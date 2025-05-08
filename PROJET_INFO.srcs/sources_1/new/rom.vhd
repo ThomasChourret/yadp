@@ -40,6 +40,7 @@ architecture Behavioral of rom is
         0 => x"06040100",
         1 => x"06050a00",
         2 => x"01020504",  -- valeur "au pif"
+        3 => x"01010202",
         others => (others => '0')
     );
 

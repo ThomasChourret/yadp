@@ -42,12 +42,13 @@ architecture Behavioral of micro is
     -- NOP FLAG
     signal stall_pipeline   : std_logic;
 
-    signal rom_comp_output  : std_logic_vector(31 downto 0);
     signal rom_output       : std_logic_vector(31 downto 0);
     signal rom_a            : std_logic_vector(7 downto 0);
     signal rom_op           : std_logic_vector(7 downto 0);
     signal rom_b            : std_logic_vector(7 downto 0);
     signal rom_c            : std_logic_vector(7 downto 0);
+    
+    signal rom_fetched      : std_logic_vector(31 downto 0);
     
     -- DI IN
     signal di_in_a         : std_logic_vector(7 downto 0);
@@ -118,7 +119,7 @@ begin
         port map (
             addr => program_counter,
             clk => clk_internal,
-            dout => rom_comp_output
+            dout => rom_output
         );
         
     
@@ -127,10 +128,10 @@ begin
     -- ---------------------------------------------------------------------------------------- --
         
     -- Prefetch instruction (async because the ROM itselft is already sync to the internal clk)
-    rom_op <= rom_output(31 downto 24);
-    rom_a  <= rom_output(23 downto 16);
-    rom_b  <= rom_output(15 downto 8);
-    rom_c  <= rom_output(7 downto 0);
+    rom_op <= rom_fetched(31 downto 24);
+    rom_a  <= rom_fetched(23 downto 16);
+    rom_b  <= rom_fetched(15 downto 8);
+    rom_c  <= rom_fetched(7 downto 0);
    
    
     -- ---------------------------------------------------------------------------------------- --
@@ -150,58 +151,66 @@ begin
                 di_in_b  <= rom_b;
                 di_in_c  <= rom_c;
             end if;
-        end if;
-    end process;
-    
-    process (clk_internal)
-    begin
-        if rising_edge(clk_internal) then
-        if stall_pipeline = '0' then
-            rom_output <= rom_comp_output;
-        end if;
+            
+            
+            
         end if;
     end process;
         
-    
     pc_enable <= stall_pipeline;
    
     -- ---------------------------------------------------------------------------------------- --
     --                                 Hazzard Detection                                        --
     -- ---------------------------------------------------------------------------------------- --
-    hazzard_detction : process(rom_output, ex_in_op, ex_in_a, mem_in_op, mem_in_a, reg_w_op, reg_w_a)
+    hazzard_detction : process(program_counter, rom_output, rom_fetched, ex_in_op, ex_in_a, mem_in_op, mem_in_a, reg_w_op, reg_w_a)
         variable op  : std_logic_vector(7 downto 0);
         variable a   : std_logic_vector(7 downto 0);
         variable b   : std_logic_vector(7 downto 0);
         variable c   : std_logic_vector(7 downto 0);
     begin
-        -- Parse the next instruction directly from ROM output
-        op := rom_output(31 downto 24);
-        a  := rom_output(23 downto 16);
-        b  := rom_output(15 downto 8);
-        c  := rom_output(7 downto 0);
-    
-        stall_pipeline <= '0';  -- Default
-    
-        -- DI hazard
-        if op = x"06" and (a = b or a = c) then
-            stall_pipeline <= '1';
-        end if;
-    
-        -- EX hazard
-        if ex_in_op = x"06" and (ex_in_a = b or ex_in_a = c) then
-            stall_pipeline <= '1';
-        end if;
-    
-        -- MEM hazard
-        if mem_in_op = x"06" and (mem_in_a = b or mem_in_a = c) then
-            stall_pipeline <= '1';
-        end if;
-    
-        -- WB hazard
-        if reg_w_op = x"06" and (reg_w_a = b or reg_w_a = c) then
-            stall_pipeline <= '1';
+        
+        if stall_pipeline = '0' then -- If the pipeline is unstalled, fetch the next instruction
+            rom_fetched <= rom_output;
         end if;
         
+        stall_pipeline <= '0';  -- Default
+        
+        for i in 0 to 1 loop
+        
+            if i = 0 then
+                op := rom_fetched(31 downto 24);
+                a  := rom_fetched(23 downto 16);
+                b  := rom_fetched(15 downto 8);
+                c  := rom_fetched(7 downto 0);
+            elsif i = 1 then
+                op := rom_output(31 downto 24);
+                a  := rom_output(23 downto 16);
+                b  := rom_output(15 downto 8);
+                c  := rom_output(7 downto 0);
+            end if;
+            
+            -- DI hazard
+            if (di_in_op = x"06" or di_in_op = x"01") and (di_in_a = b or di_in_a = c) then
+                stall_pipeline <= '1';
+            end if;
+        
+            -- EX hazard
+            if (ex_in_op = x"06" or ex_in_op  = x"01") and (ex_in_a = b or ex_in_a = c) then
+                stall_pipeline <= '1';
+            end if;
+        
+            -- MEM hazard
+            if (mem_in_op = x"06" or mem_in_op = x"01") and (mem_in_a = b or mem_in_a = c) then
+                stall_pipeline <= '1';
+            end if;
+        
+            -- WB hazard
+            if (reg_w_op = x"06" or reg_w_op = x"01") and (reg_w_a = b or reg_w_a = c) then
+                stall_pipeline <= '1';
+            end if;
+        
+        end loop;
+                
     end process;    
 
 
