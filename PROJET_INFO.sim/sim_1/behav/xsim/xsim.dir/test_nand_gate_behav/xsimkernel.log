@@ -1,0 +1,7 @@
+Running: xsim.dir/test_nand_gate_behav/xsimk.exe -simmode gui -wdb test_nand_gate_behav.wdb -simrunnum 0 -socket 59619
+Design successfully loaded
+Design Loading Memory Usage: 28416 KB (Peak: 28416 KB)
+Design Loading CPU Usage: 624 ms
+Simulation completed
+Simulation Memory Usage: 29400 KB (Peak: 29400 KB)
+Simulation CPU Usage: 671 ms

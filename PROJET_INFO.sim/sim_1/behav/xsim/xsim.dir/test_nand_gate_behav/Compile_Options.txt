@@ -1,0 +1,1 @@
+--incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "test_nand_gate_behav" "xil_defaultlib.test_nand_gate" -log "elaborate.log" 

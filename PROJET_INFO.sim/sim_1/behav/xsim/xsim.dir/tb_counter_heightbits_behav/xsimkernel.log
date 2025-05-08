@@ -1,0 +1,7 @@
+Running: xsim.dir/tb_counter_heightbits_behav/xsimk.exe -simmode gui -wdb tb_counter_heightbits_behav.wdb -simrunnum 0 -socket 26534
+Design successfully loaded
+Design Loading Memory Usage: 28436 KB (Peak: 28436 KB)
+Design Loading CPU Usage: 562 ms
+Simulation completed
+Simulation Memory Usage: 29396 KB (Peak: 29396 KB)
+Simulation CPU Usage: 640 ms

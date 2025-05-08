@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_micro_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="registers_pkg" />
+            <top_module name="tb_micro" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="249.001 ns"></ZoomEndTime>
+      <Cursor1Time time="3.311 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="219"></NameColumnWidth>
+      <ValueColumnWidth column_width="72"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="15" />
+   <wvobject fp_name="/tb_micro/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_micro/clk_external" type="logic">
+      <obj_property name="ElementShortName">clk_external</obj_property>
+      <obj_property name="ObjectShortName">clk_external</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_micro/uut/clk_internal" type="logic">
+      <obj_property name="ElementShortName">clk_internal</obj_property>
+      <obj_property name="ObjectShortName">clk_internal</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_micro/uut/nop_flag" type="logic">
+      <obj_property name="ElementShortName">nop_flag</obj_property>
+      <obj_property name="ObjectShortName">nop_flag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_micro/uut/nop_flag_plus1" type="logic">
+      <obj_property name="ElementShortName">nop_flag_plus1</obj_property>
+      <obj_property name="ObjectShortName">nop_flag_plus1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_micro/uut/program_counter" type="array">
+      <obj_property name="ElementShortName">program_counter[7:0]</obj_property>
+      <obj_property name="ObjectShortName">program_counter[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_micro/uut/rom_output" type="array">
+      <obj_property name="ElementShortName">rom_output[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_output[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_micro/uut/rom_op" type="array">
+      <obj_property name="ElementShortName">rom_op[7:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_op[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_micro/uut/ex_in_op" type="array">
+      <obj_property name="ElementShortName">ex_in_op[7:0]</obj_property>
+      <obj_property name="ObjectShortName">ex_in_op[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_micro/uut/mem_in_op" type="array">
+      <obj_property name="ElementShortName">mem_in_op[7:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_in_op[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_micro/uut/reg_w_op" type="array">
+      <obj_property name="ElementShortName">reg_w_op[7:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_w_op[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_micro/uut/rom_a" type="array">
+      <obj_property name="ElementShortName">rom_a[7:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_a[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_micro/uut/rom_b" type="array">
+      <obj_property name="ElementShortName">rom_b[7:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_b[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_micro/uut/rom_c" type="array">
+      <obj_property name="ElementShortName">rom_c[7:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_c[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_micro/uut/registers_inst/regs" type="array">
+      <obj_property name="ElementShortName">regs[0:15][7:0]</obj_property>
+      <obj_property name="ObjectShortName">regs[0:15][7:0]</obj_property>
+   </wvobject>
+</wave_config>
