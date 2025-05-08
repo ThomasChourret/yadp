@@ -40,21 +40,20 @@ architecture Behavioral of micro is
     signal program_counter  : std_logic_vector(7 downto 0);
     
     -- NOP FLAG
-    signal nop_flag         : std_logic;
-    signal nop_flag_plus1   : std_logic;
-    
-    -- LI / DI IN
+    signal stall_pipeline   : std_logic;
+
+    signal rom_comp_output  : std_logic_vector(31 downto 0);
     signal rom_output       : std_logic_vector(31 downto 0);
     signal rom_a            : std_logic_vector(7 downto 0);
     signal rom_op           : std_logic_vector(7 downto 0);
     signal rom_b            : std_logic_vector(7 downto 0);
     signal rom_c            : std_logic_vector(7 downto 0);
     
-    signal rom_output_plus1 : std_logic_vector(31 downto 0);
-    signal rom_a_plus1            : std_logic_vector(7 downto 0);
-    signal rom_op_plus1           : std_logic_vector(7 downto 0);
-    signal rom_b_plus1           : std_logic_vector(7 downto 0);
-    signal rom_c_plus1            : std_logic_vector(7 downto 0);
+    -- DI IN
+    signal di_in_a         : std_logic_vector(7 downto 0);
+    signal di_in_op        : std_logic_vector(7 downto 0);
+    signal di_in_b         : std_logic_vector(7 downto 0);
+    signal di_in_c         : std_logic_vector(7 downto 0);
     
     -- DI OUT
     signal register_a       : std_logic_vector(7 downto 0);
@@ -119,14 +118,100 @@ begin
         port map (
             addr => program_counter,
             clk => clk_internal,
-            dout => rom_output,
-            dout_plus1 => rom_output_plus1
+            dout => rom_comp_output
         );
+        
+    
+    -- ---------------------------------------------------------------------------------------- --
+    --                    Prefetch                                                              --
+    -- ---------------------------------------------------------------------------------------- --
+        
+    -- Prefetch instruction (async because the ROM itselft is already sync to the internal clk)
+    rom_op <= rom_output(31 downto 24);
+    rom_a  <= rom_output(23 downto 16);
+    rom_b  <= rom_output(15 downto 8);
+    rom_c  <= rom_output(7 downto 0);
+   
+   
+    -- ---------------------------------------------------------------------------------------- --
+    --                    LI / DI                                                               --
+    -- ---------------------------------------------------------------------------------------- --
+    di_proc : process(clk_internal) -- LI/DI
+    begin
+        if rising_edge(clk_internal) then
+            if stall_pipeline = '1' then -- If the pipeline is stalled, don't send the next instruction
+                di_in_op <= x"00";
+                di_in_a  <= x"00";
+                di_in_b  <= x"00";
+                di_in_c  <= x"00";
+            else                         -- If the pipeline is unstalled, send the next instruction
+                di_in_op <= rom_op;
+                di_in_a  <= rom_a;
+                di_in_b  <= rom_b;
+                di_in_c  <= rom_c;
+            end if;
+        end if;
+    end process;
+    
+    pc_enable <= stall_pipeline;
+   
+    -- ---------------------------------------------------------------------------------------- --
+    --                                 Hazzard Detection                                        --
+    -- ---------------------------------------------------------------------------------------- --
+    hazzard_detction : process(rom_comp_output, ex_in_op, ex_in_a, mem_in_op, mem_in_a, reg_w_op, reg_w_a)
+        variable op  : std_logic_vector(7 downto 0);
+        variable a   : std_logic_vector(7 downto 0);
+        variable b   : std_logic_vector(7 downto 0);
+        variable c   : std_logic_vector(7 downto 0);
+    begin
+        -- Parse the next instruction directly from ROM output
+        op := rom_comp_output(31 downto 24);
+        a  := rom_comp_output(23 downto 16);
+        b  := rom_comp_output(15 downto 8);
+        c  := rom_comp_output(7 downto 0);
+    
+        stall_pipeline <= '0';  -- Default
+    
+        -- DI hazard
+        if op = x"06" and (a = b or a = c) then
+            stall_pipeline <= '1';
+        end if;
+    
+        -- EX hazard
+        if ex_in_op = x"06" and (ex_in_a = b or ex_in_a = c) then
+            stall_pipeline <= '1';
+        end if;
+    
+        -- MEM hazard
+        if mem_in_op = x"06" and (mem_in_a = b or mem_in_a = c) then
+            stall_pipeline <= '1';
+        end if;
+    
+        -- WB hazard
+        if reg_w_op = x"06" and (reg_w_a = b or reg_w_a = c) then
+            stall_pipeline <= '1';
+        end if;
+        
+        if stall_pipeline = '0' then
+            rom_output <= rom_comp_output;
+        end if;
+    end process;    
 
+
+
+
+
+
+
+
+
+    -- ---------------------------------------------------------------------------------------- --
+    --                                 Register Stage                                           --
+    -- ---------------------------------------------------------------------------------------- --
     registers_inst: entity work.registers -- Registers
         port map (
-            addr_a => rom_b(3 downto 0),
-            addr_b => rom_c(3 downto 0),
+            addr_a => di_in_b(3 downto 0),
+            addr_b => di_in_c(3 downto 0),
             addr_w => register_waddr,
             w => register_w,
             rst => rst,
@@ -135,77 +220,25 @@ begin
             a => register_a,
             b => register_b
         );
-   
-   
-    di_proc : process(clk_internal) -- LI/DI
-    begin
-        if rising_edge(clk_internal) then
-            if nop_flag = '1' then
-                rom_op <= x"00";
-                rom_a  <= (others => '0');
-                rom_b  <= (others => '0');
-                rom_c  <= (others => '0');
-            else
-                rom_op <= rom_output(31 downto 24);
-                rom_a  <= rom_output(23 downto 16);
-                rom_b  <= rom_output(15 downto 8);
-                rom_c  <= rom_output(7 downto 0);
-            end if;
-        end if;
-    end process;
-    
-    pc_enable <= nop_flag;
-    
-    process(rom_output, ex_in_op, ex_in_a, mem_in_op, mem_in_a, reg_w_op, reg_w_a)
-        variable op  : std_logic_vector(7 downto 0);
-        variable a   : std_logic_vector(7 downto 0);
-        variable b   : std_logic_vector(7 downto 0);
-        variable c   : std_logic_vector(7 downto 0);
-    begin
-        -- Parse the next instruction directly from ROM output
-        op := rom_output(31 downto 24);
-        a  := rom_output(23 downto 16);
-        b  := rom_output(15 downto 8);
-        c  := rom_output(7 downto 0);
-    
-        nop_flag <= '0';  -- Default
-    
-        -- DI hazard
-        if op = x"06" and (a = b or a = c) then
-            nop_flag <= '1';
-        end if;
-    
-        -- EX hazard
-        if ex_in_op = x"06" and (ex_in_a = b or ex_in_a = c) then
-            nop_flag <= '1';
-        end if;
-    
-        -- MEM hazard
-        if mem_in_op = x"06" and (mem_in_a = b or mem_in_a = c) then
-            nop_flag <= '1';
-        end if;
-    
-        -- WB hazard
-        if reg_w_op = x"06" and (reg_w_a = b or reg_w_a = c) then
-            nop_flag <= '1';
-        end if;
-    end process;
 
-
+        
+    -- ---------------------------------------------------------------------------------------- --
+    --                                 EX Pipeline                                              --
+    -- ---------------------------------------------------------------------------------------- --
     di_ex_proc : process (clk_internal) -- DI/EX
     begin
         if rising_edge(clk_internal) then
             -- DI MUX
-            case rom_op is
+            case di_in_op is
                 when x"01" =>  -- ADD
                     ex_in_b <= register_a;
                 when x"06" =>  -- AFC
-                    ex_in_b <= rom_b;
+                    ex_in_b <= di_in_b;
                 when others =>
                     ex_in_b <= "00000000";
             end case;
-            ex_in_a     <= rom_a;
-            ex_in_op    <= rom_op;
+            ex_in_a     <= di_in_a;
+            ex_in_op    <= di_in_op;
             ex_in_c     <= register_b;
         end if;        
     end process;

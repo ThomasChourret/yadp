@@ -12,37 +12,29 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="249.001 ns"></ZoomEndTime>
-      <Cursor1Time time="3.311 ns"></Cursor1Time>
+      <ZoomEndTime time="1,237.535 ns"></ZoomEndTime>
+      <Cursor1Time time="1,000.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="219"></NameColumnWidth>
-      <ValueColumnWidth column_width="72"></ValueColumnWidth>
+      <NameColumnWidth column_width="205"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="15" />
-   <wvobject fp_name="/tb_micro/rst" type="logic">
-      <obj_property name="ElementShortName">rst</obj_property>
-      <obj_property name="ObjectShortName">rst</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_micro/clk_external" type="logic">
-      <obj_property name="ElementShortName">clk_external</obj_property>
-      <obj_property name="ObjectShortName">clk_external</obj_property>
-   </wvobject>
+   <WVObjectSize size="19" />
    <wvobject fp_name="/tb_micro/uut/clk_internal" type="logic">
       <obj_property name="ElementShortName">clk_internal</obj_property>
       <obj_property name="ObjectShortName">clk_internal</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_micro/uut/nop_flag" type="logic">
-      <obj_property name="ElementShortName">nop_flag</obj_property>
-      <obj_property name="ObjectShortName">nop_flag</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_micro/uut/nop_flag_plus1" type="logic">
-      <obj_property name="ElementShortName">nop_flag_plus1</obj_property>
-      <obj_property name="ObjectShortName">nop_flag_plus1</obj_property>
-   </wvobject>
    <wvobject fp_name="/tb_micro/uut/program_counter" type="array">
       <obj_property name="ElementShortName">program_counter[7:0]</obj_property>
       <obj_property name="ObjectShortName">program_counter[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_micro/uut/stall_pipeline" type="logic">
+      <obj_property name="ElementShortName">stall_pipeline</obj_property>
+      <obj_property name="ObjectShortName">stall_pipeline</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_micro/uut/rom_comp_output" type="array">
+      <obj_property name="ElementShortName">rom_comp_output[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_comp_output[31:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_micro/uut/rom_output" type="array">
       <obj_property name="ElementShortName">rom_output[31:0]</obj_property>
@@ -52,9 +44,62 @@
       <obj_property name="ElementShortName">rom_op[7:0]</obj_property>
       <obj_property name="ObjectShortName">rom_op[7:0]</obj_property>
    </wvobject>
+   <wvobject fp_name="/tb_micro/uut/di_in_op" type="array">
+      <obj_property name="ElementShortName">di_in_op[7:0]</obj_property>
+      <obj_property name="ObjectShortName">di_in_op[7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF0000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_micro/uut/di_in_a" type="array">
+      <obj_property name="ElementShortName">di_in_a[7:0]</obj_property>
+      <obj_property name="ObjectShortName">di_in_a[7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF0000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_micro/uut/di_in_b" type="array">
+      <obj_property name="ElementShortName">di_in_b[7:0]</obj_property>
+      <obj_property name="ObjectShortName">di_in_b[7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF0000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_micro/uut/di_in_c" type="array">
+      <obj_property name="ElementShortName">di_in_c[7:0]</obj_property>
+      <obj_property name="ObjectShortName">di_in_c[7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF0000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
    <wvobject fp_name="/tb_micro/uut/ex_in_op" type="array">
       <obj_property name="ElementShortName">ex_in_op[7:0]</obj_property>
       <obj_property name="ObjectShortName">ex_in_op[7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_micro/uut/ex_in_a" type="array">
+      <obj_property name="ElementShortName">ex_in_a[7:0]</obj_property>
+      <obj_property name="ObjectShortName">ex_in_a[7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_micro/uut/ex_in_b" type="array">
+      <obj_property name="ElementShortName">ex_in_b[7:0]</obj_property>
+      <obj_property name="ObjectShortName">ex_in_b[7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_micro/uut/ex_in_c" type="array">
+      <obj_property name="ElementShortName">ex_in_c[7:0]</obj_property>
+      <obj_property name="ObjectShortName">ex_in_c[7:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_micro/uut/registers_inst/addr_b" type="array">
+      <obj_property name="ElementShortName">addr_b[3:0]</obj_property>
+      <obj_property name="ObjectShortName">addr_b[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_micro/uut/register_b" type="array">
+      <obj_property name="ElementShortName">register_b[7:0]</obj_property>
+      <obj_property name="ObjectShortName">register_b[7:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_micro/uut/mem_in_op" type="array">
       <obj_property name="ElementShortName">mem_in_op[7:0]</obj_property>
@@ -64,20 +109,107 @@
       <obj_property name="ElementShortName">reg_w_op[7:0]</obj_property>
       <obj_property name="ObjectShortName">reg_w_op[7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_micro/uut/rom_a" type="array">
-      <obj_property name="ElementShortName">rom_a[7:0]</obj_property>
-      <obj_property name="ObjectShortName">rom_a[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_micro/uut/rom_b" type="array">
-      <obj_property name="ElementShortName">rom_b[7:0]</obj_property>
-      <obj_property name="ObjectShortName">rom_b[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_micro/uut/rom_c" type="array">
-      <obj_property name="ElementShortName">rom_c[7:0]</obj_property>
-      <obj_property name="ObjectShortName">rom_c[7:0]</obj_property>
-   </wvobject>
    <wvobject fp_name="/tb_micro/uut/registers_inst/regs" type="array">
       <obj_property name="ElementShortName">regs[0:15][7:0]</obj_property>
       <obj_property name="ObjectShortName">regs[0:15][7:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <wvobject fp_name="/tb_micro/uut/registers_inst/regs[0]" type="array">
+         <obj_property name="ElementShortName">[0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[0][7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_micro/uut/registers_inst/regs[1]" type="array">
+         <obj_property name="ElementShortName">[1][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[1][7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_micro/uut/registers_inst/regs[2]" type="array">
+         <obj_property name="ElementShortName">[2][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[2][7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_micro/uut/registers_inst/regs[3]" type="array">
+         <obj_property name="ElementShortName">[3][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[3][7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_micro/uut/registers_inst/regs[4]" type="array">
+         <obj_property name="ElementShortName">[4][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[4][7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_micro/uut/registers_inst/regs[5]" type="array">
+         <obj_property name="ElementShortName">[5][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[5][7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_micro/uut/registers_inst/regs[6]" type="array">
+         <obj_property name="ElementShortName">[6][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[6][7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_micro/uut/registers_inst/regs[7]" type="array">
+         <obj_property name="ElementShortName">[7][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[7][7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_micro/uut/registers_inst/regs[8]" type="array">
+         <obj_property name="ElementShortName">[8][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[8][7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_micro/uut/registers_inst/regs[9]" type="array">
+         <obj_property name="ElementShortName">[9][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[9][7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_micro/uut/registers_inst/regs[10]" type="array">
+         <obj_property name="ElementShortName">[10][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[10][7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_micro/uut/registers_inst/regs[11]" type="array">
+         <obj_property name="ElementShortName">[11][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[11][7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_micro/uut/registers_inst/regs[12]" type="array">
+         <obj_property name="ElementShortName">[12][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[12][7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_micro/uut/registers_inst/regs[13]" type="array">
+         <obj_property name="ElementShortName">[13][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[13][7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_micro/uut/registers_inst/regs[14]" type="array">
+         <obj_property name="ElementShortName">[14][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[14][7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_micro/uut/registers_inst/regs[15]" type="array">
+         <obj_property name="ElementShortName">[15][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[15][7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
    </wvobject>
 </wave_config>
