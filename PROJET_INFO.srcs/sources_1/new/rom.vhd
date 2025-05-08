@@ -39,7 +39,7 @@ architecture Behavioral of rom is
     signal regs : rom_array(0 to 255) := (
         0 => x"06040100",
         1 => x"06050a00",
-        2 => x"01020304",  -- valeur "au pif"
+        2 => x"01020504",  -- valeur "au pif"
         others => (others => '0')
     );
 

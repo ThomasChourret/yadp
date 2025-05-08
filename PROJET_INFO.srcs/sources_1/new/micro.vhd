@@ -153,22 +153,32 @@ begin
         end if;
     end process;
     
+    process (clk_internal)
+    begin
+        if rising_edge(clk_internal) then
+        if stall_pipeline = '0' then
+            rom_output <= rom_comp_output;
+        end if;
+        end if;
+    end process;
+        
+    
     pc_enable <= stall_pipeline;
    
     -- ---------------------------------------------------------------------------------------- --
     --                                 Hazzard Detection                                        --
     -- ---------------------------------------------------------------------------------------- --
-    hazzard_detction : process(rom_comp_output, ex_in_op, ex_in_a, mem_in_op, mem_in_a, reg_w_op, reg_w_a)
+    hazzard_detction : process(rom_output, ex_in_op, ex_in_a, mem_in_op, mem_in_a, reg_w_op, reg_w_a)
         variable op  : std_logic_vector(7 downto 0);
         variable a   : std_logic_vector(7 downto 0);
         variable b   : std_logic_vector(7 downto 0);
         variable c   : std_logic_vector(7 downto 0);
     begin
         -- Parse the next instruction directly from ROM output
-        op := rom_comp_output(31 downto 24);
-        a  := rom_comp_output(23 downto 16);
-        b  := rom_comp_output(15 downto 8);
-        c  := rom_comp_output(7 downto 0);
+        op := rom_output(31 downto 24);
+        a  := rom_output(23 downto 16);
+        b  := rom_output(15 downto 8);
+        c  := rom_output(7 downto 0);
     
         stall_pipeline <= '0';  -- Default
     
@@ -192,9 +202,6 @@ begin
             stall_pipeline <= '1';
         end if;
         
-        if stall_pipeline = '0' then
-            rom_output <= rom_comp_output;
-        end if;
     end process;    
 
 

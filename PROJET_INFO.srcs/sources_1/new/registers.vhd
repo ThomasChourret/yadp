@@ -38,8 +38,8 @@ end registers;
 architecture Behavioral of registers is
 
     signal regs : register_array(0 to 15) := (
-        3 => x"05",         -- Valeur arbitraire à l'index 3
-        4 => x"06",         -- Valeur arbitraire à l'index 4
+        --3 => x"05",         -- Valeur arbitraire à l'index 3
+        --4 => x"06",         -- Valeur arbitraire à l'index 4
         others => (others => '0')
     );
 
