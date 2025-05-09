@@ -81,6 +81,8 @@ architecture Behavioral of micro is
     -- MEM INTERNAL
     signal mem_intern_addr  : std_logic_vector(7 downto 0);
     signal mem_intern_rw    : std_logic;
+    signal mem_base_pointer_diff : std_logic_vector(7 downto 0);
+    signal mem_base_pointer_way, mem_base_pointer_change : std_logic;
     
     -- MEM OUT
     signal mem_out_b        : std_logic_vector(7 downto 0);
@@ -90,6 +92,7 @@ architecture Behavioral of micro is
     signal reg_w_a          : std_logic_vector(7 downto 0);
     signal reg_w_op         : std_logic_vector(7 downto 0);
     signal reg_w_b          : std_logic_vector(7 downto 0);
+    signal reg_w_c          : std_logic_vector(7 downto 0);
     
 begin
 
@@ -113,7 +116,6 @@ begin
             dout => program_counter
         );
        
-    pc_load <= '0';
     pc_way <= '1';
     
     rom_inst: entity work.rom -- ROM
@@ -185,6 +187,15 @@ begin
                 a  := rom_output(23 downto 16);
                 b  := rom_output(15 downto 8);
                 c  := rom_output(7 downto 0);
+            end if;
+            
+            -- JMP detection
+            if (not Is_X(di_in_op)      and (di_in_op = OP_JMP  or di_in_op = OP_IMP or di_in_op = OP_DMP or di_in_op = OP_LOAD)  ) 
+                or (not Is_X(ex_in_op)  and (ex_in_op = OP_JMP  or ex_in_op = OP_IMP or ex_in_op = OP_DMP or ex_in_op = OP_LOAD)  ) 
+                or (not Is_X(mem_in_op) and (mem_in_op = OP_JMP or mem_in_op = OP_IMP or mem_in_op = OP_DMP or mem_in_op = OP_LOAD)) 
+                or (not Is_X(reg_w_op)  and (reg_w_op = OP_JMP  or reg_w_op = OP_IMP or reg_w_op = OP_DMP or reg_w_op = OP_LOAD)  )
+            then
+                stall_pipeline <= '1';
             end if;
             
             -- DI hazard
@@ -299,6 +310,7 @@ begin
     begin
         if rising_edge(clk_internal) then
             -- EX MUX
+            mem_base_pointer_change <= '0';
             case ex_in_op is
                 when OP_ADD =>  -- ADD
                     mem_in_b <= ex_s;
@@ -326,8 +338,14 @@ begin
                     mem_in_b <= ex_in_b;
                 when OP_IMP =>
                     mem_in_b <= ex_in_b;
+                    mem_base_pointer_diff <= ex_in_a;
+                    mem_base_pointer_way  <= '1';
+                    mem_base_pointer_change <= '1';
                 when OP_DMP =>
                     mem_in_b <= ex_in_b;
+                    mem_base_pointer_diff <= ex_in_a;
+                    mem_base_pointer_way  <= '0';
+                    mem_base_pointer_change <= '1';
                 when OP_JMPM => 
                     mem_in_b <= ex_in_b;
                 when OP_LOAD =>
@@ -336,10 +354,23 @@ begin
                     mem_in_b <= ex_in_b;
                 when others =>
                     mem_in_b <= "00000000";
-            end case;
+            end case;           
+            
             mem_in_a    <= ex_in_a;
             mem_in_op   <= ex_in_op;
         end if;        
+    end process;
+    
+    jmp_proc: process (clk_internal)
+    begin
+        if rising_edge(clk_internal) then
+            if ex_in_op = OP_JMP then
+                pc_in <= ex_in_a;
+                pc_load <= '1';
+            else
+                pc_load <= '0';
+            end if;
+        end if; 
     end process;
     
     with mem_in_op select
@@ -352,17 +383,16 @@ begin
                            '1' when others;
                            
    ram_inst : entity work.ram -- RAM
-   -- addr : in std_logic_vector(3 downto 0);
-   -- rw, rst, clk : in std_logic;
-   -- din : in std_logic_vector(7 downto 0);
-   -- dout : out std_logic_vector(7 downto 0)
    port map (
         addr => mem_intern_addr,
         rw   => mem_intern_rw,
         rst  => rst,
         clk  => clk_internal,
         din  => mem_in_b,
-        dout => mem_out_b
+        dout => mem_out_b,
+        base_pointer_diff => mem_base_pointer_diff,
+        base_pointer_way => mem_base_pointer_way,
+        base_pointer_change => mem_base_pointer_change
    );
    
    --with mem_in_op select -- MEM OUT MUX (last one)
@@ -374,29 +404,33 @@ begin
    begin
         if rising_edge(clk_internal) then
             
-            reg_w_op    <= mem_in_op;
-            
-            if  
-                   mem_in_op = OP_ADD 
-                or mem_in_op = OP_SOU
-                or mem_in_op = OP_MUL
-                or mem_in_op = OP_DIV
-                or mem_in_op = OP_AFC
-                or mem_in_op = OP_COP
-                or mem_in_op = OP_INF
-                or mem_in_op = OP_SUP
-                or mem_in_op = OP_EQU
+            if mem_in_op = OP_ADD
+            or mem_in_op = OP_SOU 
+            or mem_in_op = OP_MUL
+            or mem_in_op = OP_DIV
+            or mem_in_op = OP_AFC
+            or mem_in_op = OP_INF
+            or mem_in_op = OP_SUP
+            or mem_in_op = OP_EQU
+            or mem_in_op = OP_LOAD
+            or mem_in_op = OP_COP
             then
-                reg_w_a <= mem_in_a;
-                reg_w_b <= mem_in_b;
+                reg_w_a     <= mem_in_a;
+                if mem_in_op /= OP_LOAD and mem_in_op /= OP_NOP then
+                    reg_w_c     <= mem_in_b;                 
+                end if;
+            elsif mem_in_op = OP_NOP then
+                reg_w_c     <= register_data;
             end if;
             
-            --reg_w_b     <= mem_mux_out;
+            reg_w_op    <= mem_in_op;
+            
         end if;
+
    end process;
    
    register_waddr   <= reg_w_a(3 downto 0);
-   register_data    <= reg_w_b;
+   register_data    <= mem_out_b when (reg_w_op = OP_LOAD ) else reg_w_c;
 
    with reg_w_op select
         register_w <=   '1' when OP_ADD,  -- ADD

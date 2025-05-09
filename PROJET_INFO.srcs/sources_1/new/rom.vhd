@@ -45,8 +45,15 @@ architecture Behavioral of rom is
         5 => x"04050001", -- [@5] <- [@0]/[@1]
         6 => x"05060000", -- [@6] <- [@0]
         7 => x"09070001", -- [@7] <- [@0]<[@1]
-        8 => x"0a080001", -- [@2] <- [@0]>[@1]
-        9 => x"0b090006", -- [@2] <- [@0]==[@6] 
+        8 => x"0a080001", -- [@8] <- [@0]>[@1]
+        9 => x"0b090006", -- [@9] <- [@0]==[@6]
+        -- 10 => x"07020000", 
+        10 => x"0d070000", -- test IMP 7
+        11 => x"11000000", -- store into M[@0+7] <= [@0]
+        12 => x"0e070000", -- DMP 7
+        13 => x"11010000", -- store M[@1] <= [@0]
+        14 => x"100f0100", -- load [@0f] <= M[@1]
+        15 => x"11000f00", -- store M[@0] <= [@f]
         others => (others => '0')
     );
 
@@ -57,7 +64,7 @@ begin
     begin
         if rising_edge(clk) then
             dout <= regs(to_integer(unsigned(addr)));
-            dout_plus1 <= regs(to_integer(unsigned(addr))+1);
+--dout_plus1 <= regs(to_integer(unsigned(addr))+1);
         end if;
         
     end process;
