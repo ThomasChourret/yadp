@@ -3,6 +3,7 @@ vhdl xil_defaultlib  \
 "../../../../PROJET_INFO.srcs/sources_1/new/alu.vhd" \
 "../../../../PROJET_INFO.srcs/sources_1/new/clock_divider.vhd" \
 "../../../../PROJET_INFO.srcs/sources_1/new/counter_heightbits.vhd" \
+"../../../../PROJET_INFO.srcs/sources_1/new/opcode_pkg.vhd" \
 "../../../../PROJET_INFO.srcs/sources_1/new/registers_pkg.vhd" \
 "../../../../PROJET_INFO.srcs/sources_1/new/rom.vhd" \
 "../../../../PROJET_INFO.srcs/sources_1/new/registers.vhd" \

@@ -3,10 +3,10 @@
 # SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Fri May  9 08:50:06 2025
-# Process ID         : 19772
+# Start of session at: Thu May  8 17:05:55 2025
+# Process ID         : 11440
 # Current directory  : C:/Users/Thomas/Desktop/yadp
-# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent18092 C:\Users\Thomas\Desktop\yadp\PROJET_INFO.xpr
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent1824 C:\Users\Thomas\Desktop\yadp\PROJET_INFO.xpr
 # Log file           : C:/Users/Thomas/Desktop/yadp/vivado.log
 # Journal file       : C:/Users/Thomas/Desktop/yadp\vivado.jou
 # Running On         : DESKTOP-5PFD2IV
@@ -19,7 +19,29 @@
 # Host memory        : 34055 MB
 # Swap memory        : 6710 MB
 # Total Virtual      : 40766 MB
-# Available Virtual  : 30055 MB
+# Available Virtual  : 20011 MB
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/Thomas/Desktop/yadp/PROJET_INFO.xpr
+launch_simulation
+update_compile_order -fileset sources_1
+launch_simulation
+add_files -norecurse C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/opcode_pkg.vhd
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config C:/Users/Thomas/Desktop/yadp/tb_micro_behav.wcfg
+source tb_micro.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/Thomas/Desktop/yadp/tb_micro_behav.wcfg
+source tb_micro.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/Thomas/Desktop/yadp/tb_micro_behav.wcfg
+source tb_micro.tcl
+relaunch_sim
+relaunch_sim
+save_wave_config {C:/Users/Thomas/Desktop/yadp/tb_micro_behav.wcfg}
+relaunch_sim
+relaunch_sim
+relaunch_sim

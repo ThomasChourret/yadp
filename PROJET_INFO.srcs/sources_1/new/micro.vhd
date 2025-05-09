@@ -21,6 +21,7 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use work.opcode_pkg.all;
 
 entity micro is
     Port (
@@ -151,9 +152,6 @@ begin
                 di_in_b  <= rom_b;
                 di_in_c  <= rom_c;
             end if;
-            
-            
-            
         end if;
     end process;
         
@@ -190,22 +188,22 @@ begin
             end if;
             
             -- DI hazard
-            if (di_in_op = x"06" or di_in_op = x"01") and (di_in_a = b or di_in_a = c) then
+            if not Is_X(di_in_op) and di_in_op /= x"00" and (di_in_a = b or di_in_a = c) then
                 stall_pipeline <= '1';
             end if;
         
             -- EX hazard
-            if (ex_in_op = x"06" or ex_in_op  = x"01") and (ex_in_a = b or ex_in_a = c) then
+            if not Is_X(ex_in_op) and ex_in_op /= x"00" and (ex_in_a = b or ex_in_a = c) then
                 stall_pipeline <= '1';
             end if;
         
             -- MEM hazard
-            if (mem_in_op = x"06" or mem_in_op = x"01") and (mem_in_a = b or mem_in_a = c) then
+            if not Is_X(mem_in_op) and mem_in_op /= x"00" and (mem_in_a = b or mem_in_a = c) then
                 stall_pipeline <= '1';
             end if;
         
             -- WB hazard
-            if (reg_w_op = x"06" or reg_w_op = x"01") and (reg_w_a = b or reg_w_a = c) then
+            if not Is_X(reg_w_op) and reg_w_op /= x"00" and (reg_w_a = b or reg_w_a = c) then
                 stall_pipeline <= '1';
             end if;
         
@@ -246,10 +244,40 @@ begin
         if rising_edge(clk_internal) then
             -- DI MUX
             case di_in_op is
-                when x"01" =>  -- ADD
+                when OP_ADD =>  -- ADD
                     ex_in_b <= register_a;
-                when x"06" =>  -- AFC
+                when OP_MUL => 
+                    ex_in_b <= register_a;
+                when OP_SOU =>
+                    ex_in_b <= register_a;
+                when OP_DIV =>
+                    ex_in_b <= register_a;
+                when OP_COP =>
+                    ex_in_b <= register_a;              
+                when OP_AFC =>  -- AFC
                     ex_in_b <= di_in_b;
+                when OP_JMP =>
+                    ex_in_b <= di_in_b;
+                when OP_JMF =>
+                    ex_in_b <= register_a;
+                when OP_SUP =>
+                    ex_in_b <= register_a;
+                when OP_INF =>
+                    ex_in_b <= register_a;
+                when OP_EQU =>
+                    ex_in_b <= register_a;
+                when OP_PRI =>
+                    ex_in_b <= register_a;
+                when OP_IMP =>
+                    ex_in_b <= di_in_b;
+                when OP_DMP =>
+                    ex_in_b <= di_in_b;
+                when OP_JMPM =>
+                    ex_in_b <= register_a;
+                when OP_LOAD =>
+                    ex_in_b <= di_in_b;
+                when OP_STORE =>
+                    ex_in_b <= register_a;
                 when others =>
                     ex_in_b <= "00000000";
             end case;
@@ -272,9 +300,39 @@ begin
         if rising_edge(clk_internal) then
             -- EX MUX
             case ex_in_op is
-                when "00000001" =>  -- ADD
+                when OP_ADD =>  -- ADD
                     mem_in_b <= ex_s;
-                when x"06" =>  -- AFC
+                when OP_MUL =>
+                    mem_in_b <= ex_s;
+                when OP_SOU =>
+                    mem_in_b <= ex_s;
+                when OP_DIV =>
+                    mem_in_b <= ex_s;
+                when OP_COP => 
+                    mem_in_b <= ex_in_b;
+                when OP_AFC =>
+                    mem_in_b <= ex_in_b;
+                when OP_JMP =>
+                    mem_in_b <= ex_in_b;
+                when OP_JMF =>
+                    mem_in_b <= ex_in_b;
+                when OP_INF =>
+                    mem_in_b <= ex_s;
+                when OP_SUP =>
+                    mem_in_b <= ex_s;
+                when OP_EQU =>
+                    mem_in_b <= ex_s;
+                when OP_PRI =>
+                    mem_in_b <= ex_in_b;
+                when OP_IMP =>
+                    mem_in_b <= ex_in_b;
+                when OP_DMP =>
+                    mem_in_b <= ex_in_b;
+                when OP_JMPM => 
+                    mem_in_b <= ex_in_b;
+                when OP_LOAD =>
+                    mem_in_b <= ex_in_b;
+                when OP_STORE =>
                     mem_in_b <= ex_in_b;
                 when others =>
                     mem_in_b <= "00000000";
@@ -285,11 +343,12 @@ begin
     end process;
     
     with mem_in_op select
-        mem_intern_addr <= "00000000" when "00000001",  -- ADD
+        mem_intern_addr <= mem_in_b when OP_LOAD,
+                           mem_in_a when OP_STORE,
                            "00000000" when others;
 
     with mem_in_op select
-        mem_intern_rw <= '1' when "00000001",  -- ADD
+        mem_intern_rw <= '0' when OP_STORE,  -- STORE => write => 0
                            '1' when others;
                            
    ram_inst : entity work.ram -- RAM
@@ -306,17 +365,33 @@ begin
         dout => mem_out_b
    );
    
-   with mem_in_op select -- MEM OUT MUX (last one)
-        mem_mux_out <=  mem_in_b when x"01",  -- ADD
-                        mem_in_b when x"06",  -- AFC
-                           "00000000" when others;
+   --with mem_in_op select -- MEM OUT MUX (last one)
+   --     mem_mux_out <=  mem_in_b when x"01",  -- ADD
+   --                     mem_in_b when x"06",  -- AFC
+   --                        "00000000" when others;
    
    mem_re_proc : process (clk_internal)
    begin
         if rising_edge(clk_internal) then
-            reg_w_a     <= mem_in_a;
+            
             reg_w_op    <= mem_in_op;
-            reg_w_b     <= mem_mux_out;
+            
+            if  
+                   mem_in_op = OP_ADD 
+                or mem_in_op = OP_SOU
+                or mem_in_op = OP_MUL
+                or mem_in_op = OP_DIV
+                or mem_in_op = OP_AFC
+                or mem_in_op = OP_COP
+                or mem_in_op = OP_INF
+                or mem_in_op = OP_SUP
+                or mem_in_op = OP_EQU
+            then
+                reg_w_a <= mem_in_a;
+                reg_w_b <= mem_in_b;
+            end if;
+            
+            --reg_w_b     <= mem_mux_out;
         end if;
    end process;
    
@@ -324,7 +399,15 @@ begin
    register_data    <= reg_w_b;
 
    with reg_w_op select
-        register_w <=   '1' when x"01",  -- ADD
+        register_w <=   '1' when OP_ADD,  -- ADD
+                        '1' when OP_MUL,
+                        '1' when OP_SOU,
+                        '1' when OP_DIV,
+                        '1' when OP_COP,
+                        '1' when OP_INF,
+                        '1' when OP_SUP,
+                        '1' when OP_EQU,
+                        '1' when OP_LOAD,
                         '1' when x"06",  -- AFC
                            '0' when others;
 

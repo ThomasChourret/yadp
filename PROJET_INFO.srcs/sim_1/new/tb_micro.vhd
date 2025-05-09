@@ -37,9 +37,9 @@ begin
     stim_proc: process
     begin
         -- Reset the design
-        rst <= '1';
-        --wait for 20 ns;
         --rst <= '0';
+        --wait for 20 ns;
+        rst <= '1';
 
         wait for 500 ns;
         

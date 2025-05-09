@@ -5,6 +5,7 @@
    <db_ref_list>
       <db_ref path="tb_micro_behav.wdb" id="1">
          <top_modules>
+            <top_module name="opcode_pkg" />
             <top_module name="registers_pkg" />
             <top_module name="tb_micro" />
          </top_modules>
@@ -12,14 +13,14 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="811.501 ns"></ZoomEndTime>
+      <ZoomEndTime time="527.128 ns"></ZoomEndTime>
       <Cursor1Time time="1,000.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="193"></NameColumnWidth>
+      <NameColumnWidth column_width="185"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="19" />
+   <WVObjectSize size="17" />
    <wvobject fp_name="/tb_micro/uut/clk_internal" type="logic">
       <obj_property name="ElementShortName">clk_internal</obj_property>
       <obj_property name="ObjectShortName">clk_internal</obj_property>
@@ -93,27 +94,17 @@
       <obj_property name="CustomSignalColor">#800080</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_micro/uut/registers_inst/addr_b" type="array">
-      <obj_property name="ElementShortName">addr_b[3:0]</obj_property>
-      <obj_property name="ObjectShortName">addr_b[3:0]</obj_property>
+   <wvobject fp_name="/tb_micro/uut/ex_s" type="array">
+      <obj_property name="ElementShortName">ex_s[7:0]</obj_property>
+      <obj_property name="ObjectShortName">ex_s[7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_micro/uut/register_b" type="array">
-      <obj_property name="ElementShortName">register_b[7:0]</obj_property>
-      <obj_property name="ObjectShortName">register_b[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_micro/uut/mem_in_op" type="array">
-      <obj_property name="ElementShortName">mem_in_op[7:0]</obj_property>
-      <obj_property name="ObjectShortName">mem_in_op[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_micro/uut/reg_w_op" type="array">
-      <obj_property name="ElementShortName">reg_w_op[7:0]</obj_property>
-      <obj_property name="ObjectShortName">reg_w_op[7:0]</obj_property>
+   <wvobject fp_name="/tb_micro/uut/reg_w_b" type="array">
+      <obj_property name="ElementShortName">reg_w_b[7:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_w_b[7:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_micro/uut/registers_inst/regs" type="array">
       <obj_property name="ElementShortName">regs[0:15][7:0]</obj_property>
       <obj_property name="ObjectShortName">regs[0:15][7:0]</obj_property>
       <obj_property name="isExpanded"></obj_property>
-      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
 </wave_config>

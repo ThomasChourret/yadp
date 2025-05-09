@@ -13,6 +13,7 @@ Compiling package std.textio
 Compiling package ieee.std_logic_1164
 Compiling package ieee.std_logic_arith
 Compiling package ieee.std_logic_unsigned
+Compiling package xil_defaultlib.opcode_pkg
 Compiling package ieee.numeric_std
 Compiling package xil_defaultlib.registers_pkg
 Compiling architecture behavioral of entity xil_defaultlib.clock_divider [\clock_divider(prescaler=2)\]

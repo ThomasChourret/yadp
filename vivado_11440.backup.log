@@ -1,0 +1,620 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Thu May  8 17:05:55 2025
+# Process ID         : 11440
+# Current directory  : C:/Users/Thomas/Desktop/yadp
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent1824 C:\Users\Thomas\Desktop\yadp\PROJET_INFO.xpr
+# Log file           : C:/Users/Thomas/Desktop/yadp/vivado.log
+# Journal file       : C:/Users/Thomas/Desktop/yadp\vivado.jou
+# Running On         : DESKTOP-5PFD2IV
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : Intel(R) Core(TM) i5-14600KF
+# CPU Frequency      : 3494 MHz
+# CPU Physical cores : 14
+# CPU Logical cores  : 20
+# Host memory        : 34055 MB
+# Swap memory        : 6710 MB
+# Total Virtual      : 40766 MB
+# Available Virtual  : 20011 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Thomas/Desktop/yadp/PROJET_INFO.xpr
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/Thomas/Desktop/yadp/PROJET_INFO.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.2/data/ip'.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_micro'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Thomas/Desktop/yadp/PROJET_INFO.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_micro' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Thomas/Desktop/yadp/PROJET_INFO.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_micro_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd" into library xil_defaultlib
+ERROR: [VRFC 10-2987] 'opcode_pkg' is not compiled in library 'xil_defaultlib' [C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd:24]
+INFO: [VRFC 10-3107] analyzing entity 'micro'
+ERROR: [VRFC 10-9458] unit 'micro' is ignored due to previous errors [C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd:26]
+INFO: [VRFC 10-8704] VHDL file 'C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd' is ignored due to errors
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/Thomas/Desktop/yadp/PROJET_INFO.sim/sim_1/behav/xsim/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/Thomas/Desktop/yadp/PROJET_INFO.sim/sim_1/behav/xsim/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_micro'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Thomas/Desktop/yadp/PROJET_INFO.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_micro' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Thomas/Desktop/yadp/PROJET_INFO.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_micro_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd" into library xil_defaultlib
+ERROR: [VRFC 10-2987] 'opcode_pkg' is not compiled in library 'xil_defaultlib' [C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd:24]
+INFO: [VRFC 10-3107] analyzing entity 'micro'
+ERROR: [VRFC 10-9458] unit 'micro' is ignored due to previous errors [C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd:26]
+INFO: [VRFC 10-8704] VHDL file 'C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd' is ignored due to errors
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/Thomas/Desktop/yadp/PROJET_INFO.sim/sim_1/behav/xsim/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/Thomas/Desktop/yadp/PROJET_INFO.sim/sim_1/behav/xsim/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+add_files -norecurse C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/opcode_pkg.vhd
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_micro'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Thomas/Desktop/yadp/PROJET_INFO.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_micro' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Thomas/Desktop/yadp/PROJET_INFO.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_micro_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/opcode_pkg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'micro'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sim_1/new/tb_micro.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_micro'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Thomas/Desktop/yadp/PROJET_INFO.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_micro_behav xil_defaultlib.tb_micro -log elaborate.log"
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_micro_behav xil_defaultlib.tb_micro -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package xil_defaultlib.opcode_pkg
+Compiling package ieee.numeric_std
+Compiling package xil_defaultlib.registers_pkg
+Compiling architecture behavioral of entity xil_defaultlib.clock_divider [\clock_divider(prescaler=2)\]
+Compiling architecture behavioral of entity xil_defaultlib.counter_heightbits [counter_heightbits_default]
+Compiling architecture behavioral of entity xil_defaultlib.rom [rom_default]
+Compiling architecture behavioral of entity xil_defaultlib.registers [registers_default]
+Compiling architecture behavioral of entity xil_defaultlib.alu [alu_default]
+Compiling architecture behavioral of entity xil_defaultlib.ram [ram_default]
+Compiling architecture behavioral of entity xil_defaultlib.micro [micro_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_micro
+Built simulation snapshot tb_micro_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Thomas/Desktop/yadp/PROJET_INFO.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_micro_behav -key {Behavioral:sim_1:Functional:tb_micro} -tclbatch {tb_micro.tcl} -view {C:/Users/Thomas/Desktop/yadp/tb_micro_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config C:/Users/Thomas/Desktop/yadp/tb_micro_behav.wcfg
+source tb_micro.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# log_wave -r /
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_micro_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_micro'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Thomas/Desktop/yadp/PROJET_INFO.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_micro' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Thomas/Desktop/yadp/PROJET_INFO.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_micro_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/opcode_pkg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'micro'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sim_1/new/tb_micro.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_micro'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Thomas/Desktop/yadp/PROJET_INFO.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_micro_behav xil_defaultlib.tb_micro -log elaborate.log"
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_micro_behav xil_defaultlib.tb_micro -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package xil_defaultlib.opcode_pkg
+Compiling package ieee.numeric_std
+Compiling package xil_defaultlib.registers_pkg
+Compiling architecture behavioral of entity xil_defaultlib.clock_divider [\clock_divider(prescaler=2)\]
+Compiling architecture behavioral of entity xil_defaultlib.counter_heightbits [counter_heightbits_default]
+Compiling architecture behavioral of entity xil_defaultlib.rom [rom_default]
+Compiling architecture behavioral of entity xil_defaultlib.registers [registers_default]
+Compiling architecture behavioral of entity xil_defaultlib.alu [alu_default]
+Compiling architecture behavioral of entity xil_defaultlib.ram [ram_default]
+Compiling architecture behavioral of entity xil_defaultlib.micro [micro_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_micro
+Built simulation snapshot tb_micro_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Thomas/Desktop/yadp/PROJET_INFO.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_micro_behav -key {Behavioral:sim_1:Functional:tb_micro} -tclbatch {tb_micro.tcl} -view {C:/Users/Thomas/Desktop/yadp/tb_micro_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config C:/Users/Thomas/Desktop/yadp/tb_micro_behav.wcfg
+source tb_micro.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# log_wave -r /
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_micro_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\micro.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\rom.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\rom.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\rom.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_micro'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Thomas/Desktop/yadp/PROJET_INFO.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_micro' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Thomas/Desktop/yadp/PROJET_INFO.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_micro_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/rom.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'rom'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'micro'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sim_1/new/tb_micro.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_micro'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Thomas/Desktop/yadp/PROJET_INFO.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_micro_behav xil_defaultlib.tb_micro -log elaborate.log"
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_micro_behav xil_defaultlib.tb_micro -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package xil_defaultlib.opcode_pkg
+Compiling package ieee.numeric_std
+Compiling package xil_defaultlib.registers_pkg
+Compiling architecture behavioral of entity xil_defaultlib.clock_divider [\clock_divider(prescaler=2)\]
+Compiling architecture behavioral of entity xil_defaultlib.counter_heightbits [counter_heightbits_default]
+Compiling architecture behavioral of entity xil_defaultlib.rom [rom_default]
+Compiling architecture behavioral of entity xil_defaultlib.registers [registers_default]
+Compiling architecture behavioral of entity xil_defaultlib.alu [alu_default]
+Compiling architecture behavioral of entity xil_defaultlib.ram [ram_default]
+Compiling architecture behavioral of entity xil_defaultlib.micro [micro_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_micro
+Built simulation snapshot tb_micro_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Thomas/Desktop/yadp/PROJET_INFO.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_micro_behav -key {Behavioral:sim_1:Functional:tb_micro} -tclbatch {tb_micro.tcl} -view {C:/Users/Thomas/Desktop/yadp/tb_micro_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config C:/Users/Thomas/Desktop/yadp/tb_micro_behav.wcfg
+source tb_micro.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# log_wave -r /
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_micro_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\micro.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\rom.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\rom.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\rom.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\micro.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\rom.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\micro.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\micro.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\micro.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\rom.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\rom.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\rom.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\micro.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\rom.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\rom.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\rom.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_micro'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Thomas/Desktop/yadp/PROJET_INFO.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_micro' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Thomas/Desktop/yadp/PROJET_INFO.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_micro_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'micro'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sim_1/new/tb_micro.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_micro'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_micro'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Thomas/Desktop/yadp/PROJET_INFO.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Thomas/Desktop/yadp/PROJET_INFO.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_micro_behav xil_defaultlib.tb_micro -log elaborate.log"
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_micro_behav xil_defaultlib.tb_micro -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package xil_defaultlib.opcode_pkg
+Compiling package ieee.numeric_std
+Compiling package xil_defaultlib.registers_pkg
+Compiling architecture behavioral of entity xil_defaultlib.clock_divider [\clock_divider(prescaler=2)\]
+Compiling architecture behavioral of entity xil_defaultlib.counter_heightbits [counter_heightbits_default]
+Compiling architecture behavioral of entity xil_defaultlib.rom [rom_default]
+Compiling architecture behavioral of entity xil_defaultlib.registers [registers_default]
+Compiling architecture behavioral of entity xil_defaultlib.alu [alu_default]
+Compiling architecture behavioral of entity xil_defaultlib.ram [ram_default]
+Compiling architecture behavioral of entity xil_defaultlib.micro [micro_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_micro
+Built simulation snapshot tb_micro_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Time resolution is 1 ps
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\micro.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\rom.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sim_1\new\tb_micro.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\rom.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\rom.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\micro.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\rom.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sim_1\new\tb_micro.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\micro.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\micro.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_micro'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Thomas/Desktop/yadp/PROJET_INFO.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Thomas/Desktop/yadp/PROJET_INFO.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_micro_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sim_1/new/tb_micro.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_micro'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_micro'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Thomas/Desktop/yadp/PROJET_INFO.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Thomas/Desktop/yadp/PROJET_INFO.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_micro_behav xil_defaultlib.tb_micro -log elaborate.log"
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_micro_behav xil_defaultlib.tb_micro -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package xil_defaultlib.opcode_pkg
+Compiling package ieee.numeric_std
+Compiling package xil_defaultlib.registers_pkg
+Compiling architecture behavioral of entity xil_defaultlib.clock_divider [\clock_divider(prescaler=2)\]
+Compiling architecture behavioral of entity xil_defaultlib.counter_heightbits [counter_heightbits_default]
+Compiling architecture behavioral of entity xil_defaultlib.rom [rom_default]
+Compiling architecture behavioral of entity xil_defaultlib.registers [registers_default]
+Compiling architecture behavioral of entity xil_defaultlib.alu [alu_default]
+Compiling architecture behavioral of entity xil_defaultlib.ram [ram_default]
+Compiling architecture behavioral of entity xil_defaultlib.micro [micro_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_micro
+Built simulation snapshot tb_micro_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Time resolution is 1 ps
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+save_wave_config {C:/Users/Thomas/Desktop/yadp/tb_micro_behav.wcfg}
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\micro.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\rom.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sim_1\new\tb_micro.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sim_1\new\tb_micro.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sim_1\new\tb_micro.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\micro.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\rom.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sim_1\new\tb_micro.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\micro.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\micro.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\micro.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\rom.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sim_1\new\tb_micro.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\rom.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\rom.vhd:]
+relaunch_sim
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\micro.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\rom.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sim_1\new\tb_micro.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\micro.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\micro.vhd:]
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_micro'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Thomas/Desktop/yadp/PROJET_INFO.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Thomas/Desktop/yadp/PROJET_INFO.sim/sim_1/behav/xsim'
+ERROR: [Common 17-180] Spawn failed: No error
+"xvhdl --incr --relax -prj tb_micro_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sim_1/new/tb_micro.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_micro'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+ERROR: [USF-XSim-62] 'compile' step failed with error(s) while executing 'C:/Users/Thomas/Desktop/yadp/PROJET_INFO.sim/sim_1/behav/xsim/compile.bat' script. Please check that the file has the correct 'read/write/execute' permissions and the Tcl console output for any other possible errors or warnings.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_micro'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Thomas/Desktop/yadp/PROJET_INFO.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Thomas/Desktop/yadp/PROJET_INFO.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_micro_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_micro'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Thomas/Desktop/yadp/PROJET_INFO.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Thomas/Desktop/yadp/PROJET_INFO.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_micro_behav xil_defaultlib.tb_micro -log elaborate.log"
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_micro_behav xil_defaultlib.tb_micro -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package xil_defaultlib.opcode_pkg
+Compiling package ieee.numeric_std
+Compiling package xil_defaultlib.registers_pkg
+Compiling architecture behavioral of entity xil_defaultlib.clock_divider [\clock_divider(prescaler=2)\]
+Compiling architecture behavioral of entity xil_defaultlib.counter_heightbits [counter_heightbits_default]
+Compiling architecture behavioral of entity xil_defaultlib.rom [rom_default]
+Compiling architecture behavioral of entity xil_defaultlib.registers [registers_default]
+Compiling architecture behavioral of entity xil_defaultlib.alu [alu_default]
+Compiling architecture behavioral of entity xil_defaultlib.ram [ram_default]
+Compiling architecture behavioral of entity xil_defaultlib.micro [micro_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_micro
+Built simulation snapshot tb_micro_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\micro.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\rom.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sim_1\new\tb_micro.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\rom.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\rom.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\micro.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\rom.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sim_1\new\tb_micro.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\rom.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\rom.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\micro.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\rom.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sim_1\new\tb_micro.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\micro.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\micro.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\micro.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\rom.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sim_1\new\tb_micro.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\rom.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\rom.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\micro.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\rom.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sim_1\new\tb_micro.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\micro.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\micro.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\micro.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\rom.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sim_1\new\tb_micro.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\rom.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\rom.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\micro.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\rom.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sim_1\new\tb_micro.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\rom.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\yadp\PROJET_INFO.srcs\sources_1\new\rom.vhd:]
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_micro'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Thomas/Desktop/yadp/PROJET_INFO.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Thomas/Desktop/yadp/PROJET_INFO.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_micro_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'micro'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sim_1/new/tb_micro.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_micro'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_micro'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Thomas/Desktop/yadp/PROJET_INFO.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Thomas/Desktop/yadp/PROJET_INFO.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_micro_behav xil_defaultlib.tb_micro -log elaborate.log"
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_micro_behav xil_defaultlib.tb_micro -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package xil_defaultlib.opcode_pkg
+Compiling package ieee.numeric_std
+Compiling package xil_defaultlib.registers_pkg
+Compiling architecture behavioral of entity xil_defaultlib.clock_divider [\clock_divider(prescaler=2)\]
+Compiling architecture behavioral of entity xil_defaultlib.counter_heightbits [counter_heightbits_default]
+Compiling architecture behavioral of entity xil_defaultlib.rom [rom_default]
+Compiling architecture behavioral of entity xil_defaultlib.registers [registers_default]
+Compiling architecture behavioral of entity xil_defaultlib.alu [alu_default]
+Compiling architecture behavioral of entity xil_defaultlib.ram [ram_default]
+Compiling architecture behavioral of entity xil_defaultlib.micro [micro_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_micro
+Built simulation snapshot tb_micro_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Time resolution is 1 ps
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
