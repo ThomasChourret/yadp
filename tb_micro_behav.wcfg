@@ -12,15 +12,19 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="550.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="1,916.001 ns"></ZoomEndTime>
-      <Cursor1Time time="11,000.000 ns"></Cursor1Time>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,370.001 ns"></ZoomEndTime>
+      <Cursor1Time time="522.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="177"></NameColumnWidth>
+      <NameColumnWidth column_width="173"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="27" />
+   <WVObjectSize size="28" />
+   <wvobject fp_name="/tb_micro/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
    <wvobject fp_name="/tb_micro/uut/clk_internal" type="logic">
       <obj_property name="ElementShortName">clk_internal</obj_property>
       <obj_property name="ObjectShortName">clk_internal</obj_property>
@@ -109,7 +113,6 @@
    <wvobject fp_name="/tb_micro/uut/ram_inst/regs" type="array">
       <obj_property name="ElementShortName">regs[0:255][7:0]</obj_property>
       <obj_property name="ObjectShortName">regs[0:255][7:0]</obj_property>
-      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject fp_name="/tb_micro/uut/mem_in_op" type="array">
       <obj_property name="ElementShortName">mem_in_op[7:0]</obj_property>

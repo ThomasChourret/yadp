@@ -122,7 +122,8 @@ begin
         port map (
             addr => program_counter,
             clk => clk_internal,
-            dout => rom_output
+            dout => rom_output,
+            rst => rst
         );
         
     
@@ -169,8 +170,10 @@ begin
         variable c   : std_logic_vector(7 downto 0);
     begin
         
-        if stall_pipeline = '0' then -- If the pipeline is unstalled, fetch the next instruction
+        if (stall_pipeline = '0' and rom_op /= OP_JMP and rom_op /= OP_JMF) then -- If the pipeline is unstalled, fetch the next instruction
             rom_fetched <= rom_output;
+        elsif (rom_op = OP_JMP or rom_op = OP_JMF) and stall_pipeline = '0' then
+            rom_fetched <= x"00000000";      
         end if;
         
         stall_pipeline <= '0';  -- Default
@@ -189,11 +192,11 @@ begin
                 c  := rom_output(7 downto 0);
             end if;
             
-            -- JMP detection
-            if (not Is_X(di_in_op)      and (di_in_op = OP_JMP  or di_in_op = OP_IMP or di_in_op = OP_DMP or di_in_op = OP_LOAD)  ) 
-                or (not Is_X(ex_in_op)  and (ex_in_op = OP_JMP  or ex_in_op = OP_IMP or ex_in_op = OP_DMP or ex_in_op = OP_LOAD)  ) 
-                or (not Is_X(mem_in_op) and (mem_in_op = OP_JMP or mem_in_op = OP_IMP or mem_in_op = OP_DMP or mem_in_op = OP_LOAD)) 
-                or (not Is_X(reg_w_op)  and (reg_w_op = OP_JMP  or reg_w_op = OP_IMP or reg_w_op = OP_DMP or reg_w_op = OP_LOAD)  )
+            -- JMP JMF IMP DMP LOAD detection
+            if (not Is_X(di_in_op)      and (di_in_op = OP_JMP  or di_in_op = OP_IMP or di_in_op = OP_DMP or di_in_op = OP_LOAD or di_in_op = OP_JMF)  ) 
+                or (not Is_X(ex_in_op)  and (ex_in_op = OP_JMP  or ex_in_op = OP_IMP or ex_in_op = OP_DMP or ex_in_op = OP_LOAD or ex_in_op = OP_JMF)  ) 
+                or (not Is_X(mem_in_op) and (mem_in_op = OP_JMP or mem_in_op = OP_IMP or mem_in_op = OP_DMP or mem_in_op = OP_LOAD or mem_in_op = OP_JMF)) 
+                or (not Is_X(reg_w_op)  and (reg_w_op = OP_JMP  or reg_w_op = OP_IMP or reg_w_op = OP_DMP or reg_w_op = OP_LOAD or reg_w_op = OP_JMF)  )
             then
                 stall_pipeline <= '1';
             end if;
@@ -361,12 +364,26 @@ begin
         end if;        
     end process;
     
+    -- --------------------- --
+    -- Jump Logic Controller --
+    -- --------------------- --
     jmp_proc: process (clk_internal)
     begin
         if rising_edge(clk_internal) then
             if ex_in_op = OP_JMP then
+                    
+                --rom_fetched <= x"00000000";
+            
                 pc_in <= ex_in_a;
                 pc_load <= '1';
+            elsif ex_in_op = OP_JMF then
+                if ex_in_b = x"00" then
+                    
+                    --rom_fetched <= x"00000000";
+                
+                    pc_in <= ex_in_a;
+                    pc_load <= '1';    
+                end if;
             else
                 pc_load <= '0';
             end if;

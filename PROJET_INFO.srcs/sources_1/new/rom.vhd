@@ -30,7 +30,7 @@ entity rom is
         addr : in std_logic_vector(7 downto 0);
         clk : in std_logic;
         dout : out std_logic_vector(31 downto 0);
-        dout_plus1 : out std_logic_vector(31 downto 0)
+        rst : in std_logic
     );
 end rom;
 
@@ -45,15 +45,16 @@ architecture Behavioral of rom is
         5 => x"04050001", -- [@5] <- [@0]/[@1]
         6 => x"05060000", -- [@6] <- [@0]
         7 => x"09070001", -- [@7] <- [@0]<[@1]
-        8 => x"0a080001", -- [@8] <- [@0]>[@1]
-        9 => x"0b090006", -- [@9] <- [@0]==[@6]
-        -- 10 => x"07020000", 
-        10 => x"0d070000", -- test IMP 7
-        11 => x"11000000", -- store into M[@0+7] <= [@0]
-        12 => x"0e070000", -- DMP 7
-        13 => x"11010000", -- store M[@1] <= [@0]
-        14 => x"100f0100", -- load [@0f] <= M[@1]
-        15 => x"11000f00", -- store M[@0] <= [@f]
+        8 => x"080f0700",
+        9 => x"070a0000",
+        10 => x"0a080001", -- [@8] <- [@0]>[@1]
+        11 => x"0b090006", -- [@9] <- [@0]==[@6]
+        12 => x"0d070000", -- test IMP 7
+        13 => x"11000000", -- store into M[@0+7] <= [@0]
+        14 => x"0e070000", -- DMP 7
+        15 => x"11010000", -- store M[@1] <= [@0]
+        16 => x"100f0100", -- load [@0f] <= M[@1]
+        17 => x"11000f00", -- store M[@0] <= [@f]
         others => (others => '0')
     );
 
@@ -63,8 +64,9 @@ begin
     process (clk)
     begin
         if rising_edge(clk) then
+        if rst = '1' then
             dout <= regs(to_integer(unsigned(addr)));
---dout_plus1 <= regs(to_integer(unsigned(addr))+1);
+        end if;
         end if;
         
     end process;
