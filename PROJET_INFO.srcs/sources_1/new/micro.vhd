@@ -26,11 +26,16 @@ use work.opcode_pkg.all;
 entity micro is
     Port (
         clk_external   : in std_logic;
-        rst            : in std_logic
+        rst            : in std_logic;
+            -- PRINT TO LEDS
+        leds           : out std_logic_vector(7 downto 0)
     );
 end micro;
 
 architecture Behavioral of micro is
+
+    attribute keep_hierarchy : string;
+    attribute keep_hierarchy of Behavioral : architecture is "yes";
 
     signal clk_internal     : std_logic;
    
@@ -94,7 +99,9 @@ architecture Behavioral of micro is
     signal reg_w_b          : std_logic_vector(7 downto 0);
     signal reg_w_c          : std_logic_vector(7 downto 0);
     
+    -- JUMP CONTROL
     signal jumped           : std_logic;
+   
     
 begin
 
@@ -365,6 +372,19 @@ begin
             mem_in_op   <= ex_in_op;
         end if;        
     end process;
+    
+    -- ---------------------- --
+    -- Print Logic Controller --
+    -- ---------------------- --
+    print_proc: process (clk_internal)
+    begin
+        if rising_edge(clk_internal) then
+            if ex_in_op = OP_PRI then
+                leds <= ex_in_b;
+            end if;
+        end if;
+    end process;
+    
     
     -- --------------------- --
     -- Jump Logic Controller --

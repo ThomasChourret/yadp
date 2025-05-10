@@ -39,3 +39,30 @@ run 10 us
 relaunch_sim
 relaunch_sim
 run 10 us
+relaunch_sim
+run 10 us
+relaunch_sim
+run 10 us
+close_sim
+close [ open C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/constrs_1/new/micro_contraints.xdc w ]
+add_files -fileset constrs_1 C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/constrs_1/new/micro_contraints.xdc
+set_property target_constrs_file C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/constrs_1/new/micro_contraints.xdc [current_fileset -constrset]
+synth_design -top registers -part xc7a35ticpg236-1L -lint 
+reset_run synth_1
+launch_runs synth_1 -jobs 20
+wait_on_run synth_1
+launch_runs impl_1 -jobs 14
+wait_on_run impl_1
+export_ip_user_files -of_objects  [get_files C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/constrs_1/new/counter_const.xdc] -no_script -reset -force -quiet
+remove_files  -fileset constrs_1 C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/constrs_1/new/counter_const.xdc
+synth_design -top registers -part xc7a35ticpg236-1L -lint 
+reset_run synth_1
+launch_runs synth_1 -jobs 14
+wait_on_run synth_1
+launch_runs impl_1 -jobs 14
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 14
+wait_on_run impl_1
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 14
+wait_on_run impl_1

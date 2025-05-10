@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35ticpg236-1L" LaunchTime="1741193256" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/not_gate.dcp">
-  <File Type="REPORTS-TCL" Name="pres_counter_reports.tcl"/>
-  <File Type="RDS-UTIL" Name="registers_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="registers_utilization_synth.pb"/>
-  <File Type="PA-TCL" Name="pres_counter.tcl"/>
-  <File Type="RDS-RDS" Name="pres_counter.vds"/>
-  <File Type="RDS-DCP" Name="pres_counter.dcp"/>
+<GenRun Id="synth_1" LaunchPart="xc7a35ticpg236-1L" LaunchTime="1746867267" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/not_gate.dcp">
+  <File Type="PA-TCL" Name="micro.tcl"/>
+  <File Type="REPORTS-TCL" Name="micro_reports.tcl"/>
+  <File Type="RDS-RDS" Name="micro.vds"/>
+  <File Type="RDS-PROPCONSTRS" Name="micro_drc_synth.rpt"/>
+  <File Type="RDS-UTIL" Name="micro_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="micro_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="micro.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="micro_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="micro_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/alu.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/clock_divider.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -20,13 +29,57 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/pres_counter.vhd">
+    <File Path="$PSRCDIR/sources_1/new/opcode_pkg.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/alu.vhd">
+    <File Path="$PSRCDIR/sources_1/new/registers_pkg.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/rom.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/registers.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ram.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/micro.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/pres_counter.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/perceptron.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/perceptron_pkg.vhd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -35,20 +88,19 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="pres_counter"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
+      <Option Name="TopModule" Val="micro"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
     <Filter Type="Constrs"/>
-    <File Path="$PSRCDIR/constrs_1/new/counter_const.xdc">
+    <File Path="$PSRCDIR/constrs_1/new/micro_contraints.xdc">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>
     </File>
     <Config>
-      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/counter_const.xdc"/>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/micro_contraints.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>

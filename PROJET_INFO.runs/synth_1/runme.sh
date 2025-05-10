@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/Thomas Chourret/Documents/INSA/PROJET_INFO/PROJET_INFO.runs/synth_1'
+HD_PWD='C:/Users/Thomas/Desktop/yadp/PROJET_INFO.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -41,4 +41,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log pres_counter.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source pres_counter.tcl
+EAStep vivado -log micro.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source micro.tcl

@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/Thomas Chourret/Documents/INSA/PROJET_INFO/PROJET_INFO.runs/impl_1'
+HD_PWD='C:/Users/Thomas/Desktop/yadp/PROJET_INFO.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -43,6 +43,6 @@ EAStep()
 
 # pre-commands:
 /bin/touch .write_bitstream.begin.rst
-EAStep vivado -log pres_counter.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source pres_counter.tcl -notrace
+EAStep vivado -log micro.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source micro.tcl -notrace
 
 
