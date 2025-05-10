@@ -94,6 +94,8 @@ architecture Behavioral of micro is
     signal reg_w_b          : std_logic_vector(7 downto 0);
     signal reg_w_c          : std_logic_vector(7 downto 0);
     
+    signal jumped           : std_logic;
+    
 begin
 
     clk_div_inst: entity work.clock_divider -- clock divier
@@ -170,9 +172,9 @@ begin
         variable c   : std_logic_vector(7 downto 0);
     begin
         
-        if (stall_pipeline = '0' and rom_op /= OP_JMP and rom_op /= OP_JMF) then -- If the pipeline is unstalled, fetch the next instruction
+        if (stall_pipeline = '0' ) then -- If the pipeline is unstalled, fetch the next instruction
             rom_fetched <= rom_output;
-        elsif (rom_op = OP_JMP or rom_op = OP_JMF) and stall_pipeline = '0' then
+        elsif (jumped = '1') then
             rom_fetched <= x"00000000";      
         end if;
         
@@ -370,12 +372,18 @@ begin
     jmp_proc: process (clk_internal)
     begin
         if rising_edge(clk_internal) then
+        
+            if rst = '0' then
+                jumped <= '0';
+            end if;
+        
             if ex_in_op = OP_JMP then
                     
                 --rom_fetched <= x"00000000";
             
                 pc_in <= ex_in_a;
                 pc_load <= '1';
+                jumped <= '1';
             elsif ex_in_op = OP_JMF then
                 if ex_in_b = x"00" then
                     
@@ -383,9 +391,11 @@ begin
                 
                     pc_in <= ex_in_a;
                     pc_load <= '1';    
+                    jumped <= '1';
                 end if;
             else
                 pc_load <= '0';
+                jumped <= '0';
             end if;
         end if; 
     end process;

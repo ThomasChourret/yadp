@@ -12,15 +12,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="1,370.001 ns"></ZoomEndTime>
+      <ZoomStartTime time="532.500 ns"></ZoomStartTime>
+      <ZoomEndTime time="934.501 ns"></ZoomEndTime>
       <Cursor1Time time="522.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="173"></NameColumnWidth>
+      <NameColumnWidth column_width="169"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="28" />
+   <WVObjectSize size="27" />
    <wvobject fp_name="/tb_micro/rst" type="logic">
       <obj_property name="ElementShortName">rst</obj_property>
       <obj_property name="ObjectShortName">rst</obj_property>
@@ -84,10 +84,6 @@
       <obj_property name="ObjectShortName">ex_in_a[7:0]</obj_property>
       <obj_property name="CustomSignalColor">#800080</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_micro/uut/register_a" type="array">
-      <obj_property name="ElementShortName">register_a[7:0]</obj_property>
-      <obj_property name="ObjectShortName">register_a[7:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_micro/uut/ex_in_b" type="array">
       <obj_property name="ElementShortName">ex_in_b[7:0]</obj_property>
