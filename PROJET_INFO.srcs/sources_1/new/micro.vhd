@@ -195,10 +195,10 @@ begin
             end if;
             
             -- JMP JMF IMP DMP LOAD detection
-            if (not Is_X(di_in_op)      and (di_in_op = OP_JMP  or di_in_op = OP_IMP or di_in_op = OP_DMP or di_in_op = OP_LOAD or di_in_op = OP_JMF)  ) 
-                or (not Is_X(ex_in_op)  and (ex_in_op = OP_JMP  or ex_in_op = OP_IMP or ex_in_op = OP_DMP or ex_in_op = OP_LOAD or ex_in_op = OP_JMF)  ) 
-                or (not Is_X(mem_in_op) and (mem_in_op = OP_JMP or mem_in_op = OP_IMP or mem_in_op = OP_DMP or mem_in_op = OP_LOAD or mem_in_op = OP_JMF)) 
-                or (not Is_X(reg_w_op)  and (reg_w_op = OP_JMP  or reg_w_op = OP_IMP or reg_w_op = OP_DMP or reg_w_op = OP_LOAD or reg_w_op = OP_JMF)  )
+            if (not Is_X(di_in_op)      and (di_in_op = OP_JMP  or di_in_op = OP_IMP or di_in_op = OP_DMP or di_in_op = OP_LOAD or di_in_op = OP_JMF or di_in_op = OP_JMPM)  ) 
+                or (not Is_X(ex_in_op)  and (ex_in_op = OP_JMP  or ex_in_op = OP_IMP or ex_in_op = OP_DMP or ex_in_op = OP_LOAD or ex_in_op = OP_JMF or ex_in_op = OP_JMPM)  ) 
+                or (not Is_X(mem_in_op) and (mem_in_op = OP_JMP or mem_in_op = OP_IMP or mem_in_op = OP_DMP or mem_in_op = OP_LOAD or mem_in_op = OP_JMF or mem_in_op = OP_JMPM)) 
+                or (not Is_X(reg_w_op)  and (reg_w_op = OP_JMP  or reg_w_op = OP_IMP or reg_w_op = OP_DMP or reg_w_op = OP_LOAD or reg_w_op = OP_JMF or reg_w_op = OP_JMPM)  )
             then
                 stall_pipeline <= '1';
             end if;
@@ -393,6 +393,10 @@ begin
                     pc_load <= '1';    
                     jumped <= '1';
                 end if;
+            elsif ex_in_op = OP_JMPM then
+                pc_in <= ex_in_b;
+                pc_load <= '1';
+                jumped <= '1';
             else
                 pc_load <= '0';
                 jumped <= '0';

@@ -53,8 +53,9 @@ architecture Behavioral of rom is
         13 => x"11000000", -- store into M[@0+7] <= [@0]
         14 => x"0e070000", -- DMP 7
         15 => x"11010000", -- store M[@1] <= [@0]
-        16 => x"100f0100", -- load [@0f] <= M[@1]
-        17 => x"11000f00", -- store M[@0] <= [@f]
+        16 => x"0f000000",
+        17 => x"100f0100", -- load [@0f] <= M[@1]
+        18 => x"11000f00", -- store M[@0] <= [@f]
         others => (others => '0')
     );
 

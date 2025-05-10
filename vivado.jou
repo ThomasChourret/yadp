@@ -23,3 +23,19 @@
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/Thomas/Desktop/yadp/PROJET_INFO.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config C:/Users/Thomas/Desktop/yadp/tb_micro_behav.wcfg
+source tb_micro.tcl
+run 10 us
+save_wave_config {C:/Users/Thomas/Desktop/yadp/tb_micro_behav.wcfg}
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+run 10 us
+relaunch_sim
+relaunch_sim
+run 10 us
