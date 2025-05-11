@@ -35,18 +35,25 @@ end clock_divider;
 
 architecture Behavioral of clock_divider is
     signal internal : integer range 0 to prescaler;
+    signal clk : std_logic;
 begin
 
     process (clk_in)
     begin
         if rising_edge(clk_in) then
             internal <= internal + 1;
-            if (internal = prescaler) then
+            if (internal = prescaler - 1) then
                 internal <= 0;
             end if;
+            if internal = 0 then
+                clk <= '0';
+            end if;
+            if internal = prescaler/2 then
+                clk <= '1';
+            end if; 
         end if;
     end process;
 
-    clk_out <= '1' when internal = prescaler else '0';
+    clk_out <= clk;
 
 end Behavioral;

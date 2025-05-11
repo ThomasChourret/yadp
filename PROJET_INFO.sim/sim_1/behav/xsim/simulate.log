@@ -1,1 +1,881 @@
 Time resolution is 1 ps
+Note: sp:'U',ns:'0'
+Time: 25 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 25 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'0',ns:'0'
+Time: 75 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 75 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'0',ns:'0'
+Time: 125 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 125 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'0',ns:'0'
+Time: 175 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 175 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'0',ns:'0'
+Time: 225 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 225 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'0',ns:'0'
+Time: 275 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 275 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'0',ns:'0'
+Time: 325 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 325 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'0',ns:'0'
+Time: 375 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 375 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'0',ns:'0'
+Time: 425 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 425 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'0',ns:'1'
+Time: 475 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: trigered
+Time: 475 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 525 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 525 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 575 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 575 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 625 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 625 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 675 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 675 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'0'
+Time: 725 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 725 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'0',ns:'1'
+Time: 775 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: trigered
+Time: 775 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 825 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 825 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 875 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 875 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 925 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 925 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 975 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 975 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'0'
+Time: 1025 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 1025 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'0',ns:'1'
+Time: 1075 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: trigered
+Time: 1075 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 1125 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 1125 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 1175 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 1175 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 1225 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 1225 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 1275 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 1275 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'0'
+Time: 1325 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 1325 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'0',ns:'1'
+Time: 1375 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: trigered
+Time: 1375 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 1425 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 1425 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 1475 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 1475 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 1525 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 1525 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 1575 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 1575 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'0'
+Time: 1625 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 1625 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'0',ns:'1'
+Time: 1675 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: trigered
+Time: 1675 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 1725 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 1725 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 1775 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 1775 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 1825 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 1825 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 1875 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 1875 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'0'
+Time: 1925 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 1925 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'0',ns:'1'
+Time: 1975 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: trigered
+Time: 1975 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 2025 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 2025 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 2075 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 2075 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 2125 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 2125 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 2175 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 2175 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'0'
+Time: 2225 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 2225 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'0',ns:'1'
+Time: 2275 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: trigered
+Time: 2275 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 2325 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 2325 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 2375 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 2375 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 2425 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 2425 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 2475 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 2475 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'0'
+Time: 2525 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 2525 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'0',ns:'1'
+Time: 2575 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: trigered
+Time: 2575 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 2625 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 2625 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 2675 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 2675 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 2725 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 2725 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 2775 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 2775 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'0'
+Time: 2825 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 2825 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'0',ns:'1'
+Time: 2875 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: trigered
+Time: 2875 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 2925 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 2925 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 2975 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 2975 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 3025 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 3025 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 3075 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 3075 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'0'
+Time: 3125 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 3125 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'0',ns:'1'
+Time: 3175 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: trigered
+Time: 3175 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 3225 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 3225 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 3275 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 3275 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 3325 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 3325 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 3375 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 3375 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'0'
+Time: 3425 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 3425 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'0',ns:'1'
+Time: 3475 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: trigered
+Time: 3475 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 3525 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 3525 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 3575 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 3575 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 3625 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 3625 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 3675 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 3675 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'0'
+Time: 3725 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 3725 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'0',ns:'1'
+Time: 3775 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: trigered
+Time: 3775 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 3825 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 3825 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 3875 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 3875 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 3925 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 3925 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 3975 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 3975 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'0'
+Time: 4025 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 4025 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'0',ns:'1'
+Time: 4075 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: trigered
+Time: 4075 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 4125 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 4125 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 4175 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 4175 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 4225 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 4225 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 4275 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 4275 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'0'
+Time: 4325 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 4325 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'0',ns:'1'
+Time: 4375 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: trigered
+Time: 4375 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 4425 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 4425 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 4475 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 4475 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 4525 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 4525 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 4575 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 4575 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'0'
+Time: 4625 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 4625 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'0',ns:'1'
+Time: 4675 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: trigered
+Time: 4675 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 4725 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 4725 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 4775 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 4775 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 4825 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 4825 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 4875 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 4875 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'0'
+Time: 4925 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 4925 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'0',ns:'1'
+Time: 4975 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: trigered
+Time: 4975 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 5025 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 5025 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 5075 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 5075 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 5125 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 5125 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 5175 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 5175 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'0'
+Time: 5225 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 5225 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'0',ns:'1'
+Time: 5275 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: trigered
+Time: 5275 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 5325 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 5325 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 5375 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 5375 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 5425 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 5425 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 5475 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 5475 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'0'
+Time: 5525 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 5525 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'0',ns:'1'
+Time: 5575 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: trigered
+Time: 5575 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 5625 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 5625 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 5675 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 5675 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 5725 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 5725 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 5775 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 5775 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'0'
+Time: 5825 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 5825 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'0',ns:'1'
+Time: 5875 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: trigered
+Time: 5875 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 5925 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 5925 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 5975 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 5975 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 6025 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 6025 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 6075 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 6075 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'0'
+Time: 6125 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 6125 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'0',ns:'1'
+Time: 6175 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: trigered
+Time: 6175 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 6225 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 6225 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 6275 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 6275 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 6325 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 6325 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 6375 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 6375 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'0'
+Time: 6425 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 6425 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'0',ns:'1'
+Time: 6475 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: trigered
+Time: 6475 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 6525 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 6525 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 6575 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 6575 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 6625 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 6625 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 6675 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 6675 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'0'
+Time: 6725 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 6725 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'0',ns:'1'
+Time: 6775 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: trigered
+Time: 6775 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 6825 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 6825 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 6875 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 6875 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 6925 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 6925 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 6975 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 6975 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'0'
+Time: 7025 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 7025 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'0',ns:'1'
+Time: 7075 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: trigered
+Time: 7075 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 7125 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 7125 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 7175 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 7175 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 7225 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 7225 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 7275 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 7275 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'0'
+Time: 7325 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 7325 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'0',ns:'1'
+Time: 7375 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: trigered
+Time: 7375 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 7425 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 7425 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 7475 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 7475 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 7525 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 7525 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 7575 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 7575 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'0'
+Time: 7625 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 7625 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'0',ns:'1'
+Time: 7675 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: trigered
+Time: 7675 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 7725 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 7725 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 7775 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 7775 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 7825 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 7825 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 7875 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 7875 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'0'
+Time: 7925 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 7925 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'0',ns:'1'
+Time: 7975 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: trigered
+Time: 7975 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 8025 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 8025 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 8075 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 8075 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 8125 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 8125 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 8175 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 8175 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'0'
+Time: 8225 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 8225 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'0',ns:'1'
+Time: 8275 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: trigered
+Time: 8275 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 8325 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 8325 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 8375 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 8375 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 8425 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 8425 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 8475 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 8475 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'0'
+Time: 8525 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 8525 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'0',ns:'1'
+Time: 8575 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: trigered
+Time: 8575 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 8625 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 8625 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 8675 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 8675 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 8725 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 8725 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 8775 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 8775 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'0'
+Time: 8825 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 8825 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'0',ns:'1'
+Time: 8875 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: trigered
+Time: 8875 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 8925 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 8925 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 8975 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 8975 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 9025 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 9025 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 9075 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 9075 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'0'
+Time: 9125 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 9125 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'0',ns:'1'
+Time: 9175 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: trigered
+Time: 9175 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 9225 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 9225 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 9275 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 9275 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 9325 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 9325 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 9375 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 9375 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'0'
+Time: 9425 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 9425 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'0',ns:'1'
+Time: 9475 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: trigered
+Time: 9475 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 9525 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 9525 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 9575 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 9575 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 9625 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 9625 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 9675 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 9675 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'0'
+Time: 9725 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 9725 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'0',ns:'1'
+Time: 9775 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: trigered
+Time: 9775 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 9825 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 9825 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 9875 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 9875 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 9925 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 9925 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 9975 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 9975 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'0'
+Time: 10025 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 10025 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'0',ns:'1'
+Time: 10075 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: trigered
+Time: 10075 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 10125 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 10125 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 10175 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 10175 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 10225 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 10225 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 10275 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 10275 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'0'
+Time: 10325 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 10325 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'0',ns:'1'
+Time: 10375 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: trigered
+Time: 10375 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 10425 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 10425 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 10475 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 10475 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 10525 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 10525 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 10575 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 10575 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'0'
+Time: 10625 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 10625 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'0',ns:'1'
+Time: 10675 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: trigered
+Time: 10675 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 10725 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 10725 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 10775 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 10775 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 10825 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 10825 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'1'
+Time: 10875 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 10875 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'1',ns:'0'
+Time: 10925 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: not triggered
+Time: 10925 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: sp:'0',ns:'1'
+Time: 10975 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+Note: trigered
+Time: 10975 ns  Iteration: 3  Process: /tb_micro/uut/hazzard_detction  File: C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd

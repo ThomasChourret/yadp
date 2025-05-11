@@ -21,6 +21,7 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.std_logic_unsigned.ALL; 
 use work.opcode_pkg.all;
 
 entity micro is
@@ -28,8 +29,13 @@ entity micro is
         clk_external   : in std_logic;
         rst            : in std_logic;
             -- PRINT TO LEDS
-        leds           : out std_logic_vector(7 downto 0)
+        leds           : out std_logic_vector(7 downto 0);
+        pc_leds        : out std_logic_vector(6 downto 0);
+        clk_led        : out std_logic;
+        seg            : out STD_LOGIC_VECTOR(6 downto 0);
+        an             : out STD_LOGIC_VECTOR(3 downto 0)
     );
+    
 end micro;
 
 architecture Behavioral of micro is
@@ -55,6 +61,8 @@ architecture Behavioral of micro is
     signal rom_c            : std_logic_vector(7 downto 0);
     
     signal rom_fetched      : std_logic_vector(31 downto 0);
+    signal fetched          : std_logic;
+    signal stalled_pc       : std_logic_vector(7 downto 0);
     
     -- DI IN
     signal di_in_a         : std_logic_vector(7 downto 0);
@@ -102,12 +110,41 @@ architecture Behavioral of micro is
     -- JUMP CONTROL
     signal jumped           : std_logic;
    
+   -- RESET SYNC
+    signal reset_sync       : std_logic;
     
+    -- 7 SEG
+    signal seg_r            : std_logic_vector(7 downto 0);
+    signal seg_l            : std_logic_vector(7 downto 0);
 begin
+
+    clk_led <= clk_internal;
+    --seg_l <= x"ac";
+    --seg_r <= x"dc";
+    
+        
+    seven_seg_inst: entity work.seven_seg_controller
+        port map (
+            clk => clk_external,
+            right_in => seg_r,
+            left_in => seg_l,
+            seg => seg,
+            an => an
+        );    
+    
+    process(clk_internal, rst)
+    begin
+        if rst = '0' then
+            reset_sync <= '0';
+        elsif rising_edge(clk_internal) then
+            reset_sync <= '1';
+        end if;
+    end process;
+    
 
     clk_div_inst: entity work.clock_divider -- clock divier
         generic map (
-            prescaler => 2
+            prescaler => 5--0000000
         )
         port map (
             clk_in => clk_external,
@@ -117,7 +154,7 @@ begin
     pc_inst: entity work.counter_heightbits -- Program Counter
         port map (
             clk => clk_internal,
-            rst => rst,
+            rst => reset_sync,
             load => pc_load,
             sens => pc_way,
             en => pc_enable,
@@ -132,7 +169,7 @@ begin
             addr => program_counter,
             clk => clk_internal,
             dout => rom_output,
-            rst => rst
+            rst => reset_sync
         );
         
     
@@ -153,17 +190,7 @@ begin
     di_proc : process(clk_internal) -- LI/DI
     begin
         if rising_edge(clk_internal) then
-            if stall_pipeline = '1' then -- If the pipeline is stalled, don't send the next instruction
-                di_in_op <= x"00";
-                di_in_a  <= x"00";
-                di_in_b  <= x"00";
-                di_in_c  <= x"00";
-            else                         -- If the pipeline is unstalled, send the next instruction
-                di_in_op <= rom_op;
-                di_in_a  <= rom_a;
-                di_in_b  <= rom_b;
-                di_in_c  <= rom_c;
-            end if;
+
         end if;
     end process;
         
@@ -172,69 +199,135 @@ begin
     -- ---------------------------------------------------------------------------------------- --
     --                                 Hazzard Detection                                        --
     -- ---------------------------------------------------------------------------------------- --
-    hazzard_detction : process(program_counter, rom_output, rom_fetched, ex_in_op, ex_in_a, mem_in_op, mem_in_a, reg_w_op, reg_w_a)
+    hazzard_detction : process(clk_internal)--program_counter, rom_output, rom_fetched, ex_in_op, ex_in_a, mem_in_op, mem_in_a, reg_w_op, reg_w_a)
         variable op  : std_logic_vector(7 downto 0);
         variable a   : std_logic_vector(7 downto 0);
         variable b   : std_logic_vector(7 downto 0);
         variable c   : std_logic_vector(7 downto 0);
+        
+        variable f_op : std_logic_vector(7 downto 0);
+        variable f_a  : std_logic_vector(7 downto 0);
+        variable f_b  : std_logic_vector(7 downto 0);
+        variable f_c  : std_logic_vector(7 downto 0);
+        
+        variable before : std_logic;
+        variable ns     : std_logic;
+        variable ft     : std_logic;
     begin
         
-        if (stall_pipeline = '0' ) then -- If the pipeline is unstalled, fetch the next instruction
-            rom_fetched <= rom_output;
-        elsif (jumped = '1') then
-            rom_fetched <= x"00000000";      
-        end if;
+        if rising_edge(clk_internal) then
         
-        stall_pipeline <= '0';  -- Default
+            before := stall_pipeline;
         
-        for i in 0 to 1 loop
+            if reset_sync = '0' then --reset
+                ft := '0';
+                ns := '0';
+                before := '0';
+                stall_pipeline  <= '0';
+                stalled_pc      <= x"00";
+            end if;
         
-            if i = 0 then
-                op := rom_fetched(31 downto 24);
-                a  := rom_fetched(23 downto 16);
-                b  := rom_fetched(15 downto 8);
-                c  := rom_fetched(7 downto 0);
-            elsif i = 1 then
-                op := rom_output(31 downto 24);
-                a  := rom_output(23 downto 16);
-                b  := rom_output(15 downto 8);
-                c  := rom_output(7 downto 0);
+            if stall_pipeline = '0' then   
+                rom_fetched <= rom_output; -- fetch next instruction if the pipeline isnt stall
             end if;
             
-            -- JMP JMF IMP DMP LOAD detection
-            if (not Is_X(di_in_op)      and (di_in_op = OP_JMP  or di_in_op = OP_IMP or di_in_op = OP_DMP or di_in_op = OP_LOAD or di_in_op = OP_JMF or di_in_op = OP_JMPM)  ) 
-                or (not Is_X(ex_in_op)  and (ex_in_op = OP_JMP  or ex_in_op = OP_IMP or ex_in_op = OP_DMP or ex_in_op = OP_LOAD or ex_in_op = OP_JMF or ex_in_op = OP_JMPM)  ) 
-                or (not Is_X(mem_in_op) and (mem_in_op = OP_JMP or mem_in_op = OP_IMP or mem_in_op = OP_DMP or mem_in_op = OP_LOAD or mem_in_op = OP_JMF or mem_in_op = OP_JMPM)) 
-                or (not Is_X(reg_w_op)  and (reg_w_op = OP_JMP  or reg_w_op = OP_IMP or reg_w_op = OP_DMP or reg_w_op = OP_LOAD or reg_w_op = OP_JMF or reg_w_op = OP_JMPM)  )
-            then
-                stall_pipeline <= '1';
-            end if;
+            ns := '0';
             
-            -- DI hazard
-            if not Is_X(di_in_op) and di_in_op /= x"00" and (di_in_a = b or di_in_a = c) then
-                stall_pipeline <= '1';
-            end if;
-        
-            -- EX hazard
-            if not Is_X(ex_in_op) and ex_in_op /= x"00" and (ex_in_a = b or ex_in_a = c) then
-                stall_pipeline <= '1';
-            end if;
-        
-            -- MEM hazard
-            if not Is_X(mem_in_op) and mem_in_op /= x"00" and (mem_in_a = b or mem_in_a = c) then
-                stall_pipeline <= '1';
-            end if;
-        
-            -- WB hazard
-            if not Is_X(reg_w_op) and reg_w_op /= x"00" and (reg_w_a = b or reg_w_a = c) then
-                stall_pipeline <= '1';
-            end if;
-        
-        end loop;
+            for i in 0 to 1 loop
+                if i = 0 then
+                    op := rom_fetched(31 downto 24);
+                    a  := rom_fetched(23 downto 16);
+                    b  := rom_fetched(15 downto 8);
+                    c  := rom_fetched(7 downto 0);
+                elsif i = 1 then
+                    op := rom_output(31 downto 24);
+                    a  := rom_output(23 downto 16);
+                    b  := rom_output(15 downto 8);
+                    c  := rom_output(7 downto 0);
+                end if;
                 
-    end process;    
-
-
+                -- Rom Fetched Hazzard (only if pipeline isn't already stall)
+                if before = '0' then
+                    
+                    if not Is_X(rom_fetched) and i = 1 then
+                        
+                        if rom_op /= x"00" then
+                            if a = rom_a or a = rom_b or a = rom_b then
+                                ns := '1';
+                            end if;
+                        end if;
+                    end if;
+                end if;
+                
+                -- JMP JMF IMP DMP LOAD detection
+                if (not Is_X(di_in_op)      and (di_in_op = OP_JMP  or di_in_op = OP_IMP or di_in_op = OP_DMP or di_in_op = OP_LOAD or di_in_op = OP_JMF or di_in_op = OP_JMPM)  ) 
+                    or (not Is_X(ex_in_op)  and (ex_in_op = OP_JMP  or ex_in_op = OP_IMP or ex_in_op = OP_DMP or ex_in_op = OP_LOAD or ex_in_op = OP_JMF or ex_in_op = OP_JMPM)  ) 
+                    or (not Is_X(mem_in_op) and (mem_in_op = OP_JMP or mem_in_op = OP_IMP or mem_in_op = OP_DMP or mem_in_op = OP_LOAD or mem_in_op = OP_JMF or mem_in_op = OP_JMPM)) 
+                    or (not Is_X(reg_w_op)  and (reg_w_op = OP_JMP  or reg_w_op = OP_IMP or reg_w_op = OP_DMP or reg_w_op = OP_LOAD or reg_w_op = OP_JMF or reg_w_op = OP_JMPM)  )
+                then
+                    ns := '1';
+                end if;
+    
+                -- DI hazard
+                if not Is_X(di_in_op) and di_in_op /= x"00" and (di_in_a = b or di_in_a = c or di_in_a = a) then
+                    ns := '1';
+                end if;
+            
+                -- EX hazard
+                if not Is_X(ex_in_op) and ex_in_op /= x"00" and (ex_in_a = b or ex_in_a = c or ex_in_a = a) then
+                    ns := '1';
+                end if;
+            
+                -- MEM hazard
+                if not Is_X(mem_in_op) and mem_in_op /= x"00" and (mem_in_a = b or mem_in_a = c or mem_in_a = a) then
+                    ns := '1';
+                end if;
+            
+                -- WB hazard
+                if not Is_X(reg_w_op) and reg_w_op /= x"00" and (reg_w_a = b or reg_w_a = c or reg_w_a = a) then
+                    ns := '1';
+                end if;
+            
+            end loop;   
+            
+            
+            
+            report "sp:" & std_logic'image(stall_pipeline) & ",ns:" & std_logic'image(ns);
+            if ns = '1' and stall_pipeline = '0' then
+                report "trigered";
+                stalled_pc <= program_counter;
+                pc_in <= program_counter;
+            else
+                report "not triggered";
+            end if;
+            
+            stall_pipeline <= ns;
+                     
+            if stall_pipeline = '0' then   
+                di_in_op <= rom_op; -- send fetched instruction if the pipeline isnt stall
+                di_in_a  <= rom_a;
+                di_in_b  <= rom_b;
+                di_in_c  <= rom_c;
+            else
+                di_in_op <= x"00"; -- clear the pipeline entry if the pipeline is stall
+                di_in_a  <= x"00";
+                di_in_b  <= x"00";
+                di_in_c  <= x"00";
+            end if; 
+           
+            if ns = '1' and ft = '0' then
+                pc_load <= '1';
+                ft := '1';
+            else
+                if ns = '0' then
+                    ft := '0';
+                end if;
+                pc_load <= '0';
+            end if;
+                 
+        end if;        
+        
+    end process;
 
 
 
@@ -251,7 +344,7 @@ begin
             addr_b => di_in_c(3 downto 0),
             addr_w => register_waddr,
             w => register_w,
-            rst => rst,
+            rst => reset_sync,
             clk => clk_internal,
             data => register_data,
             a => register_a,
@@ -379,12 +472,18 @@ begin
     print_proc: process (clk_internal)
     begin
         if rising_edge(clk_internal) then
-            if ex_in_op = OP_PRI then
+            if reset_sync = '0' then
+                leds <= x"ff";
+            elsif ex_in_op = OP_PRI then
                 leds <= ex_in_b;
             end if;
         end if;
     end process;
-    
+    pc_leds <= program_counter(6 downto 0);
+    --leds <= register_data;
+    seg_l <= rom_output(31 downto 24);
+    seg_r <= rom_fetched(31 downto 24);
+    --seg_r <= x"01" when stall_pipeline = '1' else x"00";
     
     -- --------------------- --
     -- Jump Logic Controller --
@@ -393,7 +492,7 @@ begin
     begin
         if rising_edge(clk_internal) then
         
-            if rst = '0' then
+            if reset_sync = '0' then
                 jumped <= '0';
             end if;
         
@@ -401,24 +500,24 @@ begin
                     
                 --rom_fetched <= x"00000000";
             
-                pc_in <= ex_in_a;
-                pc_load <= '1';
+                --pc_in <= ex_in_a;
+                --pc_load <= '1';
                 jumped <= '1';
             elsif ex_in_op = OP_JMF then
                 if ex_in_b = x"00" then
                     
                     --rom_fetched <= x"00000000";
                 
-                    pc_in <= ex_in_a;
-                    pc_load <= '1';    
+                    --pc_in <= ex_in_a;
+                    --pc_load <= '1';    
                     jumped <= '1';
                 end if;
             elsif ex_in_op = OP_JMPM then
-                pc_in <= ex_in_b;
-                pc_load <= '1';
+                --pc_in <= ex_in_b;
+                --pc_load <= '1';
                 jumped <= '1';
             else
-                pc_load <= '0';
+                --pc_load <= '0';
                 jumped <= '0';
             end if;
         end if; 
@@ -437,7 +536,7 @@ begin
    port map (
         addr => mem_intern_addr,
         rw   => mem_intern_rw,
-        rst  => rst,
+        rst  => reset_sync,
         clk  => clk_internal,
         din  => mem_in_b,
         dout => mem_out_b,

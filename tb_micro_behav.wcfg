@@ -12,18 +12,26 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="532.500 ns"></ZoomStartTime>
-      <ZoomEndTime time="934.501 ns"></ZoomEndTime>
-      <Cursor1Time time="522.000 ns"></Cursor1Time>
+      <ZoomStartTime time="415.833 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,116.834 ns"></ZoomEndTime>
+      <Cursor1Time time="1,000.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="169"></NameColumnWidth>
+      <NameColumnWidth column_width="141"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="27" />
+   <WVObjectSize size="34" />
    <wvobject fp_name="/tb_micro/rst" type="logic">
       <obj_property name="ElementShortName">rst</obj_property>
       <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_micro/uut/reset_sync" type="logic">
+      <obj_property name="ElementShortName">reset_sync</obj_property>
+      <obj_property name="ObjectShortName">reset_sync</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_micro/uut/clk_external" type="logic">
+      <obj_property name="ElementShortName">clk_external</obj_property>
+      <obj_property name="ObjectShortName">clk_external</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_micro/uut/clk_internal" type="logic">
       <obj_property name="ElementShortName">clk_internal</obj_property>
@@ -32,6 +40,18 @@
    <wvobject fp_name="/tb_micro/uut/program_counter" type="array">
       <obj_property name="ElementShortName">program_counter[7:0]</obj_property>
       <obj_property name="ObjectShortName">program_counter[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_micro/uut/pc_load" type="logic">
+      <obj_property name="ElementShortName">pc_load</obj_property>
+      <obj_property name="ObjectShortName">pc_load</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_micro/uut/pc_in" type="array">
+      <obj_property name="ElementShortName">pc_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_in[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_micro/uut/stalled_pc" type="array">
+      <obj_property name="ElementShortName">stalled_pc[7:0]</obj_property>
+      <obj_property name="ObjectShortName">stalled_pc[7:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_micro/uut/stall_pipeline" type="logic">
       <obj_property name="ElementShortName">stall_pipeline</obj_property>
@@ -145,5 +165,13 @@
    <wvobject fp_name="/tb_micro/uut/reg_w_op" type="array">
       <obj_property name="ElementShortName">reg_w_op[7:0]</obj_property>
       <obj_property name="ObjectShortName">reg_w_op[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_micro/uut/leds" type="array">
+      <obj_property name="ElementShortName">leds[7:0]</obj_property>
+      <obj_property name="ObjectShortName">leds[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_micro/uut/pc_in" type="array">
+      <obj_property name="ElementShortName">pc_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_in[7:0]</obj_property>
    </wvobject>
 </wave_config>

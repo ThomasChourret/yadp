@@ -16,7 +16,8 @@ Compiling package ieee.std_logic_unsigned
 Compiling package xil_defaultlib.opcode_pkg
 Compiling package ieee.numeric_std
 Compiling package xil_defaultlib.registers_pkg
-Compiling architecture behavioral of entity xil_defaultlib.clock_divider [\clock_divider(prescaler=2)\]
+Compiling architecture behavioral of entity xil_defaultlib.seven_seg_controller [seven_seg_controller_default]
+Compiling architecture behavioral of entity xil_defaultlib.clock_divider [\clock_divider(prescaler=5)\]
 Compiling architecture behavioral of entity xil_defaultlib.counter_heightbits [counter_heightbits_default]
 Compiling architecture behavioral of entity xil_defaultlib.rom [rom_default]
 Compiling architecture behavioral of entity xil_defaultlib.registers [registers_default]
