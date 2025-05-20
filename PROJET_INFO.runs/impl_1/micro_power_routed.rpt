@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date             : Tue May 20 10:25:43 2025
+| Date             : Tue May 20 10:43:10 2025
 | Host             : DESKTOP-5PFD2IV running 64-bit major release  (build 9200)
 | Command          : report_power -file micro_power_routed.rpt -pb micro_power_summary_routed.pb -rpx micro_power_routed.rpx
 | Design           : micro
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 12.603       |
+| Total On-Chip Power (W)  | 26.709       |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 12.465       |
-| Device Static (W)        | 0.137        |
+| Dynamic (W)              | 26.380       |
+| Device Static (W)        | 0.329        |
 | Effective TJA (C/W)      | 5.0          |
-| Max Ambient (C)          | 37.0         |
-| Junction Temperature (C) | 88.0         |
+| Max Ambient (C)          | 0.0          |
+| Junction Temperature (C) | 125.0        |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,17 +52,17 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.379 |     4203 |       --- |             --- |
-|   LUT as Logic |     0.324 |     1227 |     20800 |            5.90 |
-|   CARRY4       |     0.026 |       51 |      8150 |            0.63 |
-|   Register     |     0.024 |     2401 |     41600 |            5.77 |
-|   BUFG         |     0.005 |        2 |        32 |            6.25 |
+| Slice Logic    |     5.503 |     4199 |       --- |             --- |
+|   LUT as Logic |     5.251 |     1225 |     20800 |            5.89 |
+|   CARRY4       |     0.172 |       50 |      8150 |            0.61 |
+|   Register     |     0.038 |     2400 |     41600 |            5.77 |
+|   F7/F8 Muxes  |     0.032 |      441 |     32600 |            1.35 |
+|   BUFG         |     0.010 |        2 |        32 |            6.25 |
 |   Others       |     0.000 |       11 |       --- |             --- |
-|   F7/F8 Muxes  |     0.000 |      441 |     32600 |            1.35 |
-| Signals        |     0.483 |     3156 |       --- |             --- |
-| I/O            |    11.603 |       29 |       106 |           27.36 |
-| Static Power   |     0.137 |          |           |                 |
-| Total          |    12.603 |          |           |                 |
+| Signals        |     6.472 |     3153 |       --- |             --- |
+| I/O            |    14.406 |       29 |       106 |           27.36 |
+| Static Power   |     0.329 |          |           |                 |
+| Total          |    26.709 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,16 +72,16 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       0.950 |     0.978 |       0.912 |      0.065 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.446 |       0.425 |      0.021 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     3.284 |       3.283 |      0.001 |       NA    | Unspecified | NA         |
+| Vccint    |       0.950 |    12.820 |      12.609 |      0.211 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.576 |       0.528 |      0.048 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     4.077 |       4.076 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccbram   |       0.950 |     0.002 |       0.000 |      0.002 |       NA    | Unspecified | NA         |
+| Vccbram   |       0.950 |     0.006 |       0.000 |      0.006 |       NA    | Unspecified | NA         |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccadc    |       1.800 |     0.018 |       0.000 |      0.018 |       NA    | Unspecified | NA         |
@@ -139,11 +139,14 @@ Table of Contents
 +------------------+-----------+
 | Name             | Power (W) |
 +------------------+-----------+
-| micro            |    12.465 |
-|   clk_div_inst   |     0.226 |
-|   pc_inst        |     0.493 |
-|   ram_inst       |     0.034 |
-|   seven_seg_inst |     0.097 |
+| micro            |    26.380 |
+|   alu_inst       |     1.329 |
+|   clk_div_inst   |     0.180 |
+|   pc_inst        |     0.515 |
+|   ram_inst       |     8.761 |
+|   registers_inst |     0.182 |
+|   rom_inst       |     0.079 |
+|   seven_seg_inst |     0.161 |
 +------------------+-----------+
 
 

@@ -122,7 +122,7 @@ begin
 
     clk_div_inst: entity work.clock_divider -- clock divier
         generic map (
-            prescaler => 50000000
+            prescaler => 20000000
         )
         port map (
             clk_in => clk_external,

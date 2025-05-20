@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date         : Tue May 20 10:25:43 2025
+| Date         : Tue May 20 10:43:10 2025
 | Host         : DESKTOP-5PFD2IV running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -report_unconstrained -file micro_timing_summary_routed.rpt -pb micro_timing_summary_routed.pb -rpx micro_timing_summary_routed.rpx -warn_on_violation
 | Design       : micro
@@ -53,10 +53,10 @@ check_timing report
 
 Table of Contents
 -----------------
-1. checking no_clock (2401)
+1. checking no_clock (2400)
 2. checking constant_clock (0)
 3. checking pulse_width_clock (0)
-4. checking unconstrained_internal_endpoints (6938)
+4. checking unconstrained_internal_endpoints (6936)
 5. checking no_input_delay (1)
 6. checking no_output_delay (27)
 7. checking multiple_clock (0)
@@ -66,9 +66,9 @@ Table of Contents
 11. checking partial_output_delay (0)
 12. checking latch_loops (0)
 
-1. checking no_clock (2401)
+1. checking no_clock (2400)
 ---------------------------
- There are 45 register/latch pins with no clock driven by root clock pin: clk_external (HIGH)
+ There are 44 register/latch pins with no clock driven by root clock pin: clk_external (HIGH)
 
  There are 2356 register/latch pins with no clock driven by root clock pin: clk_div_inst/clk_reg/Q (HIGH)
 
@@ -83,9 +83,9 @@ Table of Contents
  There are 0 register/latch pins which need pulse_width check
 
 
-4. checking unconstrained_internal_endpoints (6938)
+4. checking unconstrained_internal_endpoints (6936)
 ---------------------------------------------------
- There are 6938 pins that are not constrained for maximum delay. (HIGH)
+ There are 6936 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
@@ -144,7 +144,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-        inf        0.000                      0                 6965          inf        0.000                      0                 6965           NA           NA                      NA                    NA  
+        inf        0.000                      0                 6963          inf        0.000                      0                 6963           NA           NA                      NA                    NA  
 
 
 There are no user specified timing constraints.
@@ -213,865 +213,865 @@ Path Group:  (none)
 From Clock:  
   To Clock:  
 
-Max Delay          6965 Endpoints
-Min Delay          6965 Endpoints
+Max Delay          6963 Endpoints
+Min Delay          6963 Endpoints
 --------------------------------------------------------------------------------------
 
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
 Slack:                    inf
-  Source:                 ex_in_c_reg[1]/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            mem_in_b_reg[0]_rep/D
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        24.179ns  (logic 9.027ns (37.334%)  route 15.152ns (62.666%))
-  Logic Levels:           33  (CARRY4=19 FDRE=1 LUT2=1 LUT3=6 LUT4=1 LUT6=4 MUXF7=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X58Y24         FDRE                         0.000     0.000 r  ex_in_c_reg[1]/C
-    SLICE_X58Y24         FDRE (Prop_fdre_C_Q)         0.456     0.456 f  ex_in_c_reg[1]/Q
-                         net (fo=34, routed)          2.586     3.042    alu_inst/tmp0_inferred__3/i__carry_0[1]
-    SLICE_X52Y28         LUT6 (Prop_lut6_I4_O)        0.124     3.166 f  alu_inst/i___7_carry__0_i_9/O
-                         net (fo=4, routed)           0.185     3.351    alu_inst/i___7_carry__0_i_9_n_0
-    SLICE_X52Y28         LUT4 (Prop_lut4_I2_O)        0.124     3.475 r  alu_inst/i___7_carry_i_9/O
-                         net (fo=14, routed)          1.253     4.728    alu_inst/i___7_carry__1_i_1_n_0
-    SLICE_X52Y29         LUT2 (Prop_lut2_I1_O)        0.124     4.852 r  alu_inst/i___7_carry__0_i_4/O
-                         net (fo=1, routed)           0.606     5.458    alu_inst/i___7_carry__0_i_4_n_0
-    SLICE_X53Y29         CARRY4 (Prop_carry4_DI[0]_CO[3])
-                                                      0.526     5.984 r  alu_inst/tmp0_inferred__2/i___7_carry__0/CO[3]
-                         net (fo=1, routed)           0.000     5.984    alu_inst/tmp0_inferred__2/i___7_carry__0_n_0
-    SLICE_X53Y30         CARRY4 (Prop_carry4_CI_CO[0])
-                                                      0.271     6.255 r  alu_inst/tmp0_inferred__2/i___7_carry__1/CO[0]
-                         net (fo=12, routed)          1.344     7.599    alu_inst/data3[6]
-    SLICE_X54Y27         LUT3 (Prop_lut3_I0_O)        0.373     7.972 r  alu_inst/i___211_carry_i_48/O
-                         net (fo=1, routed)           0.000     7.972    alu_inst/i___211_carry_i_48_n_0
-    SLICE_X54Y27         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.533     8.505 r  alu_inst/i___211_carry_i_38/CO[3]
-                         net (fo=1, routed)           0.000     8.505    alu_inst/i___211_carry_i_38_n_0
-    SLICE_X54Y28         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     8.622 r  alu_inst/mem_in_b_reg[5]_i_6/CO[3]
-                         net (fo=1, routed)           0.000     8.622    alu_inst/mem_in_b_reg[5]_i_6_n_0
-    SLICE_X54Y29         CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157     8.779 r  alu_inst/mem_in_b_reg[5]_i_5/CO[1]
-                         net (fo=12, routed)          1.222    10.002    alu_inst/data3[5]
-    SLICE_X56Y26         LUT3 (Prop_lut3_I0_O)        0.332    10.334 r  alu_inst/i___211_carry_i_45/O
-                         net (fo=1, routed)           0.000    10.334    alu_inst/i___211_carry_i_45_n_0
-    SLICE_X56Y26         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.533    10.867 r  alu_inst/i___211_carry_i_30/CO[3]
-                         net (fo=1, routed)           0.000    10.867    alu_inst/i___211_carry_i_30_n_0
-    SLICE_X56Y27         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    10.984 r  alu_inst/i___211_carry_i_27/CO[3]
-                         net (fo=1, routed)           0.000    10.984    alu_inst/i___211_carry_i_27_n_0
-    SLICE_X56Y28         CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157    11.141 r  alu_inst/mem_in_b_reg[4]_i_5/CO[1]
-                         net (fo=12, routed)          1.413    12.553    alu_inst/data3[4]
-    SLICE_X55Y24         LUT3 (Prop_lut3_I0_O)        0.332    12.885 r  alu_inst/i___211_carry_i_33/O
-                         net (fo=1, routed)           0.000    12.885    alu_inst/i___211_carry_i_33_n_0
-    SLICE_X55Y24         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550    13.435 r  alu_inst/i___211_carry_i_16/CO[3]
-                         net (fo=1, routed)           0.009    13.444    alu_inst/i___211_carry_i_16_n_0
-    SLICE_X55Y25         CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157    13.601 r  alu_inst/i___211_carry_i_15/CO[1]
-                         net (fo=12, routed)          1.082    14.684    alu_inst/data3[3]
-    SLICE_X54Y23         LUT3 (Prop_lut3_I0_O)        0.329    15.013 r  alu_inst/i___211_carry_i_26/O
-                         net (fo=1, routed)           0.000    15.013    alu_inst/i___211_carry_i_26_n_0
-    SLICE_X54Y23         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.533    15.546 r  alu_inst/i___211_carry_i_11/CO[3]
-                         net (fo=1, routed)           0.000    15.546    alu_inst/i___211_carry_i_11_n_0
-    SLICE_X54Y24         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    15.663 r  alu_inst/i___211_carry_i_8/CO[3]
-                         net (fo=1, routed)           0.009    15.672    alu_inst/i___211_carry_i_8_n_0
-    SLICE_X54Y25         CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157    15.829 r  alu_inst/i___211_carry_i_7/CO[1]
-                         net (fo=12, routed)          1.572    17.401    alu_inst/data3[2]
-    SLICE_X53Y22         LUT3 (Prop_lut3_I0_O)        0.332    17.733 r  alu_inst/i___211_carry_i_12/O
-                         net (fo=1, routed)           0.000    17.733    alu_inst/i___211_carry_i_12_n_0
-    SLICE_X53Y22         CARRY4 (Prop_carry4_S[3]_CO[3])
-                                                      0.401    18.134 r  alu_inst/i___211_carry_i_2/CO[3]
-                         net (fo=1, routed)           0.000    18.134    alu_inst/i___211_carry_i_2_n_0
-    SLICE_X53Y23         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    18.248 r  alu_inst/i___211_carry__0_i_1/CO[3]
-                         net (fo=1, routed)           0.000    18.248    alu_inst/i___211_carry__0_i_1_n_0
-    SLICE_X53Y24         CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157    18.405 r  alu_inst/i___211_carry_i_1/CO[1]
-                         net (fo=12, routed)          1.035    19.440    alu_inst/data3[1]
-    SLICE_X52Y22         LUT3 (Prop_lut3_I0_O)        0.329    19.769 r  alu_inst/i___211_carry_i_4/O
-                         net (fo=1, routed)           0.000    19.769    alu_inst/i___211_carry_i_4_n_0
-    SLICE_X52Y22         CARRY4 (Prop_carry4_S[2]_CO[3])
-                                                      0.380    20.149 r  alu_inst/tmp0_inferred__2/i___211_carry/CO[3]
-                         net (fo=1, routed)           0.000    20.149    alu_inst/tmp0_inferred__2/i___211_carry_n_0
-    SLICE_X52Y23         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    20.266 r  alu_inst/tmp0_inferred__2/i___211_carry__0/CO[3]
-                         net (fo=1, routed)           0.000    20.266    alu_inst/tmp0_inferred__2/i___211_carry__0_n_0
-    SLICE_X52Y24         CARRY4 (Prop_carry4_CI_CO[0])
-                                                      0.254    20.520 r  alu_inst/tmp0_inferred__2/i___211_carry__1/CO[0]
-                         net (fo=1, routed)           0.663    21.182    alu_inst/data3[0]
-    SLICE_X50Y24         LUT6 (Prop_lut6_I5_O)        0.367    21.549 f  alu_inst/mem_in_b[0]_i_6/O
-                         net (fo=1, routed)           0.378    21.928    alu_inst/mem_in_b[0]_i_6_n_0
-    SLICE_X50Y24         LUT6 (Prop_lut6_I1_O)        0.124    22.052 r  alu_inst/mem_in_b[0]_i_4/O
-                         net (fo=1, routed)           0.820    22.872    alu_inst/mem_in_b[0]_i_4_n_0
-    SLICE_X50Y23         LUT6 (Prop_lut6_I5_O)        0.124    22.996 r  alu_inst/mem_in_b[0]_i_2/O
-                         net (fo=1, routed)           0.000    22.996    alu_inst/mem_in_b[0]_i_2_n_0
-    SLICE_X50Y23         MUXF7 (Prop_muxf7_I0_O)      0.209    23.205 r  alu_inst/mem_in_b_reg[0]_i_1/O
-                         net (fo=3, routed)           0.974    24.179    alu_inst_n_7
-    SLICE_X50Y22         FDRE                                         r  mem_in_b_reg[0]_rep/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 ex_in_c_reg[1]/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            mem_in_b_reg[0]/D
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        23.779ns  (logic 9.027ns (37.962%)  route 14.752ns (62.038%))
-  Logic Levels:           33  (CARRY4=19 FDRE=1 LUT2=1 LUT3=6 LUT4=1 LUT6=4 MUXF7=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X58Y24         FDRE                         0.000     0.000 r  ex_in_c_reg[1]/C
-    SLICE_X58Y24         FDRE (Prop_fdre_C_Q)         0.456     0.456 f  ex_in_c_reg[1]/Q
-                         net (fo=34, routed)          2.586     3.042    alu_inst/tmp0_inferred__3/i__carry_0[1]
-    SLICE_X52Y28         LUT6 (Prop_lut6_I4_O)        0.124     3.166 f  alu_inst/i___7_carry__0_i_9/O
-                         net (fo=4, routed)           0.185     3.351    alu_inst/i___7_carry__0_i_9_n_0
-    SLICE_X52Y28         LUT4 (Prop_lut4_I2_O)        0.124     3.475 r  alu_inst/i___7_carry_i_9/O
-                         net (fo=14, routed)          1.253     4.728    alu_inst/i___7_carry__1_i_1_n_0
-    SLICE_X52Y29         LUT2 (Prop_lut2_I1_O)        0.124     4.852 r  alu_inst/i___7_carry__0_i_4/O
-                         net (fo=1, routed)           0.606     5.458    alu_inst/i___7_carry__0_i_4_n_0
-    SLICE_X53Y29         CARRY4 (Prop_carry4_DI[0]_CO[3])
-                                                      0.526     5.984 r  alu_inst/tmp0_inferred__2/i___7_carry__0/CO[3]
-                         net (fo=1, routed)           0.000     5.984    alu_inst/tmp0_inferred__2/i___7_carry__0_n_0
-    SLICE_X53Y30         CARRY4 (Prop_carry4_CI_CO[0])
-                                                      0.271     6.255 r  alu_inst/tmp0_inferred__2/i___7_carry__1/CO[0]
-                         net (fo=12, routed)          1.344     7.599    alu_inst/data3[6]
-    SLICE_X54Y27         LUT3 (Prop_lut3_I0_O)        0.373     7.972 r  alu_inst/i___211_carry_i_48/O
-                         net (fo=1, routed)           0.000     7.972    alu_inst/i___211_carry_i_48_n_0
-    SLICE_X54Y27         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.533     8.505 r  alu_inst/i___211_carry_i_38/CO[3]
-                         net (fo=1, routed)           0.000     8.505    alu_inst/i___211_carry_i_38_n_0
-    SLICE_X54Y28         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     8.622 r  alu_inst/mem_in_b_reg[5]_i_6/CO[3]
-                         net (fo=1, routed)           0.000     8.622    alu_inst/mem_in_b_reg[5]_i_6_n_0
-    SLICE_X54Y29         CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157     8.779 r  alu_inst/mem_in_b_reg[5]_i_5/CO[1]
-                         net (fo=12, routed)          1.222    10.002    alu_inst/data3[5]
-    SLICE_X56Y26         LUT3 (Prop_lut3_I0_O)        0.332    10.334 r  alu_inst/i___211_carry_i_45/O
-                         net (fo=1, routed)           0.000    10.334    alu_inst/i___211_carry_i_45_n_0
-    SLICE_X56Y26         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.533    10.867 r  alu_inst/i___211_carry_i_30/CO[3]
-                         net (fo=1, routed)           0.000    10.867    alu_inst/i___211_carry_i_30_n_0
-    SLICE_X56Y27         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    10.984 r  alu_inst/i___211_carry_i_27/CO[3]
-                         net (fo=1, routed)           0.000    10.984    alu_inst/i___211_carry_i_27_n_0
-    SLICE_X56Y28         CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157    11.141 r  alu_inst/mem_in_b_reg[4]_i_5/CO[1]
-                         net (fo=12, routed)          1.413    12.553    alu_inst/data3[4]
-    SLICE_X55Y24         LUT3 (Prop_lut3_I0_O)        0.332    12.885 r  alu_inst/i___211_carry_i_33/O
-                         net (fo=1, routed)           0.000    12.885    alu_inst/i___211_carry_i_33_n_0
-    SLICE_X55Y24         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550    13.435 r  alu_inst/i___211_carry_i_16/CO[3]
-                         net (fo=1, routed)           0.009    13.444    alu_inst/i___211_carry_i_16_n_0
-    SLICE_X55Y25         CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157    13.601 r  alu_inst/i___211_carry_i_15/CO[1]
-                         net (fo=12, routed)          1.082    14.684    alu_inst/data3[3]
-    SLICE_X54Y23         LUT3 (Prop_lut3_I0_O)        0.329    15.013 r  alu_inst/i___211_carry_i_26/O
-                         net (fo=1, routed)           0.000    15.013    alu_inst/i___211_carry_i_26_n_0
-    SLICE_X54Y23         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.533    15.546 r  alu_inst/i___211_carry_i_11/CO[3]
-                         net (fo=1, routed)           0.000    15.546    alu_inst/i___211_carry_i_11_n_0
-    SLICE_X54Y24         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    15.663 r  alu_inst/i___211_carry_i_8/CO[3]
-                         net (fo=1, routed)           0.009    15.672    alu_inst/i___211_carry_i_8_n_0
-    SLICE_X54Y25         CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157    15.829 r  alu_inst/i___211_carry_i_7/CO[1]
-                         net (fo=12, routed)          1.572    17.401    alu_inst/data3[2]
-    SLICE_X53Y22         LUT3 (Prop_lut3_I0_O)        0.332    17.733 r  alu_inst/i___211_carry_i_12/O
-                         net (fo=1, routed)           0.000    17.733    alu_inst/i___211_carry_i_12_n_0
-    SLICE_X53Y22         CARRY4 (Prop_carry4_S[3]_CO[3])
-                                                      0.401    18.134 r  alu_inst/i___211_carry_i_2/CO[3]
-                         net (fo=1, routed)           0.000    18.134    alu_inst/i___211_carry_i_2_n_0
-    SLICE_X53Y23         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    18.248 r  alu_inst/i___211_carry__0_i_1/CO[3]
-                         net (fo=1, routed)           0.000    18.248    alu_inst/i___211_carry__0_i_1_n_0
-    SLICE_X53Y24         CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157    18.405 r  alu_inst/i___211_carry_i_1/CO[1]
-                         net (fo=12, routed)          1.035    19.440    alu_inst/data3[1]
-    SLICE_X52Y22         LUT3 (Prop_lut3_I0_O)        0.329    19.769 r  alu_inst/i___211_carry_i_4/O
-                         net (fo=1, routed)           0.000    19.769    alu_inst/i___211_carry_i_4_n_0
-    SLICE_X52Y22         CARRY4 (Prop_carry4_S[2]_CO[3])
-                                                      0.380    20.149 r  alu_inst/tmp0_inferred__2/i___211_carry/CO[3]
-                         net (fo=1, routed)           0.000    20.149    alu_inst/tmp0_inferred__2/i___211_carry_n_0
-    SLICE_X52Y23         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    20.266 r  alu_inst/tmp0_inferred__2/i___211_carry__0/CO[3]
-                         net (fo=1, routed)           0.000    20.266    alu_inst/tmp0_inferred__2/i___211_carry__0_n_0
-    SLICE_X52Y24         CARRY4 (Prop_carry4_CI_CO[0])
-                                                      0.254    20.520 r  alu_inst/tmp0_inferred__2/i___211_carry__1/CO[0]
-                         net (fo=1, routed)           0.663    21.182    alu_inst/data3[0]
-    SLICE_X50Y24         LUT6 (Prop_lut6_I5_O)        0.367    21.549 f  alu_inst/mem_in_b[0]_i_6/O
-                         net (fo=1, routed)           0.378    21.928    alu_inst/mem_in_b[0]_i_6_n_0
-    SLICE_X50Y24         LUT6 (Prop_lut6_I1_O)        0.124    22.052 r  alu_inst/mem_in_b[0]_i_4/O
-                         net (fo=1, routed)           0.820    22.872    alu_inst/mem_in_b[0]_i_4_n_0
-    SLICE_X50Y23         LUT6 (Prop_lut6_I5_O)        0.124    22.996 r  alu_inst/mem_in_b[0]_i_2/O
-                         net (fo=1, routed)           0.000    22.996    alu_inst/mem_in_b[0]_i_2_n_0
-    SLICE_X50Y23         MUXF7 (Prop_muxf7_I0_O)      0.209    23.205 r  alu_inst/mem_in_b_reg[0]_i_1/O
-                         net (fo=3, routed)           0.574    23.779    alu_inst_n_7
-    SLICE_X51Y22         FDRE                                         r  mem_in_b_reg[0]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 ex_in_c_reg[1]/C
+  Source:                 ex_in_c_reg[0]/C
                             (rising edge-triggered cell FDRE)
   Destination:            mem_in_b_reg[0]_rep__0/D
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        23.708ns  (logic 9.027ns (38.075%)  route 14.681ns (61.925%))
-  Logic Levels:           33  (CARRY4=19 FDRE=1 LUT2=1 LUT3=6 LUT4=1 LUT6=4 MUXF7=1)
+  Data Path Delay:        23.638ns  (logic 9.033ns (38.213%)  route 14.605ns (61.787%))
+  Logic Levels:           34  (CARRY4=20 FDRE=1 LUT2=1 LUT3=6 LUT4=1 LUT6=4 MUXF7=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X58Y24         FDRE                         0.000     0.000 r  ex_in_c_reg[1]/C
-    SLICE_X58Y24         FDRE (Prop_fdre_C_Q)         0.456     0.456 f  ex_in_c_reg[1]/Q
-                         net (fo=34, routed)          2.586     3.042    alu_inst/tmp0_inferred__3/i__carry_0[1]
-    SLICE_X52Y28         LUT6 (Prop_lut6_I4_O)        0.124     3.166 f  alu_inst/i___7_carry__0_i_9/O
-                         net (fo=4, routed)           0.185     3.351    alu_inst/i___7_carry__0_i_9_n_0
-    SLICE_X52Y28         LUT4 (Prop_lut4_I2_O)        0.124     3.475 r  alu_inst/i___7_carry_i_9/O
-                         net (fo=14, routed)          1.253     4.728    alu_inst/i___7_carry__1_i_1_n_0
-    SLICE_X52Y29         LUT2 (Prop_lut2_I1_O)        0.124     4.852 r  alu_inst/i___7_carry__0_i_4/O
-                         net (fo=1, routed)           0.606     5.458    alu_inst/i___7_carry__0_i_4_n_0
-    SLICE_X53Y29         CARRY4 (Prop_carry4_DI[0]_CO[3])
-                                                      0.526     5.984 r  alu_inst/tmp0_inferred__2/i___7_carry__0/CO[3]
-                         net (fo=1, routed)           0.000     5.984    alu_inst/tmp0_inferred__2/i___7_carry__0_n_0
-    SLICE_X53Y30         CARRY4 (Prop_carry4_CI_CO[0])
-                                                      0.271     6.255 r  alu_inst/tmp0_inferred__2/i___7_carry__1/CO[0]
-                         net (fo=12, routed)          1.344     7.599    alu_inst/data3[6]
-    SLICE_X54Y27         LUT3 (Prop_lut3_I0_O)        0.373     7.972 r  alu_inst/i___211_carry_i_48/O
-                         net (fo=1, routed)           0.000     7.972    alu_inst/i___211_carry_i_48_n_0
-    SLICE_X54Y27         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.533     8.505 r  alu_inst/i___211_carry_i_38/CO[3]
-                         net (fo=1, routed)           0.000     8.505    alu_inst/i___211_carry_i_38_n_0
-    SLICE_X54Y28         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     8.622 r  alu_inst/mem_in_b_reg[5]_i_6/CO[3]
-                         net (fo=1, routed)           0.000     8.622    alu_inst/mem_in_b_reg[5]_i_6_n_0
-    SLICE_X54Y29         CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157     8.779 r  alu_inst/mem_in_b_reg[5]_i_5/CO[1]
-                         net (fo=12, routed)          1.222    10.002    alu_inst/data3[5]
-    SLICE_X56Y26         LUT3 (Prop_lut3_I0_O)        0.332    10.334 r  alu_inst/i___211_carry_i_45/O
-                         net (fo=1, routed)           0.000    10.334    alu_inst/i___211_carry_i_45_n_0
-    SLICE_X56Y26         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.533    10.867 r  alu_inst/i___211_carry_i_30/CO[3]
-                         net (fo=1, routed)           0.000    10.867    alu_inst/i___211_carry_i_30_n_0
-    SLICE_X56Y27         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    10.984 r  alu_inst/i___211_carry_i_27/CO[3]
-                         net (fo=1, routed)           0.000    10.984    alu_inst/i___211_carry_i_27_n_0
-    SLICE_X56Y28         CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157    11.141 r  alu_inst/mem_in_b_reg[4]_i_5/CO[1]
-                         net (fo=12, routed)          1.413    12.553    alu_inst/data3[4]
-    SLICE_X55Y24         LUT3 (Prop_lut3_I0_O)        0.332    12.885 r  alu_inst/i___211_carry_i_33/O
-                         net (fo=1, routed)           0.000    12.885    alu_inst/i___211_carry_i_33_n_0
-    SLICE_X55Y24         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550    13.435 r  alu_inst/i___211_carry_i_16/CO[3]
-                         net (fo=1, routed)           0.009    13.444    alu_inst/i___211_carry_i_16_n_0
-    SLICE_X55Y25         CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157    13.601 r  alu_inst/i___211_carry_i_15/CO[1]
-                         net (fo=12, routed)          1.082    14.684    alu_inst/data3[3]
-    SLICE_X54Y23         LUT3 (Prop_lut3_I0_O)        0.329    15.013 r  alu_inst/i___211_carry_i_26/O
-                         net (fo=1, routed)           0.000    15.013    alu_inst/i___211_carry_i_26_n_0
-    SLICE_X54Y23         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.533    15.546 r  alu_inst/i___211_carry_i_11/CO[3]
-                         net (fo=1, routed)           0.000    15.546    alu_inst/i___211_carry_i_11_n_0
-    SLICE_X54Y24         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    15.663 r  alu_inst/i___211_carry_i_8/CO[3]
-                         net (fo=1, routed)           0.009    15.672    alu_inst/i___211_carry_i_8_n_0
-    SLICE_X54Y25         CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157    15.829 r  alu_inst/i___211_carry_i_7/CO[1]
-                         net (fo=12, routed)          1.572    17.401    alu_inst/data3[2]
-    SLICE_X53Y22         LUT3 (Prop_lut3_I0_O)        0.332    17.733 r  alu_inst/i___211_carry_i_12/O
-                         net (fo=1, routed)           0.000    17.733    alu_inst/i___211_carry_i_12_n_0
-    SLICE_X53Y22         CARRY4 (Prop_carry4_S[3]_CO[3])
-                                                      0.401    18.134 r  alu_inst/i___211_carry_i_2/CO[3]
-                         net (fo=1, routed)           0.000    18.134    alu_inst/i___211_carry_i_2_n_0
-    SLICE_X53Y23         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    18.248 r  alu_inst/i___211_carry__0_i_1/CO[3]
-                         net (fo=1, routed)           0.000    18.248    alu_inst/i___211_carry__0_i_1_n_0
-    SLICE_X53Y24         CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157    18.405 r  alu_inst/i___211_carry_i_1/CO[1]
-                         net (fo=12, routed)          1.035    19.440    alu_inst/data3[1]
-    SLICE_X52Y22         LUT3 (Prop_lut3_I0_O)        0.329    19.769 r  alu_inst/i___211_carry_i_4/O
-                         net (fo=1, routed)           0.000    19.769    alu_inst/i___211_carry_i_4_n_0
-    SLICE_X52Y22         CARRY4 (Prop_carry4_S[2]_CO[3])
-                                                      0.380    20.149 r  alu_inst/tmp0_inferred__2/i___211_carry/CO[3]
-                         net (fo=1, routed)           0.000    20.149    alu_inst/tmp0_inferred__2/i___211_carry_n_0
-    SLICE_X52Y23         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    20.266 r  alu_inst/tmp0_inferred__2/i___211_carry__0/CO[3]
-                         net (fo=1, routed)           0.000    20.266    alu_inst/tmp0_inferred__2/i___211_carry__0_n_0
-    SLICE_X52Y24         CARRY4 (Prop_carry4_CI_CO[0])
-                                                      0.254    20.520 r  alu_inst/tmp0_inferred__2/i___211_carry__1/CO[0]
-                         net (fo=1, routed)           0.663    21.182    alu_inst/data3[0]
-    SLICE_X50Y24         LUT6 (Prop_lut6_I5_O)        0.367    21.549 f  alu_inst/mem_in_b[0]_i_6/O
-                         net (fo=1, routed)           0.378    21.928    alu_inst/mem_in_b[0]_i_6_n_0
-    SLICE_X50Y24         LUT6 (Prop_lut6_I1_O)        0.124    22.052 r  alu_inst/mem_in_b[0]_i_4/O
-                         net (fo=1, routed)           0.820    22.872    alu_inst/mem_in_b[0]_i_4_n_0
-    SLICE_X50Y23         LUT6 (Prop_lut6_I5_O)        0.124    22.996 r  alu_inst/mem_in_b[0]_i_2/O
-                         net (fo=1, routed)           0.000    22.996    alu_inst/mem_in_b[0]_i_2_n_0
-    SLICE_X50Y23         MUXF7 (Prop_muxf7_I0_O)      0.209    23.205 r  alu_inst/mem_in_b_reg[0]_i_1/O
-                         net (fo=3, routed)           0.503    23.708    alu_inst_n_7
-    SLICE_X50Y22         FDRE                                         r  mem_in_b_reg[0]_rep__0/D
+    SLICE_X58Y14         FDRE                         0.000     0.000 r  ex_in_c_reg[0]/C
+    SLICE_X58Y14         FDRE (Prop_fdre_C_Q)         0.456     0.456 f  ex_in_c_reg[0]/Q
+                         net (fo=33, routed)          2.337     2.793    alu_inst/tmp0_inferred__3/i__carry_0[0]
+    SLICE_X58Y22         LUT6 (Prop_lut6_I2_O)        0.124     2.917 f  alu_inst/i___7_carry__0_i_9/O
+                         net (fo=4, routed)           0.680     3.597    alu_inst/i___7_carry__0_i_9_n_0
+    SLICE_X58Y22         LUT4 (Prop_lut4_I2_O)        0.124     3.721 r  alu_inst/i___7_carry_i_9/O
+                         net (fo=14, routed)          1.486     5.207    alu_inst/i___7_carry__1_i_1_n_0
+    SLICE_X54Y21         LUT2 (Prop_lut2_I1_O)        0.124     5.331 r  alu_inst/i___7_carry_i_2/O
+                         net (fo=1, routed)           0.588     5.920    alu_inst/i___7_carry_i_2_n_0
+    SLICE_X55Y21         CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.385     6.305 r  alu_inst/tmp0_inferred__2/i___7_carry/CO[3]
+                         net (fo=1, routed)           0.000     6.305    alu_inst/tmp0_inferred__2/i___7_carry_n_0
+    SLICE_X55Y22         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     6.419 r  alu_inst/tmp0_inferred__2/i___7_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     6.419    alu_inst/tmp0_inferred__2/i___7_carry__0_n_0
+    SLICE_X55Y23         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.271     6.690 r  alu_inst/tmp0_inferred__2/i___7_carry__1/CO[0]
+                         net (fo=12, routed)          1.349     8.039    alu_inst/data3[6]
+    SLICE_X52Y20         LUT3 (Prop_lut3_I0_O)        0.373     8.412 r  alu_inst/i___211_carry_i_48/O
+                         net (fo=1, routed)           0.000     8.412    alu_inst/i___211_carry_i_48_n_0
+    SLICE_X52Y20         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     8.945 r  alu_inst/i___211_carry_i_38/CO[3]
+                         net (fo=1, routed)           0.000     8.945    alu_inst/i___211_carry_i_38_n_0
+    SLICE_X52Y21         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.062 r  alu_inst/mem_in_b_reg[5]_i_6/CO[3]
+                         net (fo=1, routed)           0.000     9.062    alu_inst/mem_in_b_reg[5]_i_6_n_0
+    SLICE_X52Y22         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157     9.219 r  alu_inst/mem_in_b_reg[5]_i_5/CO[1]
+                         net (fo=12, routed)          1.358    10.577    alu_inst/data3[5]
+    SLICE_X50Y18         LUT3 (Prop_lut3_I0_O)        0.332    10.909 r  alu_inst/i___211_carry_i_43/O
+                         net (fo=1, routed)           0.000    10.909    alu_inst/i___211_carry_i_43_n_0
+    SLICE_X50Y18         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376    11.285 r  alu_inst/i___211_carry_i_30/CO[3]
+                         net (fo=1, routed)           0.000    11.285    alu_inst/i___211_carry_i_30_n_0
+    SLICE_X50Y19         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    11.402 r  alu_inst/i___211_carry_i_27/CO[3]
+                         net (fo=1, routed)           0.000    11.402    alu_inst/i___211_carry_i_27_n_0
+    SLICE_X50Y20         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    11.559 r  alu_inst/mem_in_b_reg[4]_i_5/CO[1]
+                         net (fo=12, routed)          1.214    12.773    alu_inst/data3[4]
+    SLICE_X51Y18         LUT3 (Prop_lut3_I0_O)        0.332    13.105 r  alu_inst/i___211_carry_i_36/O
+                         net (fo=1, routed)           0.000    13.105    alu_inst/i___211_carry_i_36_n_0
+    SLICE_X51Y18         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    13.503 r  alu_inst/i___211_carry_i_19/CO[3]
+                         net (fo=1, routed)           0.000    13.503    alu_inst/i___211_carry_i_19_n_0
+    SLICE_X51Y19         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.617 r  alu_inst/i___211_carry_i_16/CO[3]
+                         net (fo=1, routed)           0.000    13.617    alu_inst/i___211_carry_i_16_n_0
+    SLICE_X51Y20         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    13.774 r  alu_inst/i___211_carry_i_15/CO[1]
+                         net (fo=12, routed)          1.016    14.790    alu_inst/data3[3]
+    SLICE_X53Y18         LUT3 (Prop_lut3_I0_O)        0.329    15.119 r  alu_inst/i___211_carry_i_26/O
+                         net (fo=1, routed)           0.000    15.119    alu_inst/i___211_carry_i_26_n_0
+    SLICE_X53Y18         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    15.669 r  alu_inst/i___211_carry_i_11/CO[3]
+                         net (fo=1, routed)           0.000    15.669    alu_inst/i___211_carry_i_11_n_0
+    SLICE_X53Y19         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    15.783 r  alu_inst/i___211_carry_i_8/CO[3]
+                         net (fo=1, routed)           0.000    15.783    alu_inst/i___211_carry_i_8_n_0
+    SLICE_X53Y20         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    15.940 r  alu_inst/i___211_carry_i_7/CO[1]
+                         net (fo=12, routed)          1.344    17.284    alu_inst/data3[2]
+    SLICE_X54Y18         LUT3 (Prop_lut3_I0_O)        0.329    17.613 r  alu_inst/i___211_carry_i_14/O
+                         net (fo=1, routed)           0.000    17.613    alu_inst/i___211_carry_i_14_n_0
+    SLICE_X54Y18         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    18.146 r  alu_inst/i___211_carry_i_2/CO[3]
+                         net (fo=1, routed)           0.000    18.146    alu_inst/i___211_carry_i_2_n_0
+    SLICE_X54Y19         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    18.263 r  alu_inst/i___211_carry__0_i_1/CO[3]
+                         net (fo=1, routed)           0.000    18.263    alu_inst/i___211_carry__0_i_1_n_0
+    SLICE_X54Y20         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    18.420 r  alu_inst/i___211_carry_i_1/CO[1]
+                         net (fo=12, routed)          1.030    19.450    alu_inst/data3[1]
+    SLICE_X55Y19         LUT3 (Prop_lut3_I0_O)        0.332    19.782 r  alu_inst/i___211_carry__0_i_4/O
+                         net (fo=1, routed)           0.000    19.782    alu_inst/i___211_carry__0_i_4_n_0
+    SLICE_X55Y19         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    20.332 r  alu_inst/tmp0_inferred__2/i___211_carry__0/CO[3]
+                         net (fo=1, routed)           0.000    20.332    alu_inst/tmp0_inferred__2/i___211_carry__0_n_0
+    SLICE_X55Y20         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.271    20.603 r  alu_inst/tmp0_inferred__2/i___211_carry__1/CO[0]
+                         net (fo=1, routed)           0.569    21.172    alu_inst/data3[0]
+    SLICE_X60Y19         LUT6 (Prop_lut6_I5_O)        0.373    21.545 f  alu_inst/mem_in_b[0]_i_6/O
+                         net (fo=1, routed)           0.664    22.209    alu_inst/mem_in_b[0]_i_6_n_0
+    SLICE_X60Y17         LUT6 (Prop_lut6_I1_O)        0.124    22.333 r  alu_inst/mem_in_b[0]_i_4/O
+                         net (fo=1, routed)           0.398    22.731    alu_inst/mem_in_b[0]_i_4_n_0
+    SLICE_X59Y17         LUT6 (Prop_lut6_I5_O)        0.124    22.855 r  alu_inst/mem_in_b[0]_i_2/O
+                         net (fo=1, routed)           0.000    22.855    alu_inst/mem_in_b[0]_i_2_n_0
+    SLICE_X59Y17         MUXF7 (Prop_muxf7_I0_O)      0.212    23.067 r  alu_inst/mem_in_b_reg[0]_i_1/O
+                         net (fo=3, routed)           0.572    23.638    alu_inst_n_7
+    SLICE_X59Y17         FDRE                                         r  mem_in_b_reg[0]_rep__0/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 ex_in_c_reg[1]/C
+  Source:                 ex_in_c_reg[0]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            mem_in_b_reg[0]_rep/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        23.449ns  (logic 9.033ns (38.522%)  route 14.416ns (61.478%))
+  Logic Levels:           34  (CARRY4=20 FDRE=1 LUT2=1 LUT3=6 LUT4=1 LUT6=4 MUXF7=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X58Y14         FDRE                         0.000     0.000 r  ex_in_c_reg[0]/C
+    SLICE_X58Y14         FDRE (Prop_fdre_C_Q)         0.456     0.456 f  ex_in_c_reg[0]/Q
+                         net (fo=33, routed)          2.337     2.793    alu_inst/tmp0_inferred__3/i__carry_0[0]
+    SLICE_X58Y22         LUT6 (Prop_lut6_I2_O)        0.124     2.917 f  alu_inst/i___7_carry__0_i_9/O
+                         net (fo=4, routed)           0.680     3.597    alu_inst/i___7_carry__0_i_9_n_0
+    SLICE_X58Y22         LUT4 (Prop_lut4_I2_O)        0.124     3.721 r  alu_inst/i___7_carry_i_9/O
+                         net (fo=14, routed)          1.486     5.207    alu_inst/i___7_carry__1_i_1_n_0
+    SLICE_X54Y21         LUT2 (Prop_lut2_I1_O)        0.124     5.331 r  alu_inst/i___7_carry_i_2/O
+                         net (fo=1, routed)           0.588     5.920    alu_inst/i___7_carry_i_2_n_0
+    SLICE_X55Y21         CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.385     6.305 r  alu_inst/tmp0_inferred__2/i___7_carry/CO[3]
+                         net (fo=1, routed)           0.000     6.305    alu_inst/tmp0_inferred__2/i___7_carry_n_0
+    SLICE_X55Y22         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     6.419 r  alu_inst/tmp0_inferred__2/i___7_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     6.419    alu_inst/tmp0_inferred__2/i___7_carry__0_n_0
+    SLICE_X55Y23         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.271     6.690 r  alu_inst/tmp0_inferred__2/i___7_carry__1/CO[0]
+                         net (fo=12, routed)          1.349     8.039    alu_inst/data3[6]
+    SLICE_X52Y20         LUT3 (Prop_lut3_I0_O)        0.373     8.412 r  alu_inst/i___211_carry_i_48/O
+                         net (fo=1, routed)           0.000     8.412    alu_inst/i___211_carry_i_48_n_0
+    SLICE_X52Y20         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     8.945 r  alu_inst/i___211_carry_i_38/CO[3]
+                         net (fo=1, routed)           0.000     8.945    alu_inst/i___211_carry_i_38_n_0
+    SLICE_X52Y21         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.062 r  alu_inst/mem_in_b_reg[5]_i_6/CO[3]
+                         net (fo=1, routed)           0.000     9.062    alu_inst/mem_in_b_reg[5]_i_6_n_0
+    SLICE_X52Y22         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157     9.219 r  alu_inst/mem_in_b_reg[5]_i_5/CO[1]
+                         net (fo=12, routed)          1.358    10.577    alu_inst/data3[5]
+    SLICE_X50Y18         LUT3 (Prop_lut3_I0_O)        0.332    10.909 r  alu_inst/i___211_carry_i_43/O
+                         net (fo=1, routed)           0.000    10.909    alu_inst/i___211_carry_i_43_n_0
+    SLICE_X50Y18         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376    11.285 r  alu_inst/i___211_carry_i_30/CO[3]
+                         net (fo=1, routed)           0.000    11.285    alu_inst/i___211_carry_i_30_n_0
+    SLICE_X50Y19         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    11.402 r  alu_inst/i___211_carry_i_27/CO[3]
+                         net (fo=1, routed)           0.000    11.402    alu_inst/i___211_carry_i_27_n_0
+    SLICE_X50Y20         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    11.559 r  alu_inst/mem_in_b_reg[4]_i_5/CO[1]
+                         net (fo=12, routed)          1.214    12.773    alu_inst/data3[4]
+    SLICE_X51Y18         LUT3 (Prop_lut3_I0_O)        0.332    13.105 r  alu_inst/i___211_carry_i_36/O
+                         net (fo=1, routed)           0.000    13.105    alu_inst/i___211_carry_i_36_n_0
+    SLICE_X51Y18         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    13.503 r  alu_inst/i___211_carry_i_19/CO[3]
+                         net (fo=1, routed)           0.000    13.503    alu_inst/i___211_carry_i_19_n_0
+    SLICE_X51Y19         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.617 r  alu_inst/i___211_carry_i_16/CO[3]
+                         net (fo=1, routed)           0.000    13.617    alu_inst/i___211_carry_i_16_n_0
+    SLICE_X51Y20         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    13.774 r  alu_inst/i___211_carry_i_15/CO[1]
+                         net (fo=12, routed)          1.016    14.790    alu_inst/data3[3]
+    SLICE_X53Y18         LUT3 (Prop_lut3_I0_O)        0.329    15.119 r  alu_inst/i___211_carry_i_26/O
+                         net (fo=1, routed)           0.000    15.119    alu_inst/i___211_carry_i_26_n_0
+    SLICE_X53Y18         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    15.669 r  alu_inst/i___211_carry_i_11/CO[3]
+                         net (fo=1, routed)           0.000    15.669    alu_inst/i___211_carry_i_11_n_0
+    SLICE_X53Y19         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    15.783 r  alu_inst/i___211_carry_i_8/CO[3]
+                         net (fo=1, routed)           0.000    15.783    alu_inst/i___211_carry_i_8_n_0
+    SLICE_X53Y20         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    15.940 r  alu_inst/i___211_carry_i_7/CO[1]
+                         net (fo=12, routed)          1.344    17.284    alu_inst/data3[2]
+    SLICE_X54Y18         LUT3 (Prop_lut3_I0_O)        0.329    17.613 r  alu_inst/i___211_carry_i_14/O
+                         net (fo=1, routed)           0.000    17.613    alu_inst/i___211_carry_i_14_n_0
+    SLICE_X54Y18         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    18.146 r  alu_inst/i___211_carry_i_2/CO[3]
+                         net (fo=1, routed)           0.000    18.146    alu_inst/i___211_carry_i_2_n_0
+    SLICE_X54Y19         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    18.263 r  alu_inst/i___211_carry__0_i_1/CO[3]
+                         net (fo=1, routed)           0.000    18.263    alu_inst/i___211_carry__0_i_1_n_0
+    SLICE_X54Y20         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    18.420 r  alu_inst/i___211_carry_i_1/CO[1]
+                         net (fo=12, routed)          1.030    19.450    alu_inst/data3[1]
+    SLICE_X55Y19         LUT3 (Prop_lut3_I0_O)        0.332    19.782 r  alu_inst/i___211_carry__0_i_4/O
+                         net (fo=1, routed)           0.000    19.782    alu_inst/i___211_carry__0_i_4_n_0
+    SLICE_X55Y19         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    20.332 r  alu_inst/tmp0_inferred__2/i___211_carry__0/CO[3]
+                         net (fo=1, routed)           0.000    20.332    alu_inst/tmp0_inferred__2/i___211_carry__0_n_0
+    SLICE_X55Y20         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.271    20.603 r  alu_inst/tmp0_inferred__2/i___211_carry__1/CO[0]
+                         net (fo=1, routed)           0.569    21.172    alu_inst/data3[0]
+    SLICE_X60Y19         LUT6 (Prop_lut6_I5_O)        0.373    21.545 f  alu_inst/mem_in_b[0]_i_6/O
+                         net (fo=1, routed)           0.664    22.209    alu_inst/mem_in_b[0]_i_6_n_0
+    SLICE_X60Y17         LUT6 (Prop_lut6_I1_O)        0.124    22.333 r  alu_inst/mem_in_b[0]_i_4/O
+                         net (fo=1, routed)           0.398    22.731    alu_inst/mem_in_b[0]_i_4_n_0
+    SLICE_X59Y17         LUT6 (Prop_lut6_I5_O)        0.124    22.855 r  alu_inst/mem_in_b[0]_i_2/O
+                         net (fo=1, routed)           0.000    22.855    alu_inst/mem_in_b[0]_i_2_n_0
+    SLICE_X59Y17         MUXF7 (Prop_muxf7_I0_O)      0.212    23.067 r  alu_inst/mem_in_b_reg[0]_i_1/O
+                         net (fo=3, routed)           0.382    23.449    alu_inst_n_7
+    SLICE_X59Y17         FDRE                                         r  mem_in_b_reg[0]_rep/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ex_in_c_reg[0]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            mem_in_b_reg[0]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        23.067ns  (logic 9.033ns (39.161%)  route 14.034ns (60.839%))
+  Logic Levels:           34  (CARRY4=20 FDRE=1 LUT2=1 LUT3=6 LUT4=1 LUT6=4 MUXF7=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X58Y14         FDRE                         0.000     0.000 r  ex_in_c_reg[0]/C
+    SLICE_X58Y14         FDRE (Prop_fdre_C_Q)         0.456     0.456 f  ex_in_c_reg[0]/Q
+                         net (fo=33, routed)          2.337     2.793    alu_inst/tmp0_inferred__3/i__carry_0[0]
+    SLICE_X58Y22         LUT6 (Prop_lut6_I2_O)        0.124     2.917 f  alu_inst/i___7_carry__0_i_9/O
+                         net (fo=4, routed)           0.680     3.597    alu_inst/i___7_carry__0_i_9_n_0
+    SLICE_X58Y22         LUT4 (Prop_lut4_I2_O)        0.124     3.721 r  alu_inst/i___7_carry_i_9/O
+                         net (fo=14, routed)          1.486     5.207    alu_inst/i___7_carry__1_i_1_n_0
+    SLICE_X54Y21         LUT2 (Prop_lut2_I1_O)        0.124     5.331 r  alu_inst/i___7_carry_i_2/O
+                         net (fo=1, routed)           0.588     5.920    alu_inst/i___7_carry_i_2_n_0
+    SLICE_X55Y21         CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.385     6.305 r  alu_inst/tmp0_inferred__2/i___7_carry/CO[3]
+                         net (fo=1, routed)           0.000     6.305    alu_inst/tmp0_inferred__2/i___7_carry_n_0
+    SLICE_X55Y22         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     6.419 r  alu_inst/tmp0_inferred__2/i___7_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     6.419    alu_inst/tmp0_inferred__2/i___7_carry__0_n_0
+    SLICE_X55Y23         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.271     6.690 r  alu_inst/tmp0_inferred__2/i___7_carry__1/CO[0]
+                         net (fo=12, routed)          1.349     8.039    alu_inst/data3[6]
+    SLICE_X52Y20         LUT3 (Prop_lut3_I0_O)        0.373     8.412 r  alu_inst/i___211_carry_i_48/O
+                         net (fo=1, routed)           0.000     8.412    alu_inst/i___211_carry_i_48_n_0
+    SLICE_X52Y20         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     8.945 r  alu_inst/i___211_carry_i_38/CO[3]
+                         net (fo=1, routed)           0.000     8.945    alu_inst/i___211_carry_i_38_n_0
+    SLICE_X52Y21         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.062 r  alu_inst/mem_in_b_reg[5]_i_6/CO[3]
+                         net (fo=1, routed)           0.000     9.062    alu_inst/mem_in_b_reg[5]_i_6_n_0
+    SLICE_X52Y22         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157     9.219 r  alu_inst/mem_in_b_reg[5]_i_5/CO[1]
+                         net (fo=12, routed)          1.358    10.577    alu_inst/data3[5]
+    SLICE_X50Y18         LUT3 (Prop_lut3_I0_O)        0.332    10.909 r  alu_inst/i___211_carry_i_43/O
+                         net (fo=1, routed)           0.000    10.909    alu_inst/i___211_carry_i_43_n_0
+    SLICE_X50Y18         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376    11.285 r  alu_inst/i___211_carry_i_30/CO[3]
+                         net (fo=1, routed)           0.000    11.285    alu_inst/i___211_carry_i_30_n_0
+    SLICE_X50Y19         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    11.402 r  alu_inst/i___211_carry_i_27/CO[3]
+                         net (fo=1, routed)           0.000    11.402    alu_inst/i___211_carry_i_27_n_0
+    SLICE_X50Y20         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    11.559 r  alu_inst/mem_in_b_reg[4]_i_5/CO[1]
+                         net (fo=12, routed)          1.214    12.773    alu_inst/data3[4]
+    SLICE_X51Y18         LUT3 (Prop_lut3_I0_O)        0.332    13.105 r  alu_inst/i___211_carry_i_36/O
+                         net (fo=1, routed)           0.000    13.105    alu_inst/i___211_carry_i_36_n_0
+    SLICE_X51Y18         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    13.503 r  alu_inst/i___211_carry_i_19/CO[3]
+                         net (fo=1, routed)           0.000    13.503    alu_inst/i___211_carry_i_19_n_0
+    SLICE_X51Y19         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.617 r  alu_inst/i___211_carry_i_16/CO[3]
+                         net (fo=1, routed)           0.000    13.617    alu_inst/i___211_carry_i_16_n_0
+    SLICE_X51Y20         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    13.774 r  alu_inst/i___211_carry_i_15/CO[1]
+                         net (fo=12, routed)          1.016    14.790    alu_inst/data3[3]
+    SLICE_X53Y18         LUT3 (Prop_lut3_I0_O)        0.329    15.119 r  alu_inst/i___211_carry_i_26/O
+                         net (fo=1, routed)           0.000    15.119    alu_inst/i___211_carry_i_26_n_0
+    SLICE_X53Y18         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    15.669 r  alu_inst/i___211_carry_i_11/CO[3]
+                         net (fo=1, routed)           0.000    15.669    alu_inst/i___211_carry_i_11_n_0
+    SLICE_X53Y19         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    15.783 r  alu_inst/i___211_carry_i_8/CO[3]
+                         net (fo=1, routed)           0.000    15.783    alu_inst/i___211_carry_i_8_n_0
+    SLICE_X53Y20         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    15.940 r  alu_inst/i___211_carry_i_7/CO[1]
+                         net (fo=12, routed)          1.344    17.284    alu_inst/data3[2]
+    SLICE_X54Y18         LUT3 (Prop_lut3_I0_O)        0.329    17.613 r  alu_inst/i___211_carry_i_14/O
+                         net (fo=1, routed)           0.000    17.613    alu_inst/i___211_carry_i_14_n_0
+    SLICE_X54Y18         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    18.146 r  alu_inst/i___211_carry_i_2/CO[3]
+                         net (fo=1, routed)           0.000    18.146    alu_inst/i___211_carry_i_2_n_0
+    SLICE_X54Y19         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    18.263 r  alu_inst/i___211_carry__0_i_1/CO[3]
+                         net (fo=1, routed)           0.000    18.263    alu_inst/i___211_carry__0_i_1_n_0
+    SLICE_X54Y20         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    18.420 r  alu_inst/i___211_carry_i_1/CO[1]
+                         net (fo=12, routed)          1.030    19.450    alu_inst/data3[1]
+    SLICE_X55Y19         LUT3 (Prop_lut3_I0_O)        0.332    19.782 r  alu_inst/i___211_carry__0_i_4/O
+                         net (fo=1, routed)           0.000    19.782    alu_inst/i___211_carry__0_i_4_n_0
+    SLICE_X55Y19         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    20.332 r  alu_inst/tmp0_inferred__2/i___211_carry__0/CO[3]
+                         net (fo=1, routed)           0.000    20.332    alu_inst/tmp0_inferred__2/i___211_carry__0_n_0
+    SLICE_X55Y20         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.271    20.603 r  alu_inst/tmp0_inferred__2/i___211_carry__1/CO[0]
+                         net (fo=1, routed)           0.569    21.172    alu_inst/data3[0]
+    SLICE_X60Y19         LUT6 (Prop_lut6_I5_O)        0.373    21.545 f  alu_inst/mem_in_b[0]_i_6/O
+                         net (fo=1, routed)           0.664    22.209    alu_inst/mem_in_b[0]_i_6_n_0
+    SLICE_X60Y17         LUT6 (Prop_lut6_I1_O)        0.124    22.333 r  alu_inst/mem_in_b[0]_i_4/O
+                         net (fo=1, routed)           0.398    22.731    alu_inst/mem_in_b[0]_i_4_n_0
+    SLICE_X59Y17         LUT6 (Prop_lut6_I5_O)        0.124    22.855 r  alu_inst/mem_in_b[0]_i_2/O
+                         net (fo=1, routed)           0.000    22.855    alu_inst/mem_in_b[0]_i_2_n_0
+    SLICE_X59Y17         MUXF7 (Prop_muxf7_I0_O)      0.212    23.067 r  alu_inst/mem_in_b_reg[0]_i_1/O
+                         net (fo=3, routed)           0.000    23.067    alu_inst_n_7
+    SLICE_X59Y17         FDRE                                         r  mem_in_b_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ex_in_c_reg[0]/C
                             (rising edge-triggered cell FDRE)
   Destination:            mem_in_b_reg[1]_rep/D
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        21.247ns  (logic 7.788ns (36.655%)  route 13.459ns (63.345%))
-  Logic Levels:           28  (CARRY4=16 FDRE=1 LUT2=1 LUT3=5 LUT4=1 LUT6=3 MUXF7=1)
+  Data Path Delay:        22.167ns  (logic 7.715ns (34.804%)  route 14.452ns (65.196%))
+  Logic Levels:           30  (CARRY4=18 FDRE=1 LUT2=1 LUT3=5 LUT4=1 LUT6=3 MUXF7=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X58Y24         FDRE                         0.000     0.000 r  ex_in_c_reg[1]/C
-    SLICE_X58Y24         FDRE (Prop_fdre_C_Q)         0.456     0.456 f  ex_in_c_reg[1]/Q
-                         net (fo=34, routed)          2.586     3.042    alu_inst/tmp0_inferred__3/i__carry_0[1]
-    SLICE_X52Y28         LUT6 (Prop_lut6_I4_O)        0.124     3.166 f  alu_inst/i___7_carry__0_i_9/O
-                         net (fo=4, routed)           0.185     3.351    alu_inst/i___7_carry__0_i_9_n_0
-    SLICE_X52Y28         LUT4 (Prop_lut4_I2_O)        0.124     3.475 r  alu_inst/i___7_carry_i_9/O
-                         net (fo=14, routed)          1.253     4.728    alu_inst/i___7_carry__1_i_1_n_0
-    SLICE_X52Y29         LUT2 (Prop_lut2_I1_O)        0.124     4.852 r  alu_inst/i___7_carry__0_i_4/O
-                         net (fo=1, routed)           0.606     5.458    alu_inst/i___7_carry__0_i_4_n_0
-    SLICE_X53Y29         CARRY4 (Prop_carry4_DI[0]_CO[3])
-                                                      0.526     5.984 r  alu_inst/tmp0_inferred__2/i___7_carry__0/CO[3]
-                         net (fo=1, routed)           0.000     5.984    alu_inst/tmp0_inferred__2/i___7_carry__0_n_0
-    SLICE_X53Y30         CARRY4 (Prop_carry4_CI_CO[0])
-                                                      0.271     6.255 r  alu_inst/tmp0_inferred__2/i___7_carry__1/CO[0]
-                         net (fo=12, routed)          1.344     7.599    alu_inst/data3[6]
-    SLICE_X54Y27         LUT3 (Prop_lut3_I0_O)        0.373     7.972 r  alu_inst/i___211_carry_i_48/O
-                         net (fo=1, routed)           0.000     7.972    alu_inst/i___211_carry_i_48_n_0
-    SLICE_X54Y27         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.533     8.505 r  alu_inst/i___211_carry_i_38/CO[3]
-                         net (fo=1, routed)           0.000     8.505    alu_inst/i___211_carry_i_38_n_0
-    SLICE_X54Y28         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     8.622 r  alu_inst/mem_in_b_reg[5]_i_6/CO[3]
-                         net (fo=1, routed)           0.000     8.622    alu_inst/mem_in_b_reg[5]_i_6_n_0
-    SLICE_X54Y29         CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157     8.779 r  alu_inst/mem_in_b_reg[5]_i_5/CO[1]
-                         net (fo=12, routed)          1.222    10.002    alu_inst/data3[5]
-    SLICE_X56Y26         LUT3 (Prop_lut3_I0_O)        0.332    10.334 r  alu_inst/i___211_carry_i_45/O
-                         net (fo=1, routed)           0.000    10.334    alu_inst/i___211_carry_i_45_n_0
-    SLICE_X56Y26         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.533    10.867 r  alu_inst/i___211_carry_i_30/CO[3]
-                         net (fo=1, routed)           0.000    10.867    alu_inst/i___211_carry_i_30_n_0
-    SLICE_X56Y27         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    10.984 r  alu_inst/i___211_carry_i_27/CO[3]
-                         net (fo=1, routed)           0.000    10.984    alu_inst/i___211_carry_i_27_n_0
-    SLICE_X56Y28         CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157    11.141 r  alu_inst/mem_in_b_reg[4]_i_5/CO[1]
-                         net (fo=12, routed)          1.413    12.553    alu_inst/data3[4]
-    SLICE_X55Y24         LUT3 (Prop_lut3_I0_O)        0.332    12.885 r  alu_inst/i___211_carry_i_33/O
-                         net (fo=1, routed)           0.000    12.885    alu_inst/i___211_carry_i_33_n_0
-    SLICE_X55Y24         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550    13.435 r  alu_inst/i___211_carry_i_16/CO[3]
-                         net (fo=1, routed)           0.009    13.444    alu_inst/i___211_carry_i_16_n_0
-    SLICE_X55Y25         CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157    13.601 r  alu_inst/i___211_carry_i_15/CO[1]
-                         net (fo=12, routed)          1.082    14.684    alu_inst/data3[3]
-    SLICE_X54Y23         LUT3 (Prop_lut3_I0_O)        0.329    15.013 r  alu_inst/i___211_carry_i_26/O
-                         net (fo=1, routed)           0.000    15.013    alu_inst/i___211_carry_i_26_n_0
-    SLICE_X54Y23         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.533    15.546 r  alu_inst/i___211_carry_i_11/CO[3]
-                         net (fo=1, routed)           0.000    15.546    alu_inst/i___211_carry_i_11_n_0
-    SLICE_X54Y24         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    15.663 r  alu_inst/i___211_carry_i_8/CO[3]
-                         net (fo=1, routed)           0.009    15.672    alu_inst/i___211_carry_i_8_n_0
-    SLICE_X54Y25         CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157    15.829 r  alu_inst/i___211_carry_i_7/CO[1]
-                         net (fo=12, routed)          1.572    17.401    alu_inst/data3[2]
-    SLICE_X53Y22         LUT3 (Prop_lut3_I0_O)        0.332    17.733 r  alu_inst/i___211_carry_i_12/O
-                         net (fo=1, routed)           0.000    17.733    alu_inst/i___211_carry_i_12_n_0
-    SLICE_X53Y22         CARRY4 (Prop_carry4_S[3]_CO[3])
-                                                      0.401    18.134 r  alu_inst/i___211_carry_i_2/CO[3]
-                         net (fo=1, routed)           0.000    18.134    alu_inst/i___211_carry_i_2_n_0
-    SLICE_X53Y23         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    18.248 r  alu_inst/i___211_carry__0_i_1/CO[3]
-                         net (fo=1, routed)           0.000    18.248    alu_inst/i___211_carry__0_i_1_n_0
-    SLICE_X53Y24         CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157    18.405 r  alu_inst/i___211_carry_i_1/CO[1]
-                         net (fo=12, routed)          0.761    19.166    alu_inst/data3[1]
-    SLICE_X50Y25         LUT6 (Prop_lut6_I1_O)        0.329    19.495 f  alu_inst/mem_in_b[1]_i_4/O
-                         net (fo=1, routed)           0.565    20.061    alu_inst/mem_in_b[1]_i_4_n_0
-    SLICE_X53Y25         LUT6 (Prop_lut6_I4_O)        0.124    20.185 r  alu_inst/mem_in_b[1]_i_2/O
-                         net (fo=1, routed)           0.000    20.185    alu_inst/mem_in_b[1]_i_2_n_0
-    SLICE_X53Y25         MUXF7 (Prop_muxf7_I0_O)      0.212    20.397 r  alu_inst/mem_in_b_reg[1]_i_1/O
-                         net (fo=3, routed)           0.850    21.247    alu_inst_n_6
-    SLICE_X50Y22         FDRE                                         r  mem_in_b_reg[1]_rep/D
+    SLICE_X58Y14         FDRE                         0.000     0.000 r  ex_in_c_reg[0]/C
+    SLICE_X58Y14         FDRE (Prop_fdre_C_Q)         0.456     0.456 f  ex_in_c_reg[0]/Q
+                         net (fo=33, routed)          2.337     2.793    alu_inst/tmp0_inferred__3/i__carry_0[0]
+    SLICE_X58Y22         LUT6 (Prop_lut6_I2_O)        0.124     2.917 f  alu_inst/i___7_carry__0_i_9/O
+                         net (fo=4, routed)           0.680     3.597    alu_inst/i___7_carry__0_i_9_n_0
+    SLICE_X58Y22         LUT4 (Prop_lut4_I2_O)        0.124     3.721 r  alu_inst/i___7_carry_i_9/O
+                         net (fo=14, routed)          1.486     5.207    alu_inst/i___7_carry__1_i_1_n_0
+    SLICE_X54Y21         LUT2 (Prop_lut2_I1_O)        0.124     5.331 r  alu_inst/i___7_carry_i_2/O
+                         net (fo=1, routed)           0.588     5.920    alu_inst/i___7_carry_i_2_n_0
+    SLICE_X55Y21         CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.385     6.305 r  alu_inst/tmp0_inferred__2/i___7_carry/CO[3]
+                         net (fo=1, routed)           0.000     6.305    alu_inst/tmp0_inferred__2/i___7_carry_n_0
+    SLICE_X55Y22         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     6.419 r  alu_inst/tmp0_inferred__2/i___7_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     6.419    alu_inst/tmp0_inferred__2/i___7_carry__0_n_0
+    SLICE_X55Y23         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.271     6.690 r  alu_inst/tmp0_inferred__2/i___7_carry__1/CO[0]
+                         net (fo=12, routed)          1.349     8.039    alu_inst/data3[6]
+    SLICE_X52Y20         LUT3 (Prop_lut3_I0_O)        0.373     8.412 r  alu_inst/i___211_carry_i_48/O
+                         net (fo=1, routed)           0.000     8.412    alu_inst/i___211_carry_i_48_n_0
+    SLICE_X52Y20         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     8.945 r  alu_inst/i___211_carry_i_38/CO[3]
+                         net (fo=1, routed)           0.000     8.945    alu_inst/i___211_carry_i_38_n_0
+    SLICE_X52Y21         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.062 r  alu_inst/mem_in_b_reg[5]_i_6/CO[3]
+                         net (fo=1, routed)           0.000     9.062    alu_inst/mem_in_b_reg[5]_i_6_n_0
+    SLICE_X52Y22         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157     9.219 r  alu_inst/mem_in_b_reg[5]_i_5/CO[1]
+                         net (fo=12, routed)          1.358    10.577    alu_inst/data3[5]
+    SLICE_X50Y18         LUT3 (Prop_lut3_I0_O)        0.332    10.909 r  alu_inst/i___211_carry_i_43/O
+                         net (fo=1, routed)           0.000    10.909    alu_inst/i___211_carry_i_43_n_0
+    SLICE_X50Y18         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376    11.285 r  alu_inst/i___211_carry_i_30/CO[3]
+                         net (fo=1, routed)           0.000    11.285    alu_inst/i___211_carry_i_30_n_0
+    SLICE_X50Y19         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    11.402 r  alu_inst/i___211_carry_i_27/CO[3]
+                         net (fo=1, routed)           0.000    11.402    alu_inst/i___211_carry_i_27_n_0
+    SLICE_X50Y20         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    11.559 r  alu_inst/mem_in_b_reg[4]_i_5/CO[1]
+                         net (fo=12, routed)          1.214    12.773    alu_inst/data3[4]
+    SLICE_X51Y18         LUT3 (Prop_lut3_I0_O)        0.332    13.105 r  alu_inst/i___211_carry_i_36/O
+                         net (fo=1, routed)           0.000    13.105    alu_inst/i___211_carry_i_36_n_0
+    SLICE_X51Y18         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    13.503 r  alu_inst/i___211_carry_i_19/CO[3]
+                         net (fo=1, routed)           0.000    13.503    alu_inst/i___211_carry_i_19_n_0
+    SLICE_X51Y19         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.617 r  alu_inst/i___211_carry_i_16/CO[3]
+                         net (fo=1, routed)           0.000    13.617    alu_inst/i___211_carry_i_16_n_0
+    SLICE_X51Y20         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    13.774 r  alu_inst/i___211_carry_i_15/CO[1]
+                         net (fo=12, routed)          1.016    14.790    alu_inst/data3[3]
+    SLICE_X53Y18         LUT3 (Prop_lut3_I0_O)        0.329    15.119 r  alu_inst/i___211_carry_i_26/O
+                         net (fo=1, routed)           0.000    15.119    alu_inst/i___211_carry_i_26_n_0
+    SLICE_X53Y18         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    15.669 r  alu_inst/i___211_carry_i_11/CO[3]
+                         net (fo=1, routed)           0.000    15.669    alu_inst/i___211_carry_i_11_n_0
+    SLICE_X53Y19         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    15.783 r  alu_inst/i___211_carry_i_8/CO[3]
+                         net (fo=1, routed)           0.000    15.783    alu_inst/i___211_carry_i_8_n_0
+    SLICE_X53Y20         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    15.940 r  alu_inst/i___211_carry_i_7/CO[1]
+                         net (fo=12, routed)          1.344    17.284    alu_inst/data3[2]
+    SLICE_X54Y18         LUT3 (Prop_lut3_I0_O)        0.329    17.613 r  alu_inst/i___211_carry_i_14/O
+                         net (fo=1, routed)           0.000    17.613    alu_inst/i___211_carry_i_14_n_0
+    SLICE_X54Y18         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    18.146 r  alu_inst/i___211_carry_i_2/CO[3]
+                         net (fo=1, routed)           0.000    18.146    alu_inst/i___211_carry_i_2_n_0
+    SLICE_X54Y19         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    18.263 r  alu_inst/i___211_carry__0_i_1/CO[3]
+                         net (fo=1, routed)           0.000    18.263    alu_inst/i___211_carry__0_i_1_n_0
+    SLICE_X54Y20         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    18.420 r  alu_inst/i___211_carry_i_1/CO[1]
+                         net (fo=12, routed)          1.181    19.601    alu_inst/data3[1]
+    SLICE_X60Y19         LUT6 (Prop_lut6_I1_O)        0.332    19.933 f  alu_inst/mem_in_b[1]_i_4/O
+                         net (fo=1, routed)           1.180    21.113    alu_inst/mem_in_b[1]_i_4_n_0
+    SLICE_X57Y17         LUT6 (Prop_lut6_I4_O)        0.124    21.237 r  alu_inst/mem_in_b[1]_i_2/O
+                         net (fo=1, routed)           0.000    21.237    alu_inst/mem_in_b[1]_i_2_n_0
+    SLICE_X57Y17         MUXF7 (Prop_muxf7_I0_O)      0.212    21.449 r  alu_inst/mem_in_b_reg[1]_i_1/O
+                         net (fo=3, routed)           0.718    22.167    alu_inst_n_6
+    SLICE_X52Y17         FDRE                                         r  mem_in_b_reg[1]_rep/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 ex_in_c_reg[1]/C
+  Source:                 ex_in_c_reg[0]/C
                             (rising edge-triggered cell FDRE)
   Destination:            mem_in_b_reg[1]_rep__0/D
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        21.070ns  (logic 7.788ns (36.963%)  route 13.282ns (63.037%))
-  Logic Levels:           28  (CARRY4=16 FDRE=1 LUT2=1 LUT3=5 LUT4=1 LUT6=3 MUXF7=1)
+  Data Path Delay:        21.978ns  (logic 7.715ns (35.103%)  route 14.263ns (64.897%))
+  Logic Levels:           30  (CARRY4=18 FDRE=1 LUT2=1 LUT3=5 LUT4=1 LUT6=3 MUXF7=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X58Y24         FDRE                         0.000     0.000 r  ex_in_c_reg[1]/C
-    SLICE_X58Y24         FDRE (Prop_fdre_C_Q)         0.456     0.456 f  ex_in_c_reg[1]/Q
-                         net (fo=34, routed)          2.586     3.042    alu_inst/tmp0_inferred__3/i__carry_0[1]
-    SLICE_X52Y28         LUT6 (Prop_lut6_I4_O)        0.124     3.166 f  alu_inst/i___7_carry__0_i_9/O
-                         net (fo=4, routed)           0.185     3.351    alu_inst/i___7_carry__0_i_9_n_0
-    SLICE_X52Y28         LUT4 (Prop_lut4_I2_O)        0.124     3.475 r  alu_inst/i___7_carry_i_9/O
-                         net (fo=14, routed)          1.253     4.728    alu_inst/i___7_carry__1_i_1_n_0
-    SLICE_X52Y29         LUT2 (Prop_lut2_I1_O)        0.124     4.852 r  alu_inst/i___7_carry__0_i_4/O
-                         net (fo=1, routed)           0.606     5.458    alu_inst/i___7_carry__0_i_4_n_0
-    SLICE_X53Y29         CARRY4 (Prop_carry4_DI[0]_CO[3])
-                                                      0.526     5.984 r  alu_inst/tmp0_inferred__2/i___7_carry__0/CO[3]
-                         net (fo=1, routed)           0.000     5.984    alu_inst/tmp0_inferred__2/i___7_carry__0_n_0
-    SLICE_X53Y30         CARRY4 (Prop_carry4_CI_CO[0])
-                                                      0.271     6.255 r  alu_inst/tmp0_inferred__2/i___7_carry__1/CO[0]
-                         net (fo=12, routed)          1.344     7.599    alu_inst/data3[6]
-    SLICE_X54Y27         LUT3 (Prop_lut3_I0_O)        0.373     7.972 r  alu_inst/i___211_carry_i_48/O
-                         net (fo=1, routed)           0.000     7.972    alu_inst/i___211_carry_i_48_n_0
-    SLICE_X54Y27         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.533     8.505 r  alu_inst/i___211_carry_i_38/CO[3]
-                         net (fo=1, routed)           0.000     8.505    alu_inst/i___211_carry_i_38_n_0
-    SLICE_X54Y28         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     8.622 r  alu_inst/mem_in_b_reg[5]_i_6/CO[3]
-                         net (fo=1, routed)           0.000     8.622    alu_inst/mem_in_b_reg[5]_i_6_n_0
-    SLICE_X54Y29         CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157     8.779 r  alu_inst/mem_in_b_reg[5]_i_5/CO[1]
-                         net (fo=12, routed)          1.222    10.002    alu_inst/data3[5]
-    SLICE_X56Y26         LUT3 (Prop_lut3_I0_O)        0.332    10.334 r  alu_inst/i___211_carry_i_45/O
-                         net (fo=1, routed)           0.000    10.334    alu_inst/i___211_carry_i_45_n_0
-    SLICE_X56Y26         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.533    10.867 r  alu_inst/i___211_carry_i_30/CO[3]
-                         net (fo=1, routed)           0.000    10.867    alu_inst/i___211_carry_i_30_n_0
-    SLICE_X56Y27         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    10.984 r  alu_inst/i___211_carry_i_27/CO[3]
-                         net (fo=1, routed)           0.000    10.984    alu_inst/i___211_carry_i_27_n_0
-    SLICE_X56Y28         CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157    11.141 r  alu_inst/mem_in_b_reg[4]_i_5/CO[1]
-                         net (fo=12, routed)          1.413    12.553    alu_inst/data3[4]
-    SLICE_X55Y24         LUT3 (Prop_lut3_I0_O)        0.332    12.885 r  alu_inst/i___211_carry_i_33/O
-                         net (fo=1, routed)           0.000    12.885    alu_inst/i___211_carry_i_33_n_0
-    SLICE_X55Y24         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550    13.435 r  alu_inst/i___211_carry_i_16/CO[3]
-                         net (fo=1, routed)           0.009    13.444    alu_inst/i___211_carry_i_16_n_0
-    SLICE_X55Y25         CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157    13.601 r  alu_inst/i___211_carry_i_15/CO[1]
-                         net (fo=12, routed)          1.082    14.684    alu_inst/data3[3]
-    SLICE_X54Y23         LUT3 (Prop_lut3_I0_O)        0.329    15.013 r  alu_inst/i___211_carry_i_26/O
-                         net (fo=1, routed)           0.000    15.013    alu_inst/i___211_carry_i_26_n_0
-    SLICE_X54Y23         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.533    15.546 r  alu_inst/i___211_carry_i_11/CO[3]
-                         net (fo=1, routed)           0.000    15.546    alu_inst/i___211_carry_i_11_n_0
-    SLICE_X54Y24         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    15.663 r  alu_inst/i___211_carry_i_8/CO[3]
-                         net (fo=1, routed)           0.009    15.672    alu_inst/i___211_carry_i_8_n_0
-    SLICE_X54Y25         CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157    15.829 r  alu_inst/i___211_carry_i_7/CO[1]
-                         net (fo=12, routed)          1.572    17.401    alu_inst/data3[2]
-    SLICE_X53Y22         LUT3 (Prop_lut3_I0_O)        0.332    17.733 r  alu_inst/i___211_carry_i_12/O
-                         net (fo=1, routed)           0.000    17.733    alu_inst/i___211_carry_i_12_n_0
-    SLICE_X53Y22         CARRY4 (Prop_carry4_S[3]_CO[3])
-                                                      0.401    18.134 r  alu_inst/i___211_carry_i_2/CO[3]
-                         net (fo=1, routed)           0.000    18.134    alu_inst/i___211_carry_i_2_n_0
-    SLICE_X53Y23         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    18.248 r  alu_inst/i___211_carry__0_i_1/CO[3]
-                         net (fo=1, routed)           0.000    18.248    alu_inst/i___211_carry__0_i_1_n_0
-    SLICE_X53Y24         CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157    18.405 r  alu_inst/i___211_carry_i_1/CO[1]
-                         net (fo=12, routed)          0.761    19.166    alu_inst/data3[1]
-    SLICE_X50Y25         LUT6 (Prop_lut6_I1_O)        0.329    19.495 f  alu_inst/mem_in_b[1]_i_4/O
-                         net (fo=1, routed)           0.565    20.061    alu_inst/mem_in_b[1]_i_4_n_0
-    SLICE_X53Y25         LUT6 (Prop_lut6_I4_O)        0.124    20.185 r  alu_inst/mem_in_b[1]_i_2/O
-                         net (fo=1, routed)           0.000    20.185    alu_inst/mem_in_b[1]_i_2_n_0
-    SLICE_X53Y25         MUXF7 (Prop_muxf7_I0_O)      0.212    20.397 r  alu_inst/mem_in_b_reg[1]_i_1/O
-                         net (fo=3, routed)           0.673    21.070    alu_inst_n_6
-    SLICE_X50Y25         FDRE                                         r  mem_in_b_reg[1]_rep__0/D
+    SLICE_X58Y14         FDRE                         0.000     0.000 r  ex_in_c_reg[0]/C
+    SLICE_X58Y14         FDRE (Prop_fdre_C_Q)         0.456     0.456 f  ex_in_c_reg[0]/Q
+                         net (fo=33, routed)          2.337     2.793    alu_inst/tmp0_inferred__3/i__carry_0[0]
+    SLICE_X58Y22         LUT6 (Prop_lut6_I2_O)        0.124     2.917 f  alu_inst/i___7_carry__0_i_9/O
+                         net (fo=4, routed)           0.680     3.597    alu_inst/i___7_carry__0_i_9_n_0
+    SLICE_X58Y22         LUT4 (Prop_lut4_I2_O)        0.124     3.721 r  alu_inst/i___7_carry_i_9/O
+                         net (fo=14, routed)          1.486     5.207    alu_inst/i___7_carry__1_i_1_n_0
+    SLICE_X54Y21         LUT2 (Prop_lut2_I1_O)        0.124     5.331 r  alu_inst/i___7_carry_i_2/O
+                         net (fo=1, routed)           0.588     5.920    alu_inst/i___7_carry_i_2_n_0
+    SLICE_X55Y21         CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.385     6.305 r  alu_inst/tmp0_inferred__2/i___7_carry/CO[3]
+                         net (fo=1, routed)           0.000     6.305    alu_inst/tmp0_inferred__2/i___7_carry_n_0
+    SLICE_X55Y22         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     6.419 r  alu_inst/tmp0_inferred__2/i___7_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     6.419    alu_inst/tmp0_inferred__2/i___7_carry__0_n_0
+    SLICE_X55Y23         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.271     6.690 r  alu_inst/tmp0_inferred__2/i___7_carry__1/CO[0]
+                         net (fo=12, routed)          1.349     8.039    alu_inst/data3[6]
+    SLICE_X52Y20         LUT3 (Prop_lut3_I0_O)        0.373     8.412 r  alu_inst/i___211_carry_i_48/O
+                         net (fo=1, routed)           0.000     8.412    alu_inst/i___211_carry_i_48_n_0
+    SLICE_X52Y20         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     8.945 r  alu_inst/i___211_carry_i_38/CO[3]
+                         net (fo=1, routed)           0.000     8.945    alu_inst/i___211_carry_i_38_n_0
+    SLICE_X52Y21         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.062 r  alu_inst/mem_in_b_reg[5]_i_6/CO[3]
+                         net (fo=1, routed)           0.000     9.062    alu_inst/mem_in_b_reg[5]_i_6_n_0
+    SLICE_X52Y22         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157     9.219 r  alu_inst/mem_in_b_reg[5]_i_5/CO[1]
+                         net (fo=12, routed)          1.358    10.577    alu_inst/data3[5]
+    SLICE_X50Y18         LUT3 (Prop_lut3_I0_O)        0.332    10.909 r  alu_inst/i___211_carry_i_43/O
+                         net (fo=1, routed)           0.000    10.909    alu_inst/i___211_carry_i_43_n_0
+    SLICE_X50Y18         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376    11.285 r  alu_inst/i___211_carry_i_30/CO[3]
+                         net (fo=1, routed)           0.000    11.285    alu_inst/i___211_carry_i_30_n_0
+    SLICE_X50Y19         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    11.402 r  alu_inst/i___211_carry_i_27/CO[3]
+                         net (fo=1, routed)           0.000    11.402    alu_inst/i___211_carry_i_27_n_0
+    SLICE_X50Y20         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    11.559 r  alu_inst/mem_in_b_reg[4]_i_5/CO[1]
+                         net (fo=12, routed)          1.214    12.773    alu_inst/data3[4]
+    SLICE_X51Y18         LUT3 (Prop_lut3_I0_O)        0.332    13.105 r  alu_inst/i___211_carry_i_36/O
+                         net (fo=1, routed)           0.000    13.105    alu_inst/i___211_carry_i_36_n_0
+    SLICE_X51Y18         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    13.503 r  alu_inst/i___211_carry_i_19/CO[3]
+                         net (fo=1, routed)           0.000    13.503    alu_inst/i___211_carry_i_19_n_0
+    SLICE_X51Y19         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.617 r  alu_inst/i___211_carry_i_16/CO[3]
+                         net (fo=1, routed)           0.000    13.617    alu_inst/i___211_carry_i_16_n_0
+    SLICE_X51Y20         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    13.774 r  alu_inst/i___211_carry_i_15/CO[1]
+                         net (fo=12, routed)          1.016    14.790    alu_inst/data3[3]
+    SLICE_X53Y18         LUT3 (Prop_lut3_I0_O)        0.329    15.119 r  alu_inst/i___211_carry_i_26/O
+                         net (fo=1, routed)           0.000    15.119    alu_inst/i___211_carry_i_26_n_0
+    SLICE_X53Y18         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    15.669 r  alu_inst/i___211_carry_i_11/CO[3]
+                         net (fo=1, routed)           0.000    15.669    alu_inst/i___211_carry_i_11_n_0
+    SLICE_X53Y19         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    15.783 r  alu_inst/i___211_carry_i_8/CO[3]
+                         net (fo=1, routed)           0.000    15.783    alu_inst/i___211_carry_i_8_n_0
+    SLICE_X53Y20         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    15.940 r  alu_inst/i___211_carry_i_7/CO[1]
+                         net (fo=12, routed)          1.344    17.284    alu_inst/data3[2]
+    SLICE_X54Y18         LUT3 (Prop_lut3_I0_O)        0.329    17.613 r  alu_inst/i___211_carry_i_14/O
+                         net (fo=1, routed)           0.000    17.613    alu_inst/i___211_carry_i_14_n_0
+    SLICE_X54Y18         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    18.146 r  alu_inst/i___211_carry_i_2/CO[3]
+                         net (fo=1, routed)           0.000    18.146    alu_inst/i___211_carry_i_2_n_0
+    SLICE_X54Y19         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    18.263 r  alu_inst/i___211_carry__0_i_1/CO[3]
+                         net (fo=1, routed)           0.000    18.263    alu_inst/i___211_carry__0_i_1_n_0
+    SLICE_X54Y20         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    18.420 r  alu_inst/i___211_carry_i_1/CO[1]
+                         net (fo=12, routed)          1.181    19.601    alu_inst/data3[1]
+    SLICE_X60Y19         LUT6 (Prop_lut6_I1_O)        0.332    19.933 f  alu_inst/mem_in_b[1]_i_4/O
+                         net (fo=1, routed)           1.180    21.113    alu_inst/mem_in_b[1]_i_4_n_0
+    SLICE_X57Y17         LUT6 (Prop_lut6_I4_O)        0.124    21.237 r  alu_inst/mem_in_b[1]_i_2/O
+                         net (fo=1, routed)           0.000    21.237    alu_inst/mem_in_b[1]_i_2_n_0
+    SLICE_X57Y17         MUXF7 (Prop_muxf7_I0_O)      0.212    21.449 r  alu_inst/mem_in_b_reg[1]_i_1/O
+                         net (fo=3, routed)           0.528    21.978    alu_inst_n_6
+    SLICE_X52Y17         FDRE                                         r  mem_in_b_reg[1]_rep__0/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 ex_in_c_reg[1]/C
+  Source:                 ex_in_c_reg[0]/C
                             (rising edge-triggered cell FDRE)
   Destination:            mem_in_b_reg[1]/D
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        21.058ns  (logic 7.788ns (36.984%)  route 13.270ns (63.016%))
-  Logic Levels:           28  (CARRY4=16 FDRE=1 LUT2=1 LUT3=5 LUT4=1 LUT6=3 MUXF7=1)
+  Data Path Delay:        21.948ns  (logic 7.715ns (35.151%)  route 14.233ns (64.849%))
+  Logic Levels:           30  (CARRY4=18 FDRE=1 LUT2=1 LUT3=5 LUT4=1 LUT6=3 MUXF7=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X58Y24         FDRE                         0.000     0.000 r  ex_in_c_reg[1]/C
-    SLICE_X58Y24         FDRE (Prop_fdre_C_Q)         0.456     0.456 f  ex_in_c_reg[1]/Q
-                         net (fo=34, routed)          2.586     3.042    alu_inst/tmp0_inferred__3/i__carry_0[1]
-    SLICE_X52Y28         LUT6 (Prop_lut6_I4_O)        0.124     3.166 f  alu_inst/i___7_carry__0_i_9/O
-                         net (fo=4, routed)           0.185     3.351    alu_inst/i___7_carry__0_i_9_n_0
-    SLICE_X52Y28         LUT4 (Prop_lut4_I2_O)        0.124     3.475 r  alu_inst/i___7_carry_i_9/O
-                         net (fo=14, routed)          1.253     4.728    alu_inst/i___7_carry__1_i_1_n_0
-    SLICE_X52Y29         LUT2 (Prop_lut2_I1_O)        0.124     4.852 r  alu_inst/i___7_carry__0_i_4/O
-                         net (fo=1, routed)           0.606     5.458    alu_inst/i___7_carry__0_i_4_n_0
-    SLICE_X53Y29         CARRY4 (Prop_carry4_DI[0]_CO[3])
-                                                      0.526     5.984 r  alu_inst/tmp0_inferred__2/i___7_carry__0/CO[3]
-                         net (fo=1, routed)           0.000     5.984    alu_inst/tmp0_inferred__2/i___7_carry__0_n_0
-    SLICE_X53Y30         CARRY4 (Prop_carry4_CI_CO[0])
-                                                      0.271     6.255 r  alu_inst/tmp0_inferred__2/i___7_carry__1/CO[0]
-                         net (fo=12, routed)          1.344     7.599    alu_inst/data3[6]
-    SLICE_X54Y27         LUT3 (Prop_lut3_I0_O)        0.373     7.972 r  alu_inst/i___211_carry_i_48/O
-                         net (fo=1, routed)           0.000     7.972    alu_inst/i___211_carry_i_48_n_0
-    SLICE_X54Y27         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.533     8.505 r  alu_inst/i___211_carry_i_38/CO[3]
-                         net (fo=1, routed)           0.000     8.505    alu_inst/i___211_carry_i_38_n_0
-    SLICE_X54Y28         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     8.622 r  alu_inst/mem_in_b_reg[5]_i_6/CO[3]
-                         net (fo=1, routed)           0.000     8.622    alu_inst/mem_in_b_reg[5]_i_6_n_0
-    SLICE_X54Y29         CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157     8.779 r  alu_inst/mem_in_b_reg[5]_i_5/CO[1]
-                         net (fo=12, routed)          1.222    10.002    alu_inst/data3[5]
-    SLICE_X56Y26         LUT3 (Prop_lut3_I0_O)        0.332    10.334 r  alu_inst/i___211_carry_i_45/O
-                         net (fo=1, routed)           0.000    10.334    alu_inst/i___211_carry_i_45_n_0
-    SLICE_X56Y26         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.533    10.867 r  alu_inst/i___211_carry_i_30/CO[3]
-                         net (fo=1, routed)           0.000    10.867    alu_inst/i___211_carry_i_30_n_0
-    SLICE_X56Y27         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    10.984 r  alu_inst/i___211_carry_i_27/CO[3]
-                         net (fo=1, routed)           0.000    10.984    alu_inst/i___211_carry_i_27_n_0
-    SLICE_X56Y28         CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157    11.141 r  alu_inst/mem_in_b_reg[4]_i_5/CO[1]
-                         net (fo=12, routed)          1.413    12.553    alu_inst/data3[4]
-    SLICE_X55Y24         LUT3 (Prop_lut3_I0_O)        0.332    12.885 r  alu_inst/i___211_carry_i_33/O
-                         net (fo=1, routed)           0.000    12.885    alu_inst/i___211_carry_i_33_n_0
-    SLICE_X55Y24         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550    13.435 r  alu_inst/i___211_carry_i_16/CO[3]
-                         net (fo=1, routed)           0.009    13.444    alu_inst/i___211_carry_i_16_n_0
-    SLICE_X55Y25         CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157    13.601 r  alu_inst/i___211_carry_i_15/CO[1]
-                         net (fo=12, routed)          1.082    14.684    alu_inst/data3[3]
-    SLICE_X54Y23         LUT3 (Prop_lut3_I0_O)        0.329    15.013 r  alu_inst/i___211_carry_i_26/O
-                         net (fo=1, routed)           0.000    15.013    alu_inst/i___211_carry_i_26_n_0
-    SLICE_X54Y23         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.533    15.546 r  alu_inst/i___211_carry_i_11/CO[3]
-                         net (fo=1, routed)           0.000    15.546    alu_inst/i___211_carry_i_11_n_0
-    SLICE_X54Y24         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    15.663 r  alu_inst/i___211_carry_i_8/CO[3]
-                         net (fo=1, routed)           0.009    15.672    alu_inst/i___211_carry_i_8_n_0
-    SLICE_X54Y25         CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157    15.829 r  alu_inst/i___211_carry_i_7/CO[1]
-                         net (fo=12, routed)          1.572    17.401    alu_inst/data3[2]
-    SLICE_X53Y22         LUT3 (Prop_lut3_I0_O)        0.332    17.733 r  alu_inst/i___211_carry_i_12/O
-                         net (fo=1, routed)           0.000    17.733    alu_inst/i___211_carry_i_12_n_0
-    SLICE_X53Y22         CARRY4 (Prop_carry4_S[3]_CO[3])
-                                                      0.401    18.134 r  alu_inst/i___211_carry_i_2/CO[3]
-                         net (fo=1, routed)           0.000    18.134    alu_inst/i___211_carry_i_2_n_0
-    SLICE_X53Y23         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    18.248 r  alu_inst/i___211_carry__0_i_1/CO[3]
-                         net (fo=1, routed)           0.000    18.248    alu_inst/i___211_carry__0_i_1_n_0
-    SLICE_X53Y24         CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157    18.405 r  alu_inst/i___211_carry_i_1/CO[1]
-                         net (fo=12, routed)          0.761    19.166    alu_inst/data3[1]
-    SLICE_X50Y25         LUT6 (Prop_lut6_I1_O)        0.329    19.495 f  alu_inst/mem_in_b[1]_i_4/O
-                         net (fo=1, routed)           0.565    20.061    alu_inst/mem_in_b[1]_i_4_n_0
-    SLICE_X53Y25         LUT6 (Prop_lut6_I4_O)        0.124    20.185 r  alu_inst/mem_in_b[1]_i_2/O
-                         net (fo=1, routed)           0.000    20.185    alu_inst/mem_in_b[1]_i_2_n_0
-    SLICE_X53Y25         MUXF7 (Prop_muxf7_I0_O)      0.212    20.397 r  alu_inst/mem_in_b_reg[1]_i_1/O
-                         net (fo=3, routed)           0.661    21.058    alu_inst_n_6
-    SLICE_X50Y22         FDRE                                         r  mem_in_b_reg[1]/D
+    SLICE_X58Y14         FDRE                         0.000     0.000 r  ex_in_c_reg[0]/C
+    SLICE_X58Y14         FDRE (Prop_fdre_C_Q)         0.456     0.456 f  ex_in_c_reg[0]/Q
+                         net (fo=33, routed)          2.337     2.793    alu_inst/tmp0_inferred__3/i__carry_0[0]
+    SLICE_X58Y22         LUT6 (Prop_lut6_I2_O)        0.124     2.917 f  alu_inst/i___7_carry__0_i_9/O
+                         net (fo=4, routed)           0.680     3.597    alu_inst/i___7_carry__0_i_9_n_0
+    SLICE_X58Y22         LUT4 (Prop_lut4_I2_O)        0.124     3.721 r  alu_inst/i___7_carry_i_9/O
+                         net (fo=14, routed)          1.486     5.207    alu_inst/i___7_carry__1_i_1_n_0
+    SLICE_X54Y21         LUT2 (Prop_lut2_I1_O)        0.124     5.331 r  alu_inst/i___7_carry_i_2/O
+                         net (fo=1, routed)           0.588     5.920    alu_inst/i___7_carry_i_2_n_0
+    SLICE_X55Y21         CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.385     6.305 r  alu_inst/tmp0_inferred__2/i___7_carry/CO[3]
+                         net (fo=1, routed)           0.000     6.305    alu_inst/tmp0_inferred__2/i___7_carry_n_0
+    SLICE_X55Y22         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     6.419 r  alu_inst/tmp0_inferred__2/i___7_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     6.419    alu_inst/tmp0_inferred__2/i___7_carry__0_n_0
+    SLICE_X55Y23         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.271     6.690 r  alu_inst/tmp0_inferred__2/i___7_carry__1/CO[0]
+                         net (fo=12, routed)          1.349     8.039    alu_inst/data3[6]
+    SLICE_X52Y20         LUT3 (Prop_lut3_I0_O)        0.373     8.412 r  alu_inst/i___211_carry_i_48/O
+                         net (fo=1, routed)           0.000     8.412    alu_inst/i___211_carry_i_48_n_0
+    SLICE_X52Y20         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     8.945 r  alu_inst/i___211_carry_i_38/CO[3]
+                         net (fo=1, routed)           0.000     8.945    alu_inst/i___211_carry_i_38_n_0
+    SLICE_X52Y21         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.062 r  alu_inst/mem_in_b_reg[5]_i_6/CO[3]
+                         net (fo=1, routed)           0.000     9.062    alu_inst/mem_in_b_reg[5]_i_6_n_0
+    SLICE_X52Y22         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157     9.219 r  alu_inst/mem_in_b_reg[5]_i_5/CO[1]
+                         net (fo=12, routed)          1.358    10.577    alu_inst/data3[5]
+    SLICE_X50Y18         LUT3 (Prop_lut3_I0_O)        0.332    10.909 r  alu_inst/i___211_carry_i_43/O
+                         net (fo=1, routed)           0.000    10.909    alu_inst/i___211_carry_i_43_n_0
+    SLICE_X50Y18         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376    11.285 r  alu_inst/i___211_carry_i_30/CO[3]
+                         net (fo=1, routed)           0.000    11.285    alu_inst/i___211_carry_i_30_n_0
+    SLICE_X50Y19         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    11.402 r  alu_inst/i___211_carry_i_27/CO[3]
+                         net (fo=1, routed)           0.000    11.402    alu_inst/i___211_carry_i_27_n_0
+    SLICE_X50Y20         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    11.559 r  alu_inst/mem_in_b_reg[4]_i_5/CO[1]
+                         net (fo=12, routed)          1.214    12.773    alu_inst/data3[4]
+    SLICE_X51Y18         LUT3 (Prop_lut3_I0_O)        0.332    13.105 r  alu_inst/i___211_carry_i_36/O
+                         net (fo=1, routed)           0.000    13.105    alu_inst/i___211_carry_i_36_n_0
+    SLICE_X51Y18         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    13.503 r  alu_inst/i___211_carry_i_19/CO[3]
+                         net (fo=1, routed)           0.000    13.503    alu_inst/i___211_carry_i_19_n_0
+    SLICE_X51Y19         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.617 r  alu_inst/i___211_carry_i_16/CO[3]
+                         net (fo=1, routed)           0.000    13.617    alu_inst/i___211_carry_i_16_n_0
+    SLICE_X51Y20         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    13.774 r  alu_inst/i___211_carry_i_15/CO[1]
+                         net (fo=12, routed)          1.016    14.790    alu_inst/data3[3]
+    SLICE_X53Y18         LUT3 (Prop_lut3_I0_O)        0.329    15.119 r  alu_inst/i___211_carry_i_26/O
+                         net (fo=1, routed)           0.000    15.119    alu_inst/i___211_carry_i_26_n_0
+    SLICE_X53Y18         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    15.669 r  alu_inst/i___211_carry_i_11/CO[3]
+                         net (fo=1, routed)           0.000    15.669    alu_inst/i___211_carry_i_11_n_0
+    SLICE_X53Y19         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    15.783 r  alu_inst/i___211_carry_i_8/CO[3]
+                         net (fo=1, routed)           0.000    15.783    alu_inst/i___211_carry_i_8_n_0
+    SLICE_X53Y20         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    15.940 r  alu_inst/i___211_carry_i_7/CO[1]
+                         net (fo=12, routed)          1.344    17.284    alu_inst/data3[2]
+    SLICE_X54Y18         LUT3 (Prop_lut3_I0_O)        0.329    17.613 r  alu_inst/i___211_carry_i_14/O
+                         net (fo=1, routed)           0.000    17.613    alu_inst/i___211_carry_i_14_n_0
+    SLICE_X54Y18         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    18.146 r  alu_inst/i___211_carry_i_2/CO[3]
+                         net (fo=1, routed)           0.000    18.146    alu_inst/i___211_carry_i_2_n_0
+    SLICE_X54Y19         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    18.263 r  alu_inst/i___211_carry__0_i_1/CO[3]
+                         net (fo=1, routed)           0.000    18.263    alu_inst/i___211_carry__0_i_1_n_0
+    SLICE_X54Y20         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    18.420 r  alu_inst/i___211_carry_i_1/CO[1]
+                         net (fo=12, routed)          1.181    19.601    alu_inst/data3[1]
+    SLICE_X60Y19         LUT6 (Prop_lut6_I1_O)        0.332    19.933 f  alu_inst/mem_in_b[1]_i_4/O
+                         net (fo=1, routed)           1.180    21.113    alu_inst/mem_in_b[1]_i_4_n_0
+    SLICE_X57Y17         LUT6 (Prop_lut6_I4_O)        0.124    21.237 r  alu_inst/mem_in_b[1]_i_2/O
+                         net (fo=1, routed)           0.000    21.237    alu_inst/mem_in_b[1]_i_2_n_0
+    SLICE_X57Y17         MUXF7 (Prop_muxf7_I0_O)      0.212    21.449 r  alu_inst/mem_in_b_reg[1]_i_1/O
+                         net (fo=3, routed)           0.499    21.948    alu_inst_n_6
+    SLICE_X55Y16         FDRE                                         r  mem_in_b_reg[1]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 ex_in_c_reg[1]/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            mem_in_b_reg[2]/D
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        19.379ns  (logic 6.787ns (35.023%)  route 12.592ns (64.977%))
-  Logic Levels:           24  (CARRY4=13 FDRE=1 LUT2=1 LUT3=4 LUT4=1 LUT6=3 MUXF7=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X58Y24         FDRE                         0.000     0.000 r  ex_in_c_reg[1]/C
-    SLICE_X58Y24         FDRE (Prop_fdre_C_Q)         0.456     0.456 f  ex_in_c_reg[1]/Q
-                         net (fo=34, routed)          2.586     3.042    alu_inst/tmp0_inferred__3/i__carry_0[1]
-    SLICE_X52Y28         LUT6 (Prop_lut6_I4_O)        0.124     3.166 f  alu_inst/i___7_carry__0_i_9/O
-                         net (fo=4, routed)           0.185     3.351    alu_inst/i___7_carry__0_i_9_n_0
-    SLICE_X52Y28         LUT4 (Prop_lut4_I2_O)        0.124     3.475 r  alu_inst/i___7_carry_i_9/O
-                         net (fo=14, routed)          1.253     4.728    alu_inst/i___7_carry__1_i_1_n_0
-    SLICE_X52Y29         LUT2 (Prop_lut2_I1_O)        0.124     4.852 r  alu_inst/i___7_carry__0_i_4/O
-                         net (fo=1, routed)           0.606     5.458    alu_inst/i___7_carry__0_i_4_n_0
-    SLICE_X53Y29         CARRY4 (Prop_carry4_DI[0]_CO[3])
-                                                      0.526     5.984 r  alu_inst/tmp0_inferred__2/i___7_carry__0/CO[3]
-                         net (fo=1, routed)           0.000     5.984    alu_inst/tmp0_inferred__2/i___7_carry__0_n_0
-    SLICE_X53Y30         CARRY4 (Prop_carry4_CI_CO[0])
-                                                      0.271     6.255 r  alu_inst/tmp0_inferred__2/i___7_carry__1/CO[0]
-                         net (fo=12, routed)          1.344     7.599    alu_inst/data3[6]
-    SLICE_X54Y27         LUT3 (Prop_lut3_I0_O)        0.373     7.972 r  alu_inst/i___211_carry_i_48/O
-                         net (fo=1, routed)           0.000     7.972    alu_inst/i___211_carry_i_48_n_0
-    SLICE_X54Y27         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.533     8.505 r  alu_inst/i___211_carry_i_38/CO[3]
-                         net (fo=1, routed)           0.000     8.505    alu_inst/i___211_carry_i_38_n_0
-    SLICE_X54Y28         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     8.622 r  alu_inst/mem_in_b_reg[5]_i_6/CO[3]
-                         net (fo=1, routed)           0.000     8.622    alu_inst/mem_in_b_reg[5]_i_6_n_0
-    SLICE_X54Y29         CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157     8.779 r  alu_inst/mem_in_b_reg[5]_i_5/CO[1]
-                         net (fo=12, routed)          1.222    10.002    alu_inst/data3[5]
-    SLICE_X56Y26         LUT3 (Prop_lut3_I0_O)        0.332    10.334 r  alu_inst/i___211_carry_i_45/O
-                         net (fo=1, routed)           0.000    10.334    alu_inst/i___211_carry_i_45_n_0
-    SLICE_X56Y26         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.533    10.867 r  alu_inst/i___211_carry_i_30/CO[3]
-                         net (fo=1, routed)           0.000    10.867    alu_inst/i___211_carry_i_30_n_0
-    SLICE_X56Y27         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    10.984 r  alu_inst/i___211_carry_i_27/CO[3]
-                         net (fo=1, routed)           0.000    10.984    alu_inst/i___211_carry_i_27_n_0
-    SLICE_X56Y28         CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157    11.141 r  alu_inst/mem_in_b_reg[4]_i_5/CO[1]
-                         net (fo=12, routed)          1.413    12.553    alu_inst/data3[4]
-    SLICE_X55Y24         LUT3 (Prop_lut3_I0_O)        0.332    12.885 r  alu_inst/i___211_carry_i_33/O
-                         net (fo=1, routed)           0.000    12.885    alu_inst/i___211_carry_i_33_n_0
-    SLICE_X55Y24         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550    13.435 r  alu_inst/i___211_carry_i_16/CO[3]
-                         net (fo=1, routed)           0.009    13.444    alu_inst/i___211_carry_i_16_n_0
-    SLICE_X55Y25         CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157    13.601 r  alu_inst/i___211_carry_i_15/CO[1]
-                         net (fo=12, routed)          1.082    14.684    alu_inst/data3[3]
-    SLICE_X54Y23         LUT3 (Prop_lut3_I0_O)        0.329    15.013 r  alu_inst/i___211_carry_i_26/O
-                         net (fo=1, routed)           0.000    15.013    alu_inst/i___211_carry_i_26_n_0
-    SLICE_X54Y23         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.533    15.546 r  alu_inst/i___211_carry_i_11/CO[3]
-                         net (fo=1, routed)           0.000    15.546    alu_inst/i___211_carry_i_11_n_0
-    SLICE_X54Y24         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    15.663 r  alu_inst/i___211_carry_i_8/CO[3]
-                         net (fo=1, routed)           0.009    15.672    alu_inst/i___211_carry_i_8_n_0
-    SLICE_X54Y25         CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157    15.829 r  alu_inst/i___211_carry_i_7/CO[1]
-                         net (fo=12, routed)          1.568    17.397    alu_inst/data3[2]
-    SLICE_X50Y25         LUT6 (Prop_lut6_I1_O)        0.332    17.729 f  alu_inst/mem_in_b[2]_i_4/O
-                         net (fo=1, routed)           0.766    18.495    alu_inst/mem_in_b[2]_i_4_n_0
-    SLICE_X48Y23         LUT6 (Prop_lut6_I4_O)        0.124    18.619 r  alu_inst/mem_in_b[2]_i_2/O
-                         net (fo=1, routed)           0.000    18.619    alu_inst/mem_in_b[2]_i_2_n_0
-    SLICE_X48Y23         MUXF7 (Prop_muxf7_I0_O)      0.212    18.831 r  alu_inst/mem_in_b_reg[2]_i_1/O
-                         net (fo=3, routed)           0.547    19.379    alu_inst_n_5
-    SLICE_X48Y22         FDRE                                         r  mem_in_b_reg[2]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 ex_in_c_reg[1]/C
+  Source:                 ex_in_c_reg[0]/C
                             (rising edge-triggered cell FDRE)
   Destination:            mem_in_b_reg[2]_rep/D
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        19.373ns  (logic 6.787ns (35.034%)  route 12.586ns (64.966%))
-  Logic Levels:           24  (CARRY4=13 FDRE=1 LUT2=1 LUT3=4 LUT4=1 LUT6=3 MUXF7=1)
+  Data Path Delay:        19.407ns  (logic 6.573ns (33.870%)  route 12.834ns (66.130%))
+  Logic Levels:           26  (CARRY4=15 FDRE=1 LUT2=1 LUT3=4 LUT4=1 LUT6=3 MUXF7=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X58Y24         FDRE                         0.000     0.000 r  ex_in_c_reg[1]/C
-    SLICE_X58Y24         FDRE (Prop_fdre_C_Q)         0.456     0.456 f  ex_in_c_reg[1]/Q
-                         net (fo=34, routed)          2.586     3.042    alu_inst/tmp0_inferred__3/i__carry_0[1]
-    SLICE_X52Y28         LUT6 (Prop_lut6_I4_O)        0.124     3.166 f  alu_inst/i___7_carry__0_i_9/O
-                         net (fo=4, routed)           0.185     3.351    alu_inst/i___7_carry__0_i_9_n_0
-    SLICE_X52Y28         LUT4 (Prop_lut4_I2_O)        0.124     3.475 r  alu_inst/i___7_carry_i_9/O
-                         net (fo=14, routed)          1.253     4.728    alu_inst/i___7_carry__1_i_1_n_0
-    SLICE_X52Y29         LUT2 (Prop_lut2_I1_O)        0.124     4.852 r  alu_inst/i___7_carry__0_i_4/O
-                         net (fo=1, routed)           0.606     5.458    alu_inst/i___7_carry__0_i_4_n_0
-    SLICE_X53Y29         CARRY4 (Prop_carry4_DI[0]_CO[3])
-                                                      0.526     5.984 r  alu_inst/tmp0_inferred__2/i___7_carry__0/CO[3]
-                         net (fo=1, routed)           0.000     5.984    alu_inst/tmp0_inferred__2/i___7_carry__0_n_0
-    SLICE_X53Y30         CARRY4 (Prop_carry4_CI_CO[0])
-                                                      0.271     6.255 r  alu_inst/tmp0_inferred__2/i___7_carry__1/CO[0]
-                         net (fo=12, routed)          1.344     7.599    alu_inst/data3[6]
-    SLICE_X54Y27         LUT3 (Prop_lut3_I0_O)        0.373     7.972 r  alu_inst/i___211_carry_i_48/O
-                         net (fo=1, routed)           0.000     7.972    alu_inst/i___211_carry_i_48_n_0
-    SLICE_X54Y27         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.533     8.505 r  alu_inst/i___211_carry_i_38/CO[3]
-                         net (fo=1, routed)           0.000     8.505    alu_inst/i___211_carry_i_38_n_0
-    SLICE_X54Y28         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     8.622 r  alu_inst/mem_in_b_reg[5]_i_6/CO[3]
-                         net (fo=1, routed)           0.000     8.622    alu_inst/mem_in_b_reg[5]_i_6_n_0
-    SLICE_X54Y29         CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157     8.779 r  alu_inst/mem_in_b_reg[5]_i_5/CO[1]
-                         net (fo=12, routed)          1.222    10.002    alu_inst/data3[5]
-    SLICE_X56Y26         LUT3 (Prop_lut3_I0_O)        0.332    10.334 r  alu_inst/i___211_carry_i_45/O
-                         net (fo=1, routed)           0.000    10.334    alu_inst/i___211_carry_i_45_n_0
-    SLICE_X56Y26         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.533    10.867 r  alu_inst/i___211_carry_i_30/CO[3]
-                         net (fo=1, routed)           0.000    10.867    alu_inst/i___211_carry_i_30_n_0
-    SLICE_X56Y27         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    10.984 r  alu_inst/i___211_carry_i_27/CO[3]
-                         net (fo=1, routed)           0.000    10.984    alu_inst/i___211_carry_i_27_n_0
-    SLICE_X56Y28         CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157    11.141 r  alu_inst/mem_in_b_reg[4]_i_5/CO[1]
-                         net (fo=12, routed)          1.413    12.553    alu_inst/data3[4]
-    SLICE_X55Y24         LUT3 (Prop_lut3_I0_O)        0.332    12.885 r  alu_inst/i___211_carry_i_33/O
-                         net (fo=1, routed)           0.000    12.885    alu_inst/i___211_carry_i_33_n_0
-    SLICE_X55Y24         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550    13.435 r  alu_inst/i___211_carry_i_16/CO[3]
-                         net (fo=1, routed)           0.009    13.444    alu_inst/i___211_carry_i_16_n_0
-    SLICE_X55Y25         CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157    13.601 r  alu_inst/i___211_carry_i_15/CO[1]
-                         net (fo=12, routed)          1.082    14.684    alu_inst/data3[3]
-    SLICE_X54Y23         LUT3 (Prop_lut3_I0_O)        0.329    15.013 r  alu_inst/i___211_carry_i_26/O
-                         net (fo=1, routed)           0.000    15.013    alu_inst/i___211_carry_i_26_n_0
-    SLICE_X54Y23         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.533    15.546 r  alu_inst/i___211_carry_i_11/CO[3]
-                         net (fo=1, routed)           0.000    15.546    alu_inst/i___211_carry_i_11_n_0
-    SLICE_X54Y24         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    15.663 r  alu_inst/i___211_carry_i_8/CO[3]
-                         net (fo=1, routed)           0.009    15.672    alu_inst/i___211_carry_i_8_n_0
-    SLICE_X54Y25         CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157    15.829 r  alu_inst/i___211_carry_i_7/CO[1]
-                         net (fo=12, routed)          1.568    17.397    alu_inst/data3[2]
-    SLICE_X50Y25         LUT6 (Prop_lut6_I1_O)        0.332    17.729 f  alu_inst/mem_in_b[2]_i_4/O
-                         net (fo=1, routed)           0.766    18.495    alu_inst/mem_in_b[2]_i_4_n_0
-    SLICE_X48Y23         LUT6 (Prop_lut6_I4_O)        0.124    18.619 r  alu_inst/mem_in_b[2]_i_2/O
-                         net (fo=1, routed)           0.000    18.619    alu_inst/mem_in_b[2]_i_2_n_0
-    SLICE_X48Y23         MUXF7 (Prop_muxf7_I0_O)      0.212    18.831 r  alu_inst/mem_in_b_reg[2]_i_1/O
-                         net (fo=3, routed)           0.542    19.373    alu_inst_n_5
-    SLICE_X48Y22         FDRE                                         r  mem_in_b_reg[2]_rep/D
+    SLICE_X58Y14         FDRE                         0.000     0.000 r  ex_in_c_reg[0]/C
+    SLICE_X58Y14         FDRE (Prop_fdre_C_Q)         0.456     0.456 f  ex_in_c_reg[0]/Q
+                         net (fo=33, routed)          2.337     2.793    alu_inst/tmp0_inferred__3/i__carry_0[0]
+    SLICE_X58Y22         LUT6 (Prop_lut6_I2_O)        0.124     2.917 f  alu_inst/i___7_carry__0_i_9/O
+                         net (fo=4, routed)           0.680     3.597    alu_inst/i___7_carry__0_i_9_n_0
+    SLICE_X58Y22         LUT4 (Prop_lut4_I2_O)        0.124     3.721 r  alu_inst/i___7_carry_i_9/O
+                         net (fo=14, routed)          1.486     5.207    alu_inst/i___7_carry__1_i_1_n_0
+    SLICE_X54Y21         LUT2 (Prop_lut2_I1_O)        0.124     5.331 r  alu_inst/i___7_carry_i_2/O
+                         net (fo=1, routed)           0.588     5.920    alu_inst/i___7_carry_i_2_n_0
+    SLICE_X55Y21         CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.385     6.305 r  alu_inst/tmp0_inferred__2/i___7_carry/CO[3]
+                         net (fo=1, routed)           0.000     6.305    alu_inst/tmp0_inferred__2/i___7_carry_n_0
+    SLICE_X55Y22         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     6.419 r  alu_inst/tmp0_inferred__2/i___7_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     6.419    alu_inst/tmp0_inferred__2/i___7_carry__0_n_0
+    SLICE_X55Y23         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.271     6.690 r  alu_inst/tmp0_inferred__2/i___7_carry__1/CO[0]
+                         net (fo=12, routed)          1.349     8.039    alu_inst/data3[6]
+    SLICE_X52Y20         LUT3 (Prop_lut3_I0_O)        0.373     8.412 r  alu_inst/i___211_carry_i_48/O
+                         net (fo=1, routed)           0.000     8.412    alu_inst/i___211_carry_i_48_n_0
+    SLICE_X52Y20         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     8.945 r  alu_inst/i___211_carry_i_38/CO[3]
+                         net (fo=1, routed)           0.000     8.945    alu_inst/i___211_carry_i_38_n_0
+    SLICE_X52Y21         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.062 r  alu_inst/mem_in_b_reg[5]_i_6/CO[3]
+                         net (fo=1, routed)           0.000     9.062    alu_inst/mem_in_b_reg[5]_i_6_n_0
+    SLICE_X52Y22         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157     9.219 r  alu_inst/mem_in_b_reg[5]_i_5/CO[1]
+                         net (fo=12, routed)          1.358    10.577    alu_inst/data3[5]
+    SLICE_X50Y18         LUT3 (Prop_lut3_I0_O)        0.332    10.909 r  alu_inst/i___211_carry_i_43/O
+                         net (fo=1, routed)           0.000    10.909    alu_inst/i___211_carry_i_43_n_0
+    SLICE_X50Y18         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376    11.285 r  alu_inst/i___211_carry_i_30/CO[3]
+                         net (fo=1, routed)           0.000    11.285    alu_inst/i___211_carry_i_30_n_0
+    SLICE_X50Y19         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    11.402 r  alu_inst/i___211_carry_i_27/CO[3]
+                         net (fo=1, routed)           0.000    11.402    alu_inst/i___211_carry_i_27_n_0
+    SLICE_X50Y20         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    11.559 r  alu_inst/mem_in_b_reg[4]_i_5/CO[1]
+                         net (fo=12, routed)          1.214    12.773    alu_inst/data3[4]
+    SLICE_X51Y18         LUT3 (Prop_lut3_I0_O)        0.332    13.105 r  alu_inst/i___211_carry_i_36/O
+                         net (fo=1, routed)           0.000    13.105    alu_inst/i___211_carry_i_36_n_0
+    SLICE_X51Y18         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    13.503 r  alu_inst/i___211_carry_i_19/CO[3]
+                         net (fo=1, routed)           0.000    13.503    alu_inst/i___211_carry_i_19_n_0
+    SLICE_X51Y19         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.617 r  alu_inst/i___211_carry_i_16/CO[3]
+                         net (fo=1, routed)           0.000    13.617    alu_inst/i___211_carry_i_16_n_0
+    SLICE_X51Y20         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    13.774 r  alu_inst/i___211_carry_i_15/CO[1]
+                         net (fo=12, routed)          1.016    14.790    alu_inst/data3[3]
+    SLICE_X53Y18         LUT3 (Prop_lut3_I0_O)        0.329    15.119 r  alu_inst/i___211_carry_i_26/O
+                         net (fo=1, routed)           0.000    15.119    alu_inst/i___211_carry_i_26_n_0
+    SLICE_X53Y18         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    15.669 r  alu_inst/i___211_carry_i_11/CO[3]
+                         net (fo=1, routed)           0.000    15.669    alu_inst/i___211_carry_i_11_n_0
+    SLICE_X53Y19         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    15.783 r  alu_inst/i___211_carry_i_8/CO[3]
+                         net (fo=1, routed)           0.000    15.783    alu_inst/i___211_carry_i_8_n_0
+    SLICE_X53Y20         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    15.940 r  alu_inst/i___211_carry_i_7/CO[1]
+                         net (fo=12, routed)          1.119    17.060    alu_inst/data3[2]
+    SLICE_X60Y19         LUT6 (Prop_lut6_I1_O)        0.329    17.389 f  alu_inst/mem_in_b[2]_i_4/O
+                         net (fo=1, routed)           0.530    17.919    alu_inst/mem_in_b[2]_i_4_n_0
+    SLICE_X56Y19         LUT6 (Prop_lut6_I4_O)        0.124    18.043 r  alu_inst/mem_in_b[2]_i_2/O
+                         net (fo=1, routed)           0.000    18.043    alu_inst/mem_in_b[2]_i_2_n_0
+    SLICE_X56Y19         MUXF7 (Prop_muxf7_I0_O)      0.209    18.252 r  alu_inst/mem_in_b_reg[2]_i_1/O
+                         net (fo=3, routed)           1.155    19.407    alu_inst_n_5
+    SLICE_X51Y18         FDRE                                         r  mem_in_b_reg[2]_rep/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 ex_in_c_reg[1]/C
+  Source:                 ex_in_c_reg[0]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            mem_in_b_reg[2]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        19.235ns  (logic 6.573ns (34.172%)  route 12.662ns (65.828%))
+  Logic Levels:           26  (CARRY4=15 FDRE=1 LUT2=1 LUT3=4 LUT4=1 LUT6=3 MUXF7=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X58Y14         FDRE                         0.000     0.000 r  ex_in_c_reg[0]/C
+    SLICE_X58Y14         FDRE (Prop_fdre_C_Q)         0.456     0.456 f  ex_in_c_reg[0]/Q
+                         net (fo=33, routed)          2.337     2.793    alu_inst/tmp0_inferred__3/i__carry_0[0]
+    SLICE_X58Y22         LUT6 (Prop_lut6_I2_O)        0.124     2.917 f  alu_inst/i___7_carry__0_i_9/O
+                         net (fo=4, routed)           0.680     3.597    alu_inst/i___7_carry__0_i_9_n_0
+    SLICE_X58Y22         LUT4 (Prop_lut4_I2_O)        0.124     3.721 r  alu_inst/i___7_carry_i_9/O
+                         net (fo=14, routed)          1.486     5.207    alu_inst/i___7_carry__1_i_1_n_0
+    SLICE_X54Y21         LUT2 (Prop_lut2_I1_O)        0.124     5.331 r  alu_inst/i___7_carry_i_2/O
+                         net (fo=1, routed)           0.588     5.920    alu_inst/i___7_carry_i_2_n_0
+    SLICE_X55Y21         CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.385     6.305 r  alu_inst/tmp0_inferred__2/i___7_carry/CO[3]
+                         net (fo=1, routed)           0.000     6.305    alu_inst/tmp0_inferred__2/i___7_carry_n_0
+    SLICE_X55Y22         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     6.419 r  alu_inst/tmp0_inferred__2/i___7_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     6.419    alu_inst/tmp0_inferred__2/i___7_carry__0_n_0
+    SLICE_X55Y23         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.271     6.690 r  alu_inst/tmp0_inferred__2/i___7_carry__1/CO[0]
+                         net (fo=12, routed)          1.349     8.039    alu_inst/data3[6]
+    SLICE_X52Y20         LUT3 (Prop_lut3_I0_O)        0.373     8.412 r  alu_inst/i___211_carry_i_48/O
+                         net (fo=1, routed)           0.000     8.412    alu_inst/i___211_carry_i_48_n_0
+    SLICE_X52Y20         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     8.945 r  alu_inst/i___211_carry_i_38/CO[3]
+                         net (fo=1, routed)           0.000     8.945    alu_inst/i___211_carry_i_38_n_0
+    SLICE_X52Y21         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.062 r  alu_inst/mem_in_b_reg[5]_i_6/CO[3]
+                         net (fo=1, routed)           0.000     9.062    alu_inst/mem_in_b_reg[5]_i_6_n_0
+    SLICE_X52Y22         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157     9.219 r  alu_inst/mem_in_b_reg[5]_i_5/CO[1]
+                         net (fo=12, routed)          1.358    10.577    alu_inst/data3[5]
+    SLICE_X50Y18         LUT3 (Prop_lut3_I0_O)        0.332    10.909 r  alu_inst/i___211_carry_i_43/O
+                         net (fo=1, routed)           0.000    10.909    alu_inst/i___211_carry_i_43_n_0
+    SLICE_X50Y18         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376    11.285 r  alu_inst/i___211_carry_i_30/CO[3]
+                         net (fo=1, routed)           0.000    11.285    alu_inst/i___211_carry_i_30_n_0
+    SLICE_X50Y19         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    11.402 r  alu_inst/i___211_carry_i_27/CO[3]
+                         net (fo=1, routed)           0.000    11.402    alu_inst/i___211_carry_i_27_n_0
+    SLICE_X50Y20         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    11.559 r  alu_inst/mem_in_b_reg[4]_i_5/CO[1]
+                         net (fo=12, routed)          1.214    12.773    alu_inst/data3[4]
+    SLICE_X51Y18         LUT3 (Prop_lut3_I0_O)        0.332    13.105 r  alu_inst/i___211_carry_i_36/O
+                         net (fo=1, routed)           0.000    13.105    alu_inst/i___211_carry_i_36_n_0
+    SLICE_X51Y18         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    13.503 r  alu_inst/i___211_carry_i_19/CO[3]
+                         net (fo=1, routed)           0.000    13.503    alu_inst/i___211_carry_i_19_n_0
+    SLICE_X51Y19         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.617 r  alu_inst/i___211_carry_i_16/CO[3]
+                         net (fo=1, routed)           0.000    13.617    alu_inst/i___211_carry_i_16_n_0
+    SLICE_X51Y20         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    13.774 r  alu_inst/i___211_carry_i_15/CO[1]
+                         net (fo=12, routed)          1.016    14.790    alu_inst/data3[3]
+    SLICE_X53Y18         LUT3 (Prop_lut3_I0_O)        0.329    15.119 r  alu_inst/i___211_carry_i_26/O
+                         net (fo=1, routed)           0.000    15.119    alu_inst/i___211_carry_i_26_n_0
+    SLICE_X53Y18         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    15.669 r  alu_inst/i___211_carry_i_11/CO[3]
+                         net (fo=1, routed)           0.000    15.669    alu_inst/i___211_carry_i_11_n_0
+    SLICE_X53Y19         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    15.783 r  alu_inst/i___211_carry_i_8/CO[3]
+                         net (fo=1, routed)           0.000    15.783    alu_inst/i___211_carry_i_8_n_0
+    SLICE_X53Y20         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    15.940 r  alu_inst/i___211_carry_i_7/CO[1]
+                         net (fo=12, routed)          1.119    17.060    alu_inst/data3[2]
+    SLICE_X60Y19         LUT6 (Prop_lut6_I1_O)        0.329    17.389 f  alu_inst/mem_in_b[2]_i_4/O
+                         net (fo=1, routed)           0.530    17.919    alu_inst/mem_in_b[2]_i_4_n_0
+    SLICE_X56Y19         LUT6 (Prop_lut6_I4_O)        0.124    18.043 r  alu_inst/mem_in_b[2]_i_2/O
+                         net (fo=1, routed)           0.000    18.043    alu_inst/mem_in_b[2]_i_2_n_0
+    SLICE_X56Y19         MUXF7 (Prop_muxf7_I0_O)      0.209    18.252 r  alu_inst/mem_in_b_reg[2]_i_1/O
+                         net (fo=3, routed)           0.983    19.235    alu_inst_n_5
+    SLICE_X54Y18         FDRE                                         r  mem_in_b_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ex_in_c_reg[0]/C
                             (rising edge-triggered cell FDRE)
   Destination:            mem_in_b_reg[2]_rep__0/D
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        19.183ns  (logic 6.787ns (35.380%)  route 12.396ns (64.620%))
-  Logic Levels:           24  (CARRY4=13 FDRE=1 LUT2=1 LUT3=4 LUT4=1 LUT6=3 MUXF7=1)
+  Data Path Delay:        19.170ns  (logic 6.573ns (34.289%)  route 12.597ns (65.711%))
+  Logic Levels:           26  (CARRY4=15 FDRE=1 LUT2=1 LUT3=4 LUT4=1 LUT6=3 MUXF7=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X58Y24         FDRE                         0.000     0.000 r  ex_in_c_reg[1]/C
-    SLICE_X58Y24         FDRE (Prop_fdre_C_Q)         0.456     0.456 f  ex_in_c_reg[1]/Q
-                         net (fo=34, routed)          2.586     3.042    alu_inst/tmp0_inferred__3/i__carry_0[1]
-    SLICE_X52Y28         LUT6 (Prop_lut6_I4_O)        0.124     3.166 f  alu_inst/i___7_carry__0_i_9/O
-                         net (fo=4, routed)           0.185     3.351    alu_inst/i___7_carry__0_i_9_n_0
-    SLICE_X52Y28         LUT4 (Prop_lut4_I2_O)        0.124     3.475 r  alu_inst/i___7_carry_i_9/O
-                         net (fo=14, routed)          1.253     4.728    alu_inst/i___7_carry__1_i_1_n_0
-    SLICE_X52Y29         LUT2 (Prop_lut2_I1_O)        0.124     4.852 r  alu_inst/i___7_carry__0_i_4/O
-                         net (fo=1, routed)           0.606     5.458    alu_inst/i___7_carry__0_i_4_n_0
-    SLICE_X53Y29         CARRY4 (Prop_carry4_DI[0]_CO[3])
-                                                      0.526     5.984 r  alu_inst/tmp0_inferred__2/i___7_carry__0/CO[3]
-                         net (fo=1, routed)           0.000     5.984    alu_inst/tmp0_inferred__2/i___7_carry__0_n_0
-    SLICE_X53Y30         CARRY4 (Prop_carry4_CI_CO[0])
-                                                      0.271     6.255 r  alu_inst/tmp0_inferred__2/i___7_carry__1/CO[0]
-                         net (fo=12, routed)          1.344     7.599    alu_inst/data3[6]
-    SLICE_X54Y27         LUT3 (Prop_lut3_I0_O)        0.373     7.972 r  alu_inst/i___211_carry_i_48/O
-                         net (fo=1, routed)           0.000     7.972    alu_inst/i___211_carry_i_48_n_0
-    SLICE_X54Y27         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.533     8.505 r  alu_inst/i___211_carry_i_38/CO[3]
-                         net (fo=1, routed)           0.000     8.505    alu_inst/i___211_carry_i_38_n_0
-    SLICE_X54Y28         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     8.622 r  alu_inst/mem_in_b_reg[5]_i_6/CO[3]
-                         net (fo=1, routed)           0.000     8.622    alu_inst/mem_in_b_reg[5]_i_6_n_0
-    SLICE_X54Y29         CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157     8.779 r  alu_inst/mem_in_b_reg[5]_i_5/CO[1]
-                         net (fo=12, routed)          1.222    10.002    alu_inst/data3[5]
-    SLICE_X56Y26         LUT3 (Prop_lut3_I0_O)        0.332    10.334 r  alu_inst/i___211_carry_i_45/O
-                         net (fo=1, routed)           0.000    10.334    alu_inst/i___211_carry_i_45_n_0
-    SLICE_X56Y26         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.533    10.867 r  alu_inst/i___211_carry_i_30/CO[3]
-                         net (fo=1, routed)           0.000    10.867    alu_inst/i___211_carry_i_30_n_0
-    SLICE_X56Y27         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    10.984 r  alu_inst/i___211_carry_i_27/CO[3]
-                         net (fo=1, routed)           0.000    10.984    alu_inst/i___211_carry_i_27_n_0
-    SLICE_X56Y28         CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157    11.141 r  alu_inst/mem_in_b_reg[4]_i_5/CO[1]
-                         net (fo=12, routed)          1.413    12.553    alu_inst/data3[4]
-    SLICE_X55Y24         LUT3 (Prop_lut3_I0_O)        0.332    12.885 r  alu_inst/i___211_carry_i_33/O
-                         net (fo=1, routed)           0.000    12.885    alu_inst/i___211_carry_i_33_n_0
-    SLICE_X55Y24         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550    13.435 r  alu_inst/i___211_carry_i_16/CO[3]
-                         net (fo=1, routed)           0.009    13.444    alu_inst/i___211_carry_i_16_n_0
-    SLICE_X55Y25         CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157    13.601 r  alu_inst/i___211_carry_i_15/CO[1]
-                         net (fo=12, routed)          1.082    14.684    alu_inst/data3[3]
-    SLICE_X54Y23         LUT3 (Prop_lut3_I0_O)        0.329    15.013 r  alu_inst/i___211_carry_i_26/O
-                         net (fo=1, routed)           0.000    15.013    alu_inst/i___211_carry_i_26_n_0
-    SLICE_X54Y23         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.533    15.546 r  alu_inst/i___211_carry_i_11/CO[3]
-                         net (fo=1, routed)           0.000    15.546    alu_inst/i___211_carry_i_11_n_0
-    SLICE_X54Y24         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    15.663 r  alu_inst/i___211_carry_i_8/CO[3]
-                         net (fo=1, routed)           0.009    15.672    alu_inst/i___211_carry_i_8_n_0
-    SLICE_X54Y25         CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157    15.829 r  alu_inst/i___211_carry_i_7/CO[1]
-                         net (fo=12, routed)          1.568    17.397    alu_inst/data3[2]
-    SLICE_X50Y25         LUT6 (Prop_lut6_I1_O)        0.332    17.729 f  alu_inst/mem_in_b[2]_i_4/O
-                         net (fo=1, routed)           0.766    18.495    alu_inst/mem_in_b[2]_i_4_n_0
-    SLICE_X48Y23         LUT6 (Prop_lut6_I4_O)        0.124    18.619 r  alu_inst/mem_in_b[2]_i_2/O
-                         net (fo=1, routed)           0.000    18.619    alu_inst/mem_in_b[2]_i_2_n_0
-    SLICE_X48Y23         MUXF7 (Prop_muxf7_I0_O)      0.212    18.831 r  alu_inst/mem_in_b_reg[2]_i_1/O
-                         net (fo=3, routed)           0.352    19.183    alu_inst_n_5
-    SLICE_X48Y22         FDRE                                         r  mem_in_b_reg[2]_rep__0/D
+    SLICE_X58Y14         FDRE                         0.000     0.000 r  ex_in_c_reg[0]/C
+    SLICE_X58Y14         FDRE (Prop_fdre_C_Q)         0.456     0.456 f  ex_in_c_reg[0]/Q
+                         net (fo=33, routed)          2.337     2.793    alu_inst/tmp0_inferred__3/i__carry_0[0]
+    SLICE_X58Y22         LUT6 (Prop_lut6_I2_O)        0.124     2.917 f  alu_inst/i___7_carry__0_i_9/O
+                         net (fo=4, routed)           0.680     3.597    alu_inst/i___7_carry__0_i_9_n_0
+    SLICE_X58Y22         LUT4 (Prop_lut4_I2_O)        0.124     3.721 r  alu_inst/i___7_carry_i_9/O
+                         net (fo=14, routed)          1.486     5.207    alu_inst/i___7_carry__1_i_1_n_0
+    SLICE_X54Y21         LUT2 (Prop_lut2_I1_O)        0.124     5.331 r  alu_inst/i___7_carry_i_2/O
+                         net (fo=1, routed)           0.588     5.920    alu_inst/i___7_carry_i_2_n_0
+    SLICE_X55Y21         CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.385     6.305 r  alu_inst/tmp0_inferred__2/i___7_carry/CO[3]
+                         net (fo=1, routed)           0.000     6.305    alu_inst/tmp0_inferred__2/i___7_carry_n_0
+    SLICE_X55Y22         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     6.419 r  alu_inst/tmp0_inferred__2/i___7_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     6.419    alu_inst/tmp0_inferred__2/i___7_carry__0_n_0
+    SLICE_X55Y23         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.271     6.690 r  alu_inst/tmp0_inferred__2/i___7_carry__1/CO[0]
+                         net (fo=12, routed)          1.349     8.039    alu_inst/data3[6]
+    SLICE_X52Y20         LUT3 (Prop_lut3_I0_O)        0.373     8.412 r  alu_inst/i___211_carry_i_48/O
+                         net (fo=1, routed)           0.000     8.412    alu_inst/i___211_carry_i_48_n_0
+    SLICE_X52Y20         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     8.945 r  alu_inst/i___211_carry_i_38/CO[3]
+                         net (fo=1, routed)           0.000     8.945    alu_inst/i___211_carry_i_38_n_0
+    SLICE_X52Y21         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.062 r  alu_inst/mem_in_b_reg[5]_i_6/CO[3]
+                         net (fo=1, routed)           0.000     9.062    alu_inst/mem_in_b_reg[5]_i_6_n_0
+    SLICE_X52Y22         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157     9.219 r  alu_inst/mem_in_b_reg[5]_i_5/CO[1]
+                         net (fo=12, routed)          1.358    10.577    alu_inst/data3[5]
+    SLICE_X50Y18         LUT3 (Prop_lut3_I0_O)        0.332    10.909 r  alu_inst/i___211_carry_i_43/O
+                         net (fo=1, routed)           0.000    10.909    alu_inst/i___211_carry_i_43_n_0
+    SLICE_X50Y18         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376    11.285 r  alu_inst/i___211_carry_i_30/CO[3]
+                         net (fo=1, routed)           0.000    11.285    alu_inst/i___211_carry_i_30_n_0
+    SLICE_X50Y19         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    11.402 r  alu_inst/i___211_carry_i_27/CO[3]
+                         net (fo=1, routed)           0.000    11.402    alu_inst/i___211_carry_i_27_n_0
+    SLICE_X50Y20         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    11.559 r  alu_inst/mem_in_b_reg[4]_i_5/CO[1]
+                         net (fo=12, routed)          1.214    12.773    alu_inst/data3[4]
+    SLICE_X51Y18         LUT3 (Prop_lut3_I0_O)        0.332    13.105 r  alu_inst/i___211_carry_i_36/O
+                         net (fo=1, routed)           0.000    13.105    alu_inst/i___211_carry_i_36_n_0
+    SLICE_X51Y18         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    13.503 r  alu_inst/i___211_carry_i_19/CO[3]
+                         net (fo=1, routed)           0.000    13.503    alu_inst/i___211_carry_i_19_n_0
+    SLICE_X51Y19         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.617 r  alu_inst/i___211_carry_i_16/CO[3]
+                         net (fo=1, routed)           0.000    13.617    alu_inst/i___211_carry_i_16_n_0
+    SLICE_X51Y20         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    13.774 r  alu_inst/i___211_carry_i_15/CO[1]
+                         net (fo=12, routed)          1.016    14.790    alu_inst/data3[3]
+    SLICE_X53Y18         LUT3 (Prop_lut3_I0_O)        0.329    15.119 r  alu_inst/i___211_carry_i_26/O
+                         net (fo=1, routed)           0.000    15.119    alu_inst/i___211_carry_i_26_n_0
+    SLICE_X53Y18         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    15.669 r  alu_inst/i___211_carry_i_11/CO[3]
+                         net (fo=1, routed)           0.000    15.669    alu_inst/i___211_carry_i_11_n_0
+    SLICE_X53Y19         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    15.783 r  alu_inst/i___211_carry_i_8/CO[3]
+                         net (fo=1, routed)           0.000    15.783    alu_inst/i___211_carry_i_8_n_0
+    SLICE_X53Y20         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    15.940 r  alu_inst/i___211_carry_i_7/CO[1]
+                         net (fo=12, routed)          1.119    17.060    alu_inst/data3[2]
+    SLICE_X60Y19         LUT6 (Prop_lut6_I1_O)        0.329    17.389 f  alu_inst/mem_in_b[2]_i_4/O
+                         net (fo=1, routed)           0.530    17.919    alu_inst/mem_in_b[2]_i_4_n_0
+    SLICE_X56Y19         LUT6 (Prop_lut6_I4_O)        0.124    18.043 r  alu_inst/mem_in_b[2]_i_2/O
+                         net (fo=1, routed)           0.000    18.043    alu_inst/mem_in_b[2]_i_2_n_0
+    SLICE_X56Y19         MUXF7 (Prop_muxf7_I0_O)      0.209    18.252 r  alu_inst/mem_in_b_reg[2]_i_1/O
+                         net (fo=3, routed)           0.918    19.170    alu_inst_n_5
+    SLICE_X51Y18         FDRE                                         r  mem_in_b_reg[2]_rep__0/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 ex_in_c_reg[1]/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            mem_in_b_reg[3]_rep/D
+  Source:                 rst
+                            (input port)
+  Destination:            registers_inst/regs_reg[9][4]/R
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        16.668ns  (logic 5.648ns (33.885%)  route 11.020ns (66.115%))
-  Logic Levels:           20  (CARRY4=10 FDRE=1 LUT2=1 LUT3=3 LUT4=1 LUT6=3 MUXF7=1)
+  Data Path Delay:        18.333ns  (logic 1.580ns (8.619%)  route 16.753ns (91.381%))
+  Logic Levels:           2  (IBUF=1 LUT1=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X58Y24         FDRE                         0.000     0.000 r  ex_in_c_reg[1]/C
-    SLICE_X58Y24         FDRE (Prop_fdre_C_Q)         0.456     0.456 f  ex_in_c_reg[1]/Q
-                         net (fo=34, routed)          2.586     3.042    alu_inst/tmp0_inferred__3/i__carry_0[1]
-    SLICE_X52Y28         LUT6 (Prop_lut6_I4_O)        0.124     3.166 f  alu_inst/i___7_carry__0_i_9/O
-                         net (fo=4, routed)           0.185     3.351    alu_inst/i___7_carry__0_i_9_n_0
-    SLICE_X52Y28         LUT4 (Prop_lut4_I2_O)        0.124     3.475 r  alu_inst/i___7_carry_i_9/O
-                         net (fo=14, routed)          1.253     4.728    alu_inst/i___7_carry__1_i_1_n_0
-    SLICE_X52Y29         LUT2 (Prop_lut2_I1_O)        0.124     4.852 r  alu_inst/i___7_carry__0_i_4/O
-                         net (fo=1, routed)           0.606     5.458    alu_inst/i___7_carry__0_i_4_n_0
-    SLICE_X53Y29         CARRY4 (Prop_carry4_DI[0]_CO[3])
-                                                      0.526     5.984 r  alu_inst/tmp0_inferred__2/i___7_carry__0/CO[3]
-                         net (fo=1, routed)           0.000     5.984    alu_inst/tmp0_inferred__2/i___7_carry__0_n_0
-    SLICE_X53Y30         CARRY4 (Prop_carry4_CI_CO[0])
-                                                      0.271     6.255 r  alu_inst/tmp0_inferred__2/i___7_carry__1/CO[0]
-                         net (fo=12, routed)          1.344     7.599    alu_inst/data3[6]
-    SLICE_X54Y27         LUT3 (Prop_lut3_I0_O)        0.373     7.972 r  alu_inst/i___211_carry_i_48/O
-                         net (fo=1, routed)           0.000     7.972    alu_inst/i___211_carry_i_48_n_0
-    SLICE_X54Y27         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.533     8.505 r  alu_inst/i___211_carry_i_38/CO[3]
-                         net (fo=1, routed)           0.000     8.505    alu_inst/i___211_carry_i_38_n_0
-    SLICE_X54Y28         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     8.622 r  alu_inst/mem_in_b_reg[5]_i_6/CO[3]
-                         net (fo=1, routed)           0.000     8.622    alu_inst/mem_in_b_reg[5]_i_6_n_0
-    SLICE_X54Y29         CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157     8.779 r  alu_inst/mem_in_b_reg[5]_i_5/CO[1]
-                         net (fo=12, routed)          1.222    10.002    alu_inst/data3[5]
-    SLICE_X56Y26         LUT3 (Prop_lut3_I0_O)        0.332    10.334 r  alu_inst/i___211_carry_i_45/O
-                         net (fo=1, routed)           0.000    10.334    alu_inst/i___211_carry_i_45_n_0
-    SLICE_X56Y26         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.533    10.867 r  alu_inst/i___211_carry_i_30/CO[3]
-                         net (fo=1, routed)           0.000    10.867    alu_inst/i___211_carry_i_30_n_0
-    SLICE_X56Y27         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    10.984 r  alu_inst/i___211_carry_i_27/CO[3]
-                         net (fo=1, routed)           0.000    10.984    alu_inst/i___211_carry_i_27_n_0
-    SLICE_X56Y28         CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157    11.141 r  alu_inst/mem_in_b_reg[4]_i_5/CO[1]
-                         net (fo=12, routed)          1.413    12.553    alu_inst/data3[4]
-    SLICE_X55Y24         LUT3 (Prop_lut3_I0_O)        0.332    12.885 r  alu_inst/i___211_carry_i_33/O
-                         net (fo=1, routed)           0.000    12.885    alu_inst/i___211_carry_i_33_n_0
-    SLICE_X55Y24         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550    13.435 r  alu_inst/i___211_carry_i_16/CO[3]
-                         net (fo=1, routed)           0.009    13.444    alu_inst/i___211_carry_i_16_n_0
-    SLICE_X55Y25         CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157    13.601 r  alu_inst/i___211_carry_i_15/CO[1]
-                         net (fo=12, routed)          0.855    14.456    alu_inst/data3[3]
-    SLICE_X50Y25         LUT6 (Prop_lut6_I1_O)        0.329    14.785 f  alu_inst/mem_in_b[3]_i_4/O
-                         net (fo=1, routed)           1.005    15.790    alu_inst/mem_in_b[3]_i_4_n_0
-    SLICE_X49Y22         LUT6 (Prop_lut6_I4_O)        0.124    15.914 r  alu_inst/mem_in_b[3]_i_2/O
-                         net (fo=1, routed)           0.000    15.914    alu_inst/mem_in_b[3]_i_2_n_0
-    SLICE_X49Y22         MUXF7 (Prop_muxf7_I0_O)      0.212    16.126 r  alu_inst/mem_in_b_reg[3]_i_1/O
-                         net (fo=3, routed)           0.542    16.668    alu_inst_n_4
-    SLICE_X48Y21         FDRE                                         r  mem_in_b_reg[3]_rep/D
+    R2                                                0.000     0.000 f  rst (IN)
+                         net (fo=0)                   0.000     0.000    rst
+    R2                   IBUF (Prop_ibuf_I_O)         1.456     1.456 f  rst_IBUF_inst/O
+                         net (fo=20, routed)          2.103     3.560    ram_inst/rst_IBUF
+    SLICE_X61Y26         LUT1 (Prop_lut1_I0_O)        0.124     3.684 r  ram_inst/regs[0][7]_i_1/O
+                         net (fo=2200, routed)       14.649    18.333    registers_inst/SR[0]
+    SLICE_X64Y18         FDRE                                         r  registers_inst/regs_reg[9][4]/R
   -------------------------------------------------------------------    -------------------
 
 
@@ -1081,107 +1081,122 @@ Slack:                    inf
 Min Delay Paths
 --------------------------------------------------------------------------------------
 Slack:                    inf
-  Source:                 mem_in_b_reg[7]/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            ram_inst/regs_reg[25][7]/D
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.219ns  (logic 0.128ns (58.523%)  route 0.091ns (41.477%))
-  Logic Levels:           1  (FDRE=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X48Y21         FDRE                         0.000     0.000 r  mem_in_b_reg[7]/C
-    SLICE_X48Y21         FDRE (Prop_fdre_C_Q)         0.128     0.128 r  mem_in_b_reg[7]/Q
-                         net (fo=88, routed)          0.091     0.219    ram_inst/Q[7]
-    SLICE_X49Y21         FDRE                                         r  ram_inst/regs_reg[25][7]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
   Source:                 di_in_a_reg[2]/C
                             (rising edge-triggered cell FDRE)
   Destination:            ex_in_a_reg[2]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.232ns  (logic 0.128ns (55.264%)  route 0.104ns (44.736%))
+  Data Path Delay:        0.240ns  (logic 0.128ns (53.381%)  route 0.112ns (46.619%))
   Logic Levels:           1  (FDRE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X61Y28         FDRE                         0.000     0.000 r  di_in_a_reg[2]/C
-    SLICE_X61Y28         FDRE (Prop_fdre_C_Q)         0.128     0.128 r  di_in_a_reg[2]/Q
-                         net (fo=1, routed)           0.104     0.232    di_in_a[2]
-    SLICE_X59Y28         FDRE                                         r  ex_in_a_reg[2]/D
+    SLICE_X61Y24         FDRE                         0.000     0.000 r  di_in_a_reg[2]/C
+    SLICE_X61Y24         FDRE (Prop_fdre_C_Q)         0.128     0.128 r  di_in_a_reg[2]/Q
+                         net (fo=1, routed)           0.112     0.240    di_in_a[2]
+    SLICE_X60Y23         FDRE                                         r  ex_in_a_reg[2]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 registers_inst/regs_reg[2][2]/C
+  Source:                 di_in_a_reg[4]/C
                             (rising edge-triggered cell FDRE)
-  Destination:            ex_in_c_reg[2]/D
+  Destination:            ex_in_a_reg[4]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.256ns  (logic 0.186ns (72.764%)  route 0.070ns (27.236%))
-  Logic Levels:           2  (FDRE=1 LUT5=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X59Y24         FDRE                         0.000     0.000 r  registers_inst/regs_reg[2][2]/C
-    SLICE_X59Y24         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  registers_inst/regs_reg[2][2]/Q
-                         net (fo=2, routed)           0.070     0.211    registers_inst/regs_reg[2][2]
-    SLICE_X58Y24         LUT5 (Prop_lut5_I2_O)        0.045     0.256 r  registers_inst/ex_in_c[2]_i_1/O
-                         net (fo=1, routed)           0.000     0.256    register_b[2]
-    SLICE_X58Y24         FDRE                                         r  ex_in_c_reg[2]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 rom_inst/dout_reg[10]/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            rom_fetched_reg[10]/D
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.265ns  (logic 0.141ns (53.180%)  route 0.124ns (46.820%))
+  Data Path Delay:        0.242ns  (logic 0.128ns (52.946%)  route 0.114ns (47.054%))
   Logic Levels:           1  (FDRE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X61Y27         FDRE                         0.000     0.000 r  rom_inst/dout_reg[10]/C
-    SLICE_X61Y27         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  rom_inst/dout_reg[10]/Q
-                         net (fo=2, routed)           0.124     0.265    rom_inst_n_17
-    SLICE_X60Y27         FDRE                                         r  rom_fetched_reg[10]/D
+    SLICE_X61Y24         FDRE                         0.000     0.000 r  di_in_a_reg[4]/C
+    SLICE_X61Y24         FDRE (Prop_fdre_C_Q)         0.128     0.128 r  di_in_a_reg[4]/Q
+                         net (fo=1, routed)           0.114     0.242    di_in_a[4]
+    SLICE_X60Y23         FDRE                                         r  ex_in_a_reg[4]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 rom_inst/dout_reg[19]/C
+  Source:                 di_in_a_reg[3]/C
                             (rising edge-triggered cell FDRE)
-  Destination:            rom_fetched_reg[19]/D
+  Destination:            ex_in_a_reg[3]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.271ns  (logic 0.141ns (52.082%)  route 0.130ns (47.918%))
+  Data Path Delay:        0.254ns  (logic 0.141ns (55.511%)  route 0.113ns (44.489%))
   Logic Levels:           1  (FDRE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X61Y27         FDRE                         0.000     0.000 r  rom_inst/dout_reg[19]/C
-    SLICE_X61Y27         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  rom_inst/dout_reg[19]/Q
-                         net (fo=2, routed)           0.130     0.271    rom_inst_n_12
-    SLICE_X62Y28         FDRE                                         r  rom_fetched_reg[19]/D
+    SLICE_X61Y24         FDRE                         0.000     0.000 r  di_in_a_reg[3]/C
+    SLICE_X61Y24         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  di_in_a_reg[3]/Q
+                         net (fo=1, routed)           0.113     0.254    di_in_a[3]
+    SLICE_X60Y23         FDRE                                         r  ex_in_a_reg[3]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 rom_inst/dout_reg[9]/C
+  Source:                 di_in_a_reg[0]/C
                             (rising edge-triggered cell FDRE)
-  Destination:            rom_fetched_reg[9]/D
+  Destination:            ex_in_a_reg[0]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.271ns  (logic 0.141ns (52.035%)  route 0.130ns (47.965%))
+  Data Path Delay:        0.260ns  (logic 0.141ns (54.312%)  route 0.119ns (45.688%))
   Logic Levels:           1  (FDRE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X62Y29         FDRE                         0.000     0.000 r  rom_inst/dout_reg[9]/C
-    SLICE_X62Y29         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  rom_inst/dout_reg[9]/Q
-                         net (fo=2, routed)           0.130     0.271    rom_inst_n_18
-    SLICE_X62Y28         FDRE                                         r  rom_fetched_reg[9]/D
+    SLICE_X62Y23         FDRE                         0.000     0.000 r  di_in_a_reg[0]/C
+    SLICE_X62Y23         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  di_in_a_reg[0]/Q
+                         net (fo=1, routed)           0.119     0.260    di_in_a[0]
+    SLICE_X61Y22         FDRE                                         r  ex_in_a_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 di_in_op_reg[1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            ex_in_op_reg[1]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.263ns  (logic 0.141ns (53.636%)  route 0.122ns (46.364%))
+  Logic Levels:           1  (FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X63Y23         FDRE                         0.000     0.000 r  di_in_op_reg[1]/C
+    SLICE_X63Y23         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  di_in_op_reg[1]/Q
+                         net (fo=8, routed)           0.122     0.263    di_in_op[1]
+    SLICE_X63Y22         FDRE                                         r  ex_in_op_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 rom_inst/dout_reg[18]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            rom_fetched_reg[18]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.263ns  (logic 0.141ns (53.636%)  route 0.122ns (46.364%))
+  Logic Levels:           1  (FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X61Y26         FDRE                         0.000     0.000 r  rom_inst/dout_reg[18]/C
+    SLICE_X61Y26         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  rom_inst/dout_reg[18]/Q
+                         net (fo=2, routed)           0.122     0.263    rom_inst_n_13
+    SLICE_X61Y25         FDRE                                         r  rom_fetched_reg[18]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 di_in_op_reg[2]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            ex_in_op_reg[2]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.267ns  (logic 0.128ns (47.873%)  route 0.139ns (52.127%))
+  Logic Levels:           1  (FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X63Y23         FDRE                         0.000     0.000 r  di_in_op_reg[2]/C
+    SLICE_X63Y23         FDRE (Prop_fdre_C_Q)         0.128     0.128 r  di_in_op_reg[2]/Q
+                         net (fo=12, routed)          0.139     0.267    di_in_op[2]
+    SLICE_X63Y22         FDRE                                         r  ex_in_op_reg[2]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
@@ -1190,66 +1205,49 @@ Slack:                    inf
   Destination:            rom_fetched_reg[21]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.272ns  (logic 0.141ns (51.855%)  route 0.131ns (48.145%))
+  Data Path Delay:        0.272ns  (logic 0.141ns (51.775%)  route 0.131ns (48.225%))
   Logic Levels:           1  (FDRE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X62Y27         FDRE                         0.000     0.000 r  rom_inst/dout_reg[21]/C
-    SLICE_X62Y27         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  rom_inst/dout_reg[21]/Q
+    SLICE_X62Y22         FDRE                         0.000     0.000 r  rom_inst/dout_reg[21]/C
+    SLICE_X62Y22         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  rom_inst/dout_reg[21]/Q
                          net (fo=2, routed)           0.131     0.272    rom_inst_n_10
-    SLICE_X62Y28         FDRE                                         r  rom_fetched_reg[21]/D
+    SLICE_X61Y23         FDRE                                         r  rom_fetched_reg[21]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 mem_in_b_reg[0]/C
+  Source:                 mem_base_pointer_change_reg/C
                             (rising edge-triggered cell FDRE)
-  Destination:            ram_inst/regs_reg[18][0]/D
+  Destination:            ram_inst/base_pointer_reg[0]/CE
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.275ns  (logic 0.141ns (51.339%)  route 0.134ns (48.661%))
+  Data Path Delay:        0.277ns  (logic 0.141ns (50.852%)  route 0.136ns (49.148%))
   Logic Levels:           1  (FDRE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X51Y22         FDRE                         0.000     0.000 r  mem_in_b_reg[0]/C
-    SLICE_X51Y22         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  mem_in_b_reg[0]/Q
-                         net (fo=67, routed)          0.134     0.275    ram_inst/Q[0]
-    SLICE_X52Y21         FDRE                                         r  ram_inst/regs_reg[18][0]/D
+    SLICE_X55Y16         FDRE                         0.000     0.000 r  mem_base_pointer_change_reg/C
+    SLICE_X55Y16         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  mem_base_pointer_change_reg/Q
+                         net (fo=265, routed)         0.136     0.277    ram_inst/mem_base_pointer_change
+    SLICE_X54Y15         FDRE                                         r  ram_inst/base_pointer_reg[0]/CE
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 mem_in_b_reg[7]/C
+  Source:                 mem_base_pointer_change_reg/C
                             (rising edge-triggered cell FDRE)
-  Destination:            ram_inst/regs_reg[28][7]/D
+  Destination:            ram_inst/base_pointer_reg[1]/CE
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.284ns  (logic 0.128ns (44.997%)  route 0.156ns (55.003%))
+  Data Path Delay:        0.277ns  (logic 0.141ns (50.852%)  route 0.136ns (49.148%))
   Logic Levels:           1  (FDRE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X48Y21         FDRE                         0.000     0.000 r  mem_in_b_reg[7]/C
-    SLICE_X48Y21         FDRE (Prop_fdre_C_Q)         0.128     0.128 r  mem_in_b_reg[7]/Q
-                         net (fo=88, routed)          0.156     0.284    ram_inst/Q[7]
-    SLICE_X49Y20         FDRE                                         r  ram_inst/regs_reg[28][7]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 mem_in_b_reg[4]_rep__0/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            ram_inst/regs_reg[234][4]/D
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.285ns  (logic 0.141ns (49.518%)  route 0.144ns (50.482%))
-  Logic Levels:           1  (FDRE=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X48Y14         FDRE                         0.000     0.000 r  mem_in_b_reg[4]_rep__0/C
-    SLICE_X48Y14         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  mem_in_b_reg[4]_rep__0/Q
-                         net (fo=86, routed)          0.144     0.285    ram_inst/regs_reg[165][7]_0[1]
-    SLICE_X51Y14         FDRE                                         r  ram_inst/regs_reg[234][4]/D
+    SLICE_X55Y16         FDRE                         0.000     0.000 r  mem_base_pointer_change_reg/C
+    SLICE_X55Y16         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  mem_base_pointer_change_reg/Q
+                         net (fo=265, routed)         0.136     0.277    ram_inst/mem_base_pointer_change
+    SLICE_X54Y15         FDRE                                         r  ram_inst/base_pointer_reg[1]/CE
   -------------------------------------------------------------------    -------------------
 
 
