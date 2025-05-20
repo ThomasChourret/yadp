@@ -12,15 +12,19 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="532.500 ns"></ZoomStartTime>
-      <ZoomEndTime time="934.501 ns"></ZoomEndTime>
-      <Cursor1Time time="522.000 ns"></Cursor1Time>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,386.001 ns"></ZoomEndTime>
+      <Cursor1Time time="10,691.100 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="169"></NameColumnWidth>
+      <NameColumnWidth column_width="157"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="27" />
+   <WVObjectSize size="32" />
+   <wvobject fp_name="/tb_micro/uut/leds" type="array">
+      <obj_property name="ElementShortName">leds[7:0]</obj_property>
+      <obj_property name="ObjectShortName">leds[7:0]</obj_property>
+   </wvobject>
    <wvobject fp_name="/tb_micro/rst" type="logic">
       <obj_property name="ElementShortName">rst</obj_property>
       <obj_property name="ObjectShortName">rst</obj_property>
@@ -37,6 +41,22 @@
       <obj_property name="ElementShortName">stall_pipeline</obj_property>
       <obj_property name="ObjectShortName">stall_pipeline</obj_property>
    </wvobject>
+   <wvobject fp_name="/tb_micro/uut/sync_stall" type="logic">
+      <obj_property name="ElementShortName">sync_stall</obj_property>
+      <obj_property name="ObjectShortName">sync_stall</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_micro/uut/rom_op" type="array">
+      <obj_property name="ElementShortName">rom_op[7:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_op[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_micro/uut/rom_b" type="array">
+      <obj_property name="ElementShortName">rom_b[7:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_b[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_micro/uut/rom_c" type="array">
+      <obj_property name="ElementShortName">rom_c[7:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_c[7:0]</obj_property>
+   </wvobject>
    <wvobject fp_name="/tb_micro/uut/rom_output" type="array">
       <obj_property name="ElementShortName">rom_output[31:0]</obj_property>
       <obj_property name="ObjectShortName">rom_output[31:0]</obj_property>
@@ -44,10 +64,6 @@
    <wvobject fp_name="/tb_micro/uut/rom_fetched" type="array">
       <obj_property name="ElementShortName">rom_fetched[31:0]</obj_property>
       <obj_property name="ObjectShortName">rom_fetched[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_micro/uut/rom_op" type="array">
-      <obj_property name="ElementShortName">rom_op[7:0]</obj_property>
-      <obj_property name="ObjectShortName">rom_op[7:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_micro/uut/di_in_op" type="array">
       <obj_property name="ElementShortName">di_in_op[7:0]</obj_property>
@@ -58,20 +74,18 @@
    <wvobject fp_name="/tb_micro/uut/di_in_a" type="array">
       <obj_property name="ElementShortName">di_in_a[7:0]</obj_property>
       <obj_property name="ObjectShortName">di_in_a[7:0]</obj_property>
-      <obj_property name="CustomSignalColor">#FF0000</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_micro/uut/di_in_b" type="array">
       <obj_property name="ElementShortName">di_in_b[7:0]</obj_property>
       <obj_property name="ObjectShortName">di_in_b[7:0]</obj_property>
-      <obj_property name="CustomSignalColor">#FF0000</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_micro/uut/di_in_c" type="array">
       <obj_property name="ElementShortName">di_in_c[7:0]</obj_property>
       <obj_property name="ObjectShortName">di_in_c[7:0]</obj_property>
-      <obj_property name="CustomSignalColor">#FF0000</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_micro/uut/register_a" type="array">
+      <obj_property name="ElementShortName">register_a[7:0]</obj_property>
+      <obj_property name="ObjectShortName">register_a[7:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_micro/uut/ex_in_op" type="array">
       <obj_property name="ElementShortName">ex_in_op[7:0]</obj_property>
@@ -79,71 +93,64 @@
       <obj_property name="CustomSignalColor">#800080</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_micro/uut/ex_in_a" type="array">
-      <obj_property name="ElementShortName">ex_in_a[7:0]</obj_property>
-      <obj_property name="ObjectShortName">ex_in_a[7:0]</obj_property>
-      <obj_property name="CustomSignalColor">#800080</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
    <wvobject fp_name="/tb_micro/uut/ex_in_b" type="array">
       <obj_property name="ElementShortName">ex_in_b[7:0]</obj_property>
       <obj_property name="ObjectShortName">ex_in_b[7:0]</obj_property>
-      <obj_property name="CustomSignalColor">#800080</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_micro/uut/ex_in_c" type="array">
       <obj_property name="ElementShortName">ex_in_c[7:0]</obj_property>
       <obj_property name="ObjectShortName">ex_in_c[7:0]</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-      <obj_property name="CustomSignalColor">#800080</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_micro/uut/ex_s" type="array">
-      <obj_property name="ElementShortName">ex_s[7:0]</obj_property>
-      <obj_property name="ObjectShortName">ex_s[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_micro/uut/registers_inst/regs" type="array">
-      <obj_property name="ElementShortName">regs[0:15][7:0]</obj_property>
-      <obj_property name="ObjectShortName">regs[0:15][7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_micro/uut/ram_inst/regs" type="array">
-      <obj_property name="ElementShortName">regs[0:255][7:0]</obj_property>
-      <obj_property name="ObjectShortName">regs[0:255][7:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_micro/uut/mem_in_op" type="array">
       <obj_property name="ElementShortName">mem_in_op[7:0]</obj_property>
       <obj_property name="ObjectShortName">mem_in_op[7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_micro/uut/mem_intern_rw" type="logic">
-      <obj_property name="ElementShortName">mem_intern_rw</obj_property>
-      <obj_property name="ObjectShortName">mem_intern_rw</obj_property>
+   <wvobject fp_name="/tb_micro/uut/ram_inst/regs" type="array">
+      <obj_property name="ElementShortName">regs[0:255][7:0]</obj_property>
+      <obj_property name="ObjectShortName">regs[0:255][7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_micro/uut/mem_in_b" type="array">
-      <obj_property name="ElementShortName">mem_in_b[7:0]</obj_property>
-      <obj_property name="ObjectShortName">mem_in_b[7:0]</obj_property>
+   <wvobject fp_name="/tb_micro/uut/registers_inst/regs" type="array">
+      <obj_property name="ElementShortName">regs[0:15][7:0]</obj_property>
+      <obj_property name="ObjectShortName">regs[0:15][7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_micro/uut/mem_intern_addr" type="array">
-      <obj_property name="ElementShortName">mem_intern_addr[7:0]</obj_property>
-      <obj_property name="ObjectShortName">mem_intern_addr[7:0]</obj_property>
+   <wvobject fp_name="/tb_micro/uut/ram_inst/dout" type="array">
+      <obj_property name="ElementShortName">dout[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dout[7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_micro/uut/register_waddr" type="array">
-      <obj_property name="ElementShortName">register_waddr[3:0]</obj_property>
-      <obj_property name="ObjectShortName">register_waddr[3:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_micro/uut/mem_out_b" type="array">
-      <obj_property name="ElementShortName">mem_out_b[7:0]</obj_property>
-      <obj_property name="ObjectShortName">mem_out_b[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_micro/uut/reg_w_c" type="array">
-      <obj_property name="ElementShortName">reg_w_c[7:0]</obj_property>
-      <obj_property name="ObjectShortName">reg_w_c[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_micro/uut/register_data" type="array">
-      <obj_property name="ElementShortName">register_data[7:0]</obj_property>
-      <obj_property name="ObjectShortName">register_data[7:0]</obj_property>
+   <wvobject fp_name="/tb_micro/uut/ram_inst/addr" type="array">
+      <obj_property name="ElementShortName">addr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">addr[7:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_micro/uut/reg_w_op" type="array">
       <obj_property name="ElementShortName">reg_w_op[7:0]</obj_property>
       <obj_property name="ObjectShortName">reg_w_op[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_micro/uut/registers_inst/w" type="logic">
+      <obj_property name="ElementShortName">w</obj_property>
+      <obj_property name="ObjectShortName">w</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_micro/uut/registers_inst/addr_w" type="array">
+      <obj_property name="ElementShortName">addr_w[3:0]</obj_property>
+      <obj_property name="ObjectShortName">addr_w[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_micro/uut/registers_inst/data" type="array">
+      <obj_property name="ElementShortName">data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_micro/uut/ram_inst/base_pointer" type="array">
+      <obj_property name="ElementShortName">base_pointer[7:0]</obj_property>
+      <obj_property name="ObjectShortName">base_pointer[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_micro/uut/ram_inst/base_pointer_change" type="logic">
+      <obj_property name="ElementShortName">base_pointer_change</obj_property>
+      <obj_property name="ObjectShortName">base_pointer_change</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_micro/uut/ram_inst/base_pointer_way" type="logic">
+      <obj_property name="ElementShortName">base_pointer_way</obj_property>
+      <obj_property name="ObjectShortName">base_pointer_way</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_micro/uut/ram_inst/base_pointer_diff" type="array">
+      <obj_property name="ElementShortName">base_pointer_diff[7:0]</obj_property>
+      <obj_property name="ObjectShortName">base_pointer_diff[7:0]</obj_property>
    </wvobject>
 </wave_config>

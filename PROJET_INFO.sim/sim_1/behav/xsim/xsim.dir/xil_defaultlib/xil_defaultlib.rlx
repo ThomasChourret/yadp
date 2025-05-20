@@ -2,13 +2,14 @@
 2020.2
 Nov  8 2024
 22:36:57
-C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sim_1/new/tb_micro.vhd,1746777659,vhdl,,,,tb_micro,,,,,,,,
+C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sim_1/new/tb_micro.vhd,1747727865,vhdl,,,,tb_micro,,,,,,,,
 C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/alu.vhd,1746693264,vhdl,C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd,,,alu,,,,,,,,
-C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/clock_divider.vhd,1746693264,vhdl,C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd,,,clock_divider,,,,,,,,
+C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/clock_divider.vhd,1747688006,vhdl,C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd,,,clock_divider,,,,,,,,
 C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/counter_heightbits.vhd,1746693264,vhdl,C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd,,,counter_heightbits,,,,,,,,
-C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd,1746865348,vhdl,C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sim_1/new/tb_micro.vhd,,,micro,,,,,,,,
+C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd,1747728234,vhdl,C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sim_1/new/tb_micro.vhd,,,micro,,,,,,,,
 C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/opcode_pkg.vhd,1746717152,vhdl,C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd,,,opcode_pkg,,,,,,,,
-C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/ram.vhd,1746777410,vhdl,C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd,,,ram,,,,,,,,
+C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/ram.vhd,1747727783,vhdl,C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd,,,ram,,,,,,,,
 C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/registers.vhd,1746710648,vhdl,C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd,,,registers,,,,,,,,
 C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/registers_pkg.vhd,1746693264,vhdl,C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/ram.vhd;C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/registers.vhd;C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/rom.vhd,,,registers_pkg,,,,,,,,
-C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/rom.vhd,1746865145,vhdl,C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd,,,rom,,,,,,,,
+C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/rom.vhd,1747729232,vhdl,C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd,,,rom,,,,,,,,
+C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/seven_seg_controller.vhd,1747689302,vhdl,C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd,,,seven_seg_controller,,,,,,,,

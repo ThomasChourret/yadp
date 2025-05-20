@@ -38,7 +38,7 @@ begin
     begin
         -- Reset the design
         rst <= '0';
-        wait for 20 ns;
+        wait for 90 ns;
         rst <= '1';
 
         wait for 500 ns;

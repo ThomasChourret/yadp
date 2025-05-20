@@ -57,10 +57,7 @@ if {$::dispatch::connected} {
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 5
-set_param synth.incrementalSynthesisCache C:/Users/Thomas/Desktop/yadp/.Xil/Vivado-9184-DESKTOP-5PFD2IV/incrSyn
-set_param checkpoint.writeSynthRtdsInDcp 1
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
+set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35ticpg236-1L
 
@@ -80,6 +77,7 @@ read_vhdl -library xil_defaultlib {
   C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/clock_divider.vhd
   C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/counter_heightbits.vhd
   C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/opcode_pkg.vhd
+  C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/seven_seg_controller.vhd
   C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/registers_pkg.vhd
   C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/rom.vhd
   C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/registers.vhd

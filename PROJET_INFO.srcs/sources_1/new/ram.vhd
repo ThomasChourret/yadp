@@ -54,19 +54,20 @@ begin
                 end loop;
                 base_pointer <= x"00";
             else
-                if (rw = '0') then -- write
-                    regs(to_integer(unsigned(addr)) + to_integer(unsigned(base_pointer))) <= din;
-                elsif (rw = '1') then -- read
-                    dout <= regs(to_integer(unsigned(addr)) + to_integer(unsigned(base_pointer)));
-                end if;
-                
+
                 if base_pointer_change = '1' then
                     if base_pointer_way = '1' then
                         base_pointer <= std_logic_vector(unsigned(base_pointer) + unsigned(base_pointer_diff));
                     elsif base_pointer_way = '0' then
                         base_pointer <= std_logic_vector(unsigned(base_pointer) - unsigned(base_pointer_diff));
                     end if;
-                end if;
+                else
+                    if (rw = '0') then -- write
+                        regs(to_integer(unsigned(addr)) + to_integer(unsigned(base_pointer))) <= din;
+                    elsif (rw = '1') then -- read
+                        dout <= regs(to_integer(unsigned(addr)) + to_integer(unsigned(base_pointer)));
+                    end if;
+                end if;                
             end if;
         end if;
         
