@@ -1,0 +1,10 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/chour/Documents/INSA/yadp/PROJET_INFO.sim/sim_1/impl/func/xsim/tb_micro_func_impl.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'clock_divider'
+INFO: [VRFC 10-3107] analyzing entity 'counter_heightbits'
+INFO: [VRFC 10-3107] analyzing entity 'ram'
+INFO: [VRFC 10-3107] analyzing entity 'registers'
+INFO: [VRFC 10-3107] analyzing entity 'rom'
+INFO: [VRFC 10-3107] analyzing entity 'seven_seg_controller'
+INFO: [VRFC 10-3107] analyzing entity 'micro'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/chour/Documents/INSA/yadp/PROJET_INFO.srcs/sim_1/new/tb_micro.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_micro'

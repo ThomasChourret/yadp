@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/constrs_1/new/micro_contraints.xdc rfile:../../../PROJET_INFO.srcs/constrs_1/new/micro_contraints.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/chour/Documents/INSA/yadp/PROJET_INFO.srcs/constrs_1/new/micro_contraints.xdc rfile:../../../PROJET_INFO.srcs/constrs_1/new/micro_contraints.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:5 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN W5   IOSTANDARD LVCMOS33 } [get_ports { clk_external }]; # Horloge 100MHz
 set_property src_info {type:XDC file:1 line:8 export:INPUT save:INPUT read:READ} [current_design]
@@ -20,19 +20,11 @@ set_property -dict { PACKAGE_PIN U14  IOSTANDARD LVCMOS33 } [get_ports { leds[6]
 set_property src_info {type:XDC file:1 line:18 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN V14  IOSTANDARD LVCMOS33 } [get_ports { leds[7] }]; # LED7
 set_property src_info {type:XDC file:1 line:21 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN P1  IOSTANDARD LVCMOS33 } [get_ports { pc_leds[0] }]; # LED0
+set_property -dict { PACKAGE_PIN P1  IOSTANDARD LVCMOS33 } [get_ports { o_stall_pipeline }]; # LED0
 set_property src_info {type:XDC file:1 line:22 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN N3  IOSTANDARD LVCMOS33 } [get_ports { pc_leds[1] }]; # LED1
+set_property -dict { PACKAGE_PIN N3  IOSTANDARD LVCMOS33 } [get_ports { o_sync_stall }]; # LED1
 set_property src_info {type:XDC file:1 line:23 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN P3  IOSTANDARD LVCMOS33 } [get_ports { pc_leds[2] }]; # LED2
-set_property src_info {type:XDC file:1 line:24 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN U3  IOSTANDARD LVCMOS33 } [get_ports { pc_leds[3] }]; # LED3
-set_property src_info {type:XDC file:1 line:25 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN W3  IOSTANDARD LVCMOS33 } [get_ports { pc_leds[4] }]; # LED4
-set_property src_info {type:XDC file:1 line:26 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN V3  IOSTANDARD LVCMOS33 } [get_ports { pc_leds[5] }]; # LED5
-set_property src_info {type:XDC file:1 line:27 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN V13  IOSTANDARD LVCMOS33 } [get_ports { pc_leds[6] }]; # LED6
+set_property -dict { PACKAGE_PIN P3  IOSTANDARD LVCMOS33 } [get_ports { o_jumped }]; # LED2
 set_property src_info {type:XDC file:1 line:31 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN L1  IOSTANDARD LVCMOS33 } [get_ports { clk_led }]; # LED7
 set_property src_info {type:XDC file:1 line:34 export:INPUT save:INPUT read:READ} [current_design]

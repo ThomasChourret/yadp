@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35ticpg236-1L" LaunchTime="1747730522" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/not_gate.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7a35ticpg236-1L" LaunchTime="1747824322" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/not_gate.dcp">
   <File Type="PA-TCL" Name="micro.tcl"/>
   <File Type="REPORTS-TCL" Name="micro_reports.tcl"/>
   <File Type="RDS-RDS" Name="micro.vds"/>

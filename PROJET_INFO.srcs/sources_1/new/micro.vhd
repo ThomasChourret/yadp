@@ -29,10 +29,14 @@ entity micro is
         rst            : in std_logic;
             -- PRINT TO LEDS
         leds           : out std_logic_vector(7 downto 0);
-        pc_leds        : out std_logic_vector(6 downto 0);
+        --pc_leds        : out std_logic_vector(6 downto 0);
         clk_led        : out std_logic;
         seg            : out STD_LOGIC_VECTOR(6 downto 0);
-        an             : out STD_LOGIC_VECTOR(3 downto 0)
+        an             : out STD_LOGIC_VECTOR(3 downto 0);
+        
+        o_stall_pipeline : out std_logic;
+        o_sync_stall    : out std_logic;
+        o_jumped    : out std_logic
     );
 end micro;
 
@@ -113,12 +117,16 @@ architecture Behavioral of micro is
     
 begin
 
+    o_stall_pipeline <= stall_pipeline;
+    o_sync_stall <= sync_stall;
+    o_jumped <= jumped;
+
     clk_led <= clk_internal;
-    pc_leds <= program_counter(6 downto 0);
+    --pc_leds <= program_counter(6 downto 0);
 
     seg_l <= ex_in_op;
     --seg_r <= rom_fetched(31 downto 24);
-    seg_r <= x"01" when stall_pipeline = '1' else x"00";
+    --seg_r <= x"01" when stall_pipeline = '1' else x"00";
 
     clk_div_inst: entity work.clock_divider -- clock divier
         generic map (
@@ -404,13 +412,15 @@ begin
     begin
         if rising_edge(clk_internal) then
             if rst = '0' then
-                leds <= x"00";
+                --leds <= x"00";
+                seg_r <= x"00";
             elsif ex_in_op = OP_PRI then
-                leds <= ex_in_b;
+                --leds <= ex_in_b;
+                seg_r <= ex_in_b;
             end if;
         end if;
     end process;
-    
+    leds <= program_counter;
     
     -- --------------------- --
     -- Jump Logic Controller --

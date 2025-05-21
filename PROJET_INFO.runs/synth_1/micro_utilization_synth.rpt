@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date         : Tue May 20 10:42:33 2025
-| Host         : DESKTOP-5PFD2IV running 64-bit major release  (build 9200)
+| Date         : Wed May 21 12:46:07 2025
+| Host         : PC-PORTABLE running 64-bit major release  (build 9200)
 | Command      : report_utilization -file micro_utilization_synth.rpt -pb micro_utilization_synth.pb
 | Design       : micro
 | Device       : xc7a35ticpg236-1L
@@ -31,14 +31,14 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*             | 1226 |     0 |          0 |     20800 |  5.89 |
-|   LUT as Logic          | 1226 |     0 |          0 |     20800 |  5.89 |
+| Slice LUTs*             | 1218 |     0 |          0 |     20800 |  5.86 |
+|   LUT as Logic          | 1218 |     0 |          0 |     20800 |  5.86 |
 |   LUT as Memory         |    0 |     0 |          0 |      9600 |  0.00 |
 | Slice Registers         | 2400 |     0 |          0 |     41600 |  5.77 |
 |   Register as Flip Flop | 2400 |     0 |          0 |     41600 |  5.77 |
 |   Register as Latch     |    0 |     0 |          0 |     41600 |  0.00 |
-| F7 Muxes                |  304 |     0 |          0 |     16300 |  1.87 |
-| F8 Muxes                |  137 |     0 |          0 |      8150 |  1.68 |
+| F7 Muxes                |  300 |     0 |          0 |     16300 |  1.84 |
+| F8 Muxes                |  136 |     0 |          0 |      8150 |  1.67 |
 +-------------------------+------+-------+------------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 Warning! LUT value is adjusted to account for LUT combining.
@@ -93,7 +93,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +-----------------------------+------+-------+------------+-----------+-------+
 |          Site Type          | Used | Fixed | Prohibited | Available | Util% |
 +-----------------------------+------+-------+------------+-----------+-------+
-| Bonded IOB                  |   29 |     0 |          0 |       106 | 27.36 |
+| Bonded IOB                  |   25 |     0 |          0 |       106 | 23.58 |
 | Bonded IPADs                |    0 |     0 |          0 |        10 |  0.00 |
 | Bonded OPADs                |    0 |     0 |          0 |         4 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |          0 |         5 |  0.00 |
@@ -153,15 +153,15 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | FDRE     | 2400 |        Flop & Latch |
-| LUT6     |  975 |                 LUT |
-| MUXF7    |  304 |               MuxFx |
-| MUXF8    |  137 |               MuxFx |
-| LUT3     |  105 |                 LUT |
-| LUT5     |   79 |                 LUT |
-| LUT4     |   71 |                 LUT |
+| LUT6     |  968 |                 LUT |
+| MUXF7    |  300 |               MuxFx |
+| MUXF8    |  136 |               MuxFx |
+| LUT3     |  103 |                 LUT |
+| LUT5     |   77 |                 LUT |
+| LUT4     |   77 |                 LUT |
 | LUT2     |   59 |                 LUT |
 | CARRY4   |   50 |          CarryLogic |
-| OBUF     |   27 |                  IO |
+| OBUF     |   23 |                  IO |
 | LUT1     |    8 |                 LUT |
 | IBUF     |    2 |                  IO |
 | BUFG     |    2 |               Clock |

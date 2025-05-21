@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/Thomas/Desktop/yadp/PROJET_INFO.runs/synth_1/micro.tcl"
+  variable script "C:/Users/chour/Documents/INSA/yadp/PROJET_INFO.runs/synth_1/micro.tcl"
   variable category "vivado_synth"
 }
 
@@ -56,31 +56,33 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 2
+set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35ticpg236-1L
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/Thomas/Desktop/yadp/PROJET_INFO.cache/wt [current_project]
-set_property parent.project_path C:/Users/Thomas/Desktop/yadp/PROJET_INFO.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/chour/Documents/INSA/yadp/PROJET_INFO.cache/wt [current_project]
+set_property parent.project_path C:/Users/chour/Documents/INSA/yadp/PROJET_INFO.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
-set_property ip_output_repo c:/Users/Thomas/Desktop/yadp/PROJET_INFO.cache/ip [current_project]
+set_property ip_output_repo c:/Users/chour/Documents/INSA/yadp/PROJET_INFO.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib {
-  C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/alu.vhd
-  C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/clock_divider.vhd
-  C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/counter_heightbits.vhd
-  C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/opcode_pkg.vhd
-  C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/seven_seg_controller.vhd
-  C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/registers_pkg.vhd
-  C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/rom.vhd
-  C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/registers.vhd
-  C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/ram.vhd
-  C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
+  C:/Users/chour/Documents/INSA/yadp/PROJET_INFO.srcs/sources_1/new/alu.vhd
+  C:/Users/chour/Documents/INSA/yadp/PROJET_INFO.srcs/sources_1/new/clock_divider.vhd
+  C:/Users/chour/Documents/INSA/yadp/PROJET_INFO.srcs/sources_1/new/counter_heightbits.vhd
+  C:/Users/chour/Documents/INSA/yadp/PROJET_INFO.srcs/sources_1/new/opcode_pkg.vhd
+  C:/Users/chour/Documents/INSA/yadp/PROJET_INFO.srcs/sources_1/new/seven_seg_controller.vhd
+  C:/Users/chour/Documents/INSA/yadp/PROJET_INFO.srcs/sources_1/new/registers_pkg.vhd
+  C:/Users/chour/Documents/INSA/yadp/PROJET_INFO.srcs/sources_1/new/rom.vhd
+  C:/Users/chour/Documents/INSA/yadp/PROJET_INFO.srcs/sources_1/new/registers.vhd
+  C:/Users/chour/Documents/INSA/yadp/PROJET_INFO.srcs/sources_1/new/ram.vhd
+  C:/Users/chour/Documents/INSA/yadp/PROJET_INFO.srcs/sources_1/new/micro.vhd
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -91,12 +93,12 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/constrs_1/new/micro_contraints.xdc
-set_property used_in_implementation false [get_files C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/constrs_1/new/micro_contraints.xdc]
+read_xdc C:/Users/chour/Documents/INSA/yadp/PROJET_INFO.srcs/constrs_1/new/micro_contraints.xdc
+set_property used_in_implementation false [get_files C:/Users/chour/Documents/INSA/yadp/PROJET_INFO.srcs/constrs_1/new/micro_contraints.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental C:/Users/Thomas/Desktop/yadp/PROJET_INFO.srcs/utils_1/imports/synth_1/not_gate.dcp
+read_checkpoint -auto_incremental -incremental C:/Users/chour/Documents/INSA/yadp/PROJET_INFO.srcs/utils_1/imports/synth_1/not_gate.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

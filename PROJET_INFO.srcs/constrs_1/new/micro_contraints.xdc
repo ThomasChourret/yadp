@@ -7,7 +7,7 @@ set_property -dict { PACKAGE_PIN W5   IOSTANDARD LVCMOS33 } [get_ports { clk_ext
 ## Bouton Reset
 set_property -dict { PACKAGE_PIN R2  IOSTANDARD LVCMOS33 } [get_ports { rst }]; # Bouton Reset (BTNU)
 
-## LEDs
+## LEDs (PC)
 set_property -dict { PACKAGE_PIN U16  IOSTANDARD LVCMOS33 } [get_ports { leds[0] }]; # LED0
 set_property -dict { PACKAGE_PIN E19  IOSTANDARD LVCMOS33 } [get_ports { leds[1] }]; # LED1
 set_property -dict { PACKAGE_PIN U19  IOSTANDARD LVCMOS33 } [get_ports { leds[2] }]; # LED2
@@ -17,14 +17,14 @@ set_property -dict { PACKAGE_PIN U15  IOSTANDARD LVCMOS33 } [get_ports { leds[5]
 set_property -dict { PACKAGE_PIN U14  IOSTANDARD LVCMOS33 } [get_ports { leds[6] }]; # LED6
 set_property -dict { PACKAGE_PIN V14  IOSTANDARD LVCMOS33 } [get_ports { leds[7] }]; # LED7
 
-## PC LEDS
-set_property -dict { PACKAGE_PIN P1  IOSTANDARD LVCMOS33 } [get_ports { pc_leds[0] }]; # LED0
-set_property -dict { PACKAGE_PIN N3  IOSTANDARD LVCMOS33 } [get_ports { pc_leds[1] }]; # LED1
-set_property -dict { PACKAGE_PIN P3  IOSTANDARD LVCMOS33 } [get_ports { pc_leds[2] }]; # LED2
-set_property -dict { PACKAGE_PIN U3  IOSTANDARD LVCMOS33 } [get_ports { pc_leds[3] }]; # LED3
-set_property -dict { PACKAGE_PIN W3  IOSTANDARD LVCMOS33 } [get_ports { pc_leds[4] }]; # LED4
-set_property -dict { PACKAGE_PIN V3  IOSTANDARD LVCMOS33 } [get_ports { pc_leds[5] }]; # LED5
-set_property -dict { PACKAGE_PIN V13  IOSTANDARD LVCMOS33 } [get_ports { pc_leds[6] }]; # LED6
+## INFO LEDs
+set_property -dict { PACKAGE_PIN P1  IOSTANDARD LVCMOS33 } [get_ports { o_stall_pipeline }]; # LED0
+set_property -dict { PACKAGE_PIN N3  IOSTANDARD LVCMOS33 } [get_ports { o_sync_stall }]; # LED1
+set_property -dict { PACKAGE_PIN P3  IOSTANDARD LVCMOS33 } [get_ports { o_jumped }]; # LED2
+#set_property -dict { PACKAGE_PIN U3  IOSTANDARD LVCMOS33 } [get_ports { pc_leds[3] }]; # LED3
+#set_property -dict { PACKAGE_PIN W3  IOSTANDARD LVCMOS33 } [get_ports { pc_leds[4] }]; # LED4
+#set_property -dict { PACKAGE_PIN V3  IOSTANDARD LVCMOS33 } [get_ports { pc_leds[5] }]; # LED5
+#set_property -dict { PACKAGE_PIN V13  IOSTANDARD LVCMOS33 } [get_ports { pc_leds[6] }]; # LED6
 #set_property -dict { PACKAGE_PIN V13  IOSTANDARD LVCMOS33 } [get_ports { pc_leds[7] }]; # LED7
 
 ## CLK LED

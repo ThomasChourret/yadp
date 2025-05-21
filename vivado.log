@@ -3,23 +3,23 @@
 # SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Tue May 20 10:44:13 2025
-# Process ID         : 31228
-# Current directory  : C:/Users/Thomas/Desktop/yadp
+# Start of session at: Wed May 21 16:42:44 2025
+# Process ID         : 15956
+# Current directory  : C:/Users/chour/Documents/INSA/yadp
 # Command line       : vivado.exe -mode batch -source .\progam_fpga.tcl
-# Log file           : C:/Users/Thomas/Desktop/yadp/vivado.log
-# Journal file       : C:/Users/Thomas/Desktop/yadp\vivado.jou
-# Running On         : DESKTOP-5PFD2IV
+# Log file           : C:/Users/chour/Documents/INSA/yadp/vivado.log
+# Journal file       : C:/Users/chour/Documents/INSA/yadp\vivado.jou
+# Running On         : PC-PORTABLE
 # Platform           : Windows Server 2016 or Windows 10
 # Operating System   : 26100
-# Processor Detail   : Intel(R) Core(TM) i5-14600KF
-# CPU Frequency      : 3494 MHz
-# CPU Physical cores : 14
-# CPU Logical cores  : 20
-# Host memory        : 34055 MB
-# Swap memory        : 6174 MB
-# Total Virtual      : 40229 MB
-# Available Virtual  : 23173 MB
+# Processor Detail   : 11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz
+# CPU Frequency      : 2803 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 8
+# Host memory        : 16861 MB
+# Swap memory        : 9126 MB
+# Total Virtual      : 25988 MB
+# Available Virtual  : 6778 MB
 #-----------------------------------------------------------
 source {.\progam_fpga.tcl}
 # open_hw
@@ -47,6 +47,7 @@ INFO: [Labtools 27-2221] Launch Output:
 
 
 
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 329.020 ; gain = 1.969
 # open_hw_target
 INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183AB4EA1A
 # current_hw_device [lindex [get_hw_devices] 0]
@@ -56,4 +57,4 @@ INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed wi
 # program_hw_devices [current_hw_device]
 INFO: [Labtools 27-3164] End of startup status: HIGH
 # exit
-INFO: [Common 17-206] Exiting Vivado at Tue May 20 10:44:21 2025...
+INFO: [Common 17-206] Exiting Vivado at Wed May 21 16:42:58 2025...

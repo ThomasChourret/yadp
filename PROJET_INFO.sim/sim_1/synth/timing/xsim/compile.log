@@ -1,0 +1,10 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/chour/Documents/INSA/yadp/PROJET_INFO.sim/sim_1/synth/timing/xsim/tb_micro_time_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clock_divider
+INFO: [VRFC 10-311] analyzing module counter_heightbits
+INFO: [VRFC 10-311] analyzing module micro
+INFO: [VRFC 10-311] analyzing module registers
+INFO: [VRFC 10-311] analyzing module rom
+INFO: [VRFC 10-311] analyzing module seven_seg_controller
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/chour/Documents/INSA/yadp/PROJET_INFO.srcs/sim_1/new/tb_micro.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_micro'
